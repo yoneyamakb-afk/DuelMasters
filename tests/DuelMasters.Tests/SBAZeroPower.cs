@@ -1,4 +1,4 @@
-
+﻿
 using System.Linq;
 using System.Collections.Immutable;
 using Xunit;
@@ -27,7 +27,7 @@ public class SBAZeroPower
         s = sim.Step(s, new ActionIntent(ActionType.PassPriority));
 
         gs = (GameState)s;
-        Assert.Equal(0, gs.Players[0].Battle.Cards.Length);
-        Assert.Equal(1, gs.Players[0].Graveyard.Cards.Length);
+        Assert.Empty(gs.Players[0].Battle.Cards);
+        Assert.Single(gs.Players[0].Graveyard.Cards);
     }
 }

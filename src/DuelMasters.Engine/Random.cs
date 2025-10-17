@@ -1,12 +1,18 @@
-
-using System;
-
 namespace DuelMasters.Engine;
 
-public sealed class SeededRandom : IRandomSource
+public interface IRandomSource
 {
-    private Random _random;
-    public SeededRandom(int seed) => _random = new Random(seed);
-    public int Next(int minInclusive, int maxExclusive) => _random.Next(minInclusive, maxExclusive);
-    public void Reseed(int seed) => _random = new Random(seed);
+    int Next();
+    int Next(int min, int max);
+    void Reseed(int seed);
+}
+
+public sealed class DefaultRandom : IRandomSource
+{
+    private System.Random _r;
+
+    public DefaultRandom(int seed) { _r = new System.Random(seed); }
+    public int Next() => _r.Next();
+    public int Next(int min, int max) => _r.Next(min, max);
+    public void Reseed(int seed) => _r = new System.Random(seed);
 }
