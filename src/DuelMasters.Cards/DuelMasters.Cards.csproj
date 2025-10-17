@@ -1,0 +1,14 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cards\*.json" />
+  </ItemGroup>
+</Project>

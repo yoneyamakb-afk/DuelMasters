@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Duel Masters Card",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "type",
+    "civilization",
+    "cost"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "civilization": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cost": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "power": {
+      "type": "integer"
+    },
+    "races": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "abilities": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

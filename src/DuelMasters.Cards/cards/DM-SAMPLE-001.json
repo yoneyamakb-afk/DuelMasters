@@ -1,0 +1,29 @@
+{
+  "id": "DM-SAMPLE-001",
+  "name": "Sample Dragon",
+  "type": [
+    "Creature"
+  ],
+  "civilization": [
+    "Fire"
+  ],
+  "cost": 5,
+  "power": 6000,
+  "races": [
+    "Dragon"
+  ],
+  "abilities": [
+    {
+      "type": "Static",
+      "effect": "PowerModifier",
+      "amount": 2000,
+      "condition": "YouControl:Race=Dragon"
+    },
+    {
+      "type": "Triggered",
+      "when": "This:AttackDeclare",
+      "effect": "BreakShields",
+      "value": 1
+    }
+  ]
+}
