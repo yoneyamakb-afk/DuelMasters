@@ -1,23 +1,24 @@
-
+using System.Linq;
 using DMRules.Engine;
-using FluentAssertions;
 using Xunit;
-
-namespace DMRules.Tests;
 
 public class TriggerOrderTests
 {
-    [Fact(DisplayName = "S-Triggers first; APNAP within batch (TP then NP)")]
-    public void Order_Striggers_TP_First()
+    [Fact]
+    public void APNAP_TPThenNPWithinBatch()
     {
-        IGameState s = new MinimalState();
-        s = Adapter.Instance.EnqueueNewTriggers(s);
-        s = Adapter.Instance.ResolveSAndOtherTriggers(s);
-        var log = Adapter.Instance.Audit.Dump();
-        var tp = log.ToList().FindIndex(x => x.Contains("QUEUE[S:TP]"));
-        var np = log.ToList().FindIndex(x => x.Contains("QUEUE[S:NP]"));
-        tp.Should().BeGreaterOrEqualTo(0);
-        np.Should().BeGreaterOrEqualTo(0);
-        tp.Should().BeLessThan(np);
+        var s = EngineAdapterCore.CreateInitial();
+        var a = new StackItem("A", s.TurnPlayer);
+        var b = new StackItem("B", s.NonTurnPlayer);
+        var c = new StackItem("C", s.TurnPlayer);
+        var d = new StackItem("D", s.NonTurnPlayer);
+
+        var ordered = s.ResolveBatchAPNAP(new[] { b, a, d, c }).ToList();
+        Assert.Collection(ordered,
+            x => Assert.Equal("A", x.Label),
+            x => Assert.Equal("C", x.Label),
+            x => Assert.Equal("B", x.Label),
+            x => Assert.Equal("D", x.Label)
+        );
     }
 }

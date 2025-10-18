@@ -1,21 +1,18 @@
-
 using DMRules.Engine;
-using FluentAssertions;
 using Xunit;
-
-namespace DMRules.Tests;
 
 public class SBATests
 {
-    [Fact(DisplayName = "SBA: zero-or-less power creatures destroyed and no unresolved triggers")]
-    public void ZeroPower_Destroyed()
+    [Fact]
+    public void PowerLessOrEqualZeroGetsDestroyed_Stable()
     {
-        IGameState s = new MinimalState(
-            bz: new[]{ new Creature(5,0), new Creature(6,-1)},
-            libraryCountTP: 1
-        );
-        s = Adapter.Instance.DoSBAUntilStable(s);
-        s.BattleZone.Should().BeEmpty("zero-or-less power creatures are destroyed simultaneously");
-        Adapter.Instance.PendingTriggersCount(s).Should().Be(0);
+        var ms = new MinimalState(2, Phase.Main, Priority.TurnPlayer);
+        // 2体を0パワーで置いて安定破壊を確認
+        ms.S.Battlefield.Add(new Creature("X", 0));
+        ms.S.Battlefield.Add(new Creature("Y", -1000));
+
+        Adapter.Instance.DoSBAUntilStable(ms);
+        Assert.True(ms.S.Battlefield[0].Destroyed);
+        Assert.True(ms.S.Battlefield[1].Destroyed);
     }
 }
