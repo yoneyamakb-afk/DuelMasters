@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Collections.Immutable;
 using Xunit;
 using DuelMasters.Engine;

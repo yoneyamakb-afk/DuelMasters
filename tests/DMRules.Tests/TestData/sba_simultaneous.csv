@@ -1,0 +1,2 @@
+ScenarioId,Description,InitialStateJson,ActionsJson,ExpectedStackAfterSBA,ExpectedTriggerOrderCsv,ExpectSingleReplacement
+sba-001,Two creatures reduced to 0 power simultaneously,"{""battle"":{""c1"":0,""c2"":0}}","[]",2,"S,TP,NP",true

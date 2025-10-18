@@ -3,16 +3,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="InitialPhaseTests.cs" />
-    <Compile Include="TriggerOrderTests.cs" />
-    <Compile Include="SBATests.cs" />
-    <Compile Include="DeckOutRuleTests.cs" />
-    <Compile Include="ReplacementTests.cs" />
-    <Compile Include="TestUtils.cs" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\DMRules.Engine\DMRules.Engine.csproj" />
   </ItemGroup>

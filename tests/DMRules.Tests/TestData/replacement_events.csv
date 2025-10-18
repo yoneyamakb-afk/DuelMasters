@@ -1,0 +1,2 @@
+ScenarioId,Description,InitialStateJson,ActionsJson,ExpectedStackAfterSBA,ExpectedTriggerOrderCsv,ExpectSingleReplacement
+rep-001,Draw replacement occurs once,"{""players"":[""TP"",""NP""],""hand"":{""TP"":0}}","[{""event"":""Draw"",""player"":""TP""}]",2,"S,TP,NP",true

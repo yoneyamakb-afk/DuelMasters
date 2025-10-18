@@ -1,0 +1,16 @@
+using DMRules.Engine;
+using FluentAssertions;
+using Xunit;
+
+namespace DMRules.Tests;
+
+public class SBATests
+{
+    [Fact(DisplayName = "No trigger remains unresolved after SBA re-evaluation")]
+    public void SbaShouldResolveAllTriggers()
+    {
+        var s = new MinimalState(2, "Main", "TP");
+        var after = Adapter.Instance.DoSBAUntilStable(s);
+        Adapter.Instance.PendingTriggersCount(after).Should().Be(0);
+    }
+}

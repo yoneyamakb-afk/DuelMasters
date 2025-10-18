@@ -70,7 +70,7 @@ public sealed record GameState
             new Zone(ZoneKind.Graveyard, ImmutableArray<CardId>.Empty));
 
         var rng = new DefaultRandom(seed);
-        var gs = new GameState(new PlayerId(0), new PlayerId(0), TurnPhase.Main,
+        var gs = new GameState(new PlayerId(0), new PlayerId(0), TurnPhase.Start,
             ImmutableArray.Create(p0, p1), StackState.Empty, rng, 0, 0, 1);
         for (int i=0;i<5;i++) { gs = gs.GiveShield(new PlayerId(0)).GiveShield(new PlayerId(1)); }
         for (int i=0;i<5;i++) { gs = gs.Draw(new PlayerId(0)).Draw(new PlayerId(1)); }
