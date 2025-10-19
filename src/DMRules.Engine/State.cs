@@ -147,7 +147,7 @@ namespace DMRules.Engine
         IReadOnlyList<PlayerId> Losers { get; }
     }
 
-    public sealed class MinimalState : IGameState
+    public partial class MinimalState : IGameState
     {
         public State S { get; }
 
