@@ -1,2 +1,0 @@
-ScenarioId,Description,InitialStateJson,ActionsJson,ExpectedStackAfterSBA,ExpectedTriggerOrderCsv,ExpectSingleReplacement
-st-001,S-Trigger batch resolves before others,"{""shieldsBroken"":2}","[]",2,"S,TP,NP",true

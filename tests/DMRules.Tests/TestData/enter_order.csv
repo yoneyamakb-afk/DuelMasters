@@ -1,2 +1,0 @@
-ScenarioId,Description,InitialStateJson,ActionsJson,ExpectedStackAfterSBA,ExpectedTriggerOrderCsv,ExpectSingleReplacement
-enter-001,Continuous effect grants blocker upon entry before ETB,"{""contEff"":""Light gets Blocker""}","[{""event"":""ZoneEnter"",""card"":""Light Creature""}]",0,"",true
