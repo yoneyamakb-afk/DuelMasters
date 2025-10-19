@@ -1,0 +1,124 @@
+#nullable enable
+using System;
+using System.Linq;
+using System.Reflection;
+
+namespace DMRules.Engine;
+
+/// <summary>
+/// M3: Official engine entrypoints for advancing the game.
+/// These methods allow tests and callers to avoid compat layers.
+/// </summary>
+public static class TurnSystem
+{
+    private static readonly Assembly EngineAsm = typeof(IGameState).Assembly;
+
+    private static Type RequireEnum(string simpleOrFullName)
+    {
+        var t = EngineAsm.GetTypes().FirstOrDefault(x =>
+            x.Name == simpleOrFullName || x.FullName?.EndsWith("." + simpleOrFullName) == true);
+        if (t is null || !t.IsEnum) throw new InvalidOperationException($"TurnSystem: enum not found: {simpleOrFullName}");
+        return t;
+    }
+
+    /// <summary>
+    /// Advance the game by applying the given Phase. Returns the updated state.
+    /// Default implementation delegates to MinimalState/State.SetPhase(phase).
+    /// </summary>
+    public static IGameState Step(IGameState state, Enum phase)
+    {
+        // If an engine-specific handler exists, prefer that (future-proof hook).
+        var handler = FindPreferredStepHandler();
+        if (handler is not null)
+        {
+            var result = handler.Invoke(null, new object?[] { state, phase }) as IGameState;
+            if (result is not null) return result;
+        }
+
+        // Minimal delegation: use MinimalState/State.SetPhase
+        if (state is MinimalState ms)
+        {
+            // MinimalState.Compat.cs provides SetPhase(Phase)
+            var m = typeof(MinimalState).GetMethod("SetPhase", BindingFlags.Public | BindingFlags.Instance);
+            if (m is not null)
+            {
+                m.Invoke(ms, new object[] { phase });
+                return ms;
+            }
+        }
+
+        // Direct property/field fallback (when MinimalState not available)
+        var prop = state.GetType().GetProperty("Phase", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        if (prop is not null && prop.CanWrite && prop.PropertyType.IsEnum) { prop.SetValue(state, phase); return state; }
+        var fld = state.GetType().GetField("Phase", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        if (fld is not null && fld.FieldType.IsEnum) { fld.SetValue(state, phase); return state; }
+
+        throw new InvalidOperationException("TurnSystem.Step: could not set Phase on provided state.");
+    }
+
+    /// <summary>
+    /// Overload with strongly-typed Phase (engine enum). Use this from C# callers.
+    /// </summary>
+    public static IGameState Step(IGameState state, object phase)
+    {
+        if (phase is Enum e) return Step(state, e);
+        // allow string (case-insensitive) for convenience
+        if (phase is string s)
+        {
+            var PhaseT = RequireEnum("Phase");
+            if (!Enum.TryParse(PhaseT, s, true, out var parsed)) throw new ArgumentException($"TurnSystem.Step: cannot parse Phase '{s}'");
+            return Step(state, (Enum)parsed!);
+        }
+        throw new ArgumentException("TurnSystem.Step: 'phase' must be Phase enum or string.");
+    }
+
+    /// <summary>
+    /// Optional priority overload. If an engine handler exists it is used;
+    /// otherwise falls back to Step(state, phase) ignoring priority.
+    /// </summary>
+    public static IGameState Step(IGameState state, object phase, object priority)
+    {
+        var handler = FindPreferredStepHandler(withPriority: true);
+        if (handler is not null)
+        {
+            // Attempt enum conversion if needed
+            var PhaseT = RequireEnum("Phase");
+            var PriorityT = RequireEnum("Priority");
+            var p = phase is Enum pe ? pe
+                  : phase is string ps && Enum.TryParse(PhaseT, ps, true, out var px) ? (Enum)px!
+                  : throw new ArgumentException("TurnSystem.Step: invalid Phase value");
+            var q = priority is Enum qe ? qe
+                  : priority is string qs && Enum.TryParse(PriorityT, qs, true, out var qx) ? (Enum)qx!
+                  : throw new ArgumentException("TurnSystem.Step: invalid Priority value");
+
+            var result = handler.Invoke(null, new object?[] { state, p, q }) as IGameState;
+            if (result is not null) return result;
+        }
+        // Fallback: ignore priority for now
+        return Step(state, phase);
+    }
+
+    private static MethodInfo? FindPreferredStepHandler(bool withPriority = false)
+    {
+        // Look for a canonical static Step method in engine with desired signature.
+        var names = new[] { "Step", "Advance", "AdvancePhase", "ProcessPhase", "DoStep" };
+        foreach (var t in EngineAsm.GetTypes())
+        {
+            foreach (var m in t.GetMethods(BindingFlags.Public | BindingFlags.Static))
+            {
+                if (!names.Contains(m.Name)) continue;
+                var ps = m.GetParameters();
+                if (withPriority && ps.Length != 3) continue;
+                if (!withPriority && ps.Length != 2) continue;
+
+                if (!typeof(IGameState).IsAssignableFrom(ps[0].ParameterType)) continue;
+                if (!ps[1].ParameterType.IsEnum) continue;
+                if (withPriority && !ps[2].ParameterType.IsEnum) continue;
+                if (!typeof(IGameState).IsAssignableFrom(m.ReturnType)) continue;
+
+                return m;
+            }
+        }
+        return null;
+    }
+}
