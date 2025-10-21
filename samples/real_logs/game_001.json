@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "source": "sample",
+    "created": "2025-10-21T04:52:00.649228Z"
+  },
+  "events": [
+    {
+      "turn": 1,
+      "phase": "Start",
+      "action": "StartTurn",
+      "actor": "P1",
+      "ts": "T+0"
+    },
+    {
+      "turn": 1,
+      "phase": "Draw",
+      "action": "Draw",
+      "actor": "P1",
+      "card": "Card#123",
+      "ts": "T+1"
+    },
+    {
+      "turn": 1,
+      "phase": "Charge",
+      "action": "ChargeMana",
+      "actor": "P1",
+      "card": "Card#123",
+      "ts": "T+2"
+    },
+    {
+      "turn": 1,
+      "phase": "Main",
+      "action": "Summon",
+      "actor": "P1",
+      "card": "Card#A",
+      "ts": "T+3"
+    },
+    {
+      "turn": 1,
+      "phase": "End",
+      "action": "EndTurn",
+      "actor": "P1",
+      "ts": "T+4"
+    }
+  ]
+}

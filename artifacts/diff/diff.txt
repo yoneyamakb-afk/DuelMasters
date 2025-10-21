@@ -1,0 +1,48 @@
+$.events[0].action: equal
+$.events[0].actor: equal
+$.events[0].card: equal (both null)
+$.events[0].index: equal
+$.events[0].phase: equal
+$.events[0].stateAfter.note: equal
+$.events[0].stateAfter.phase: equal
+$.events[0].targets: equal (both null)
+$.events[0].turn: equal
+$.events[1].action: equal
+$.events[1].actor: equal
+$.events[1].card: equal
+$.events[1].index: equal
+$.events[1].phase: equal
+$.events[1].stateAfter.note: equal
+$.events[1].stateAfter.phase: equal
+$.events[1].targets: equal (both null)
+$.events[1].turn: equal
+$.events[2].action: equal
+$.events[2].actor: equal
+$.events[2].card: equal
+$.events[2].index: equal
+$.events[2].phase: equal
+$.events[2].stateAfter.note: equal
+$.events[2].stateAfter.phase: equal
+$.events[2].targets: equal (both null)
+$.events[2].turn: equal
+$.events[3].action: equal
+$.events[3].actor: equal
+$.events[3].card: equal
+$.events[3].index: equal
+$.events[3].phase: equal
+$.events[3].stateAfter.note: equal
+$.events[3].stateAfter.phase: equal
+$.events[3].targets: equal (both null)
+$.events[3].turn: equal
+$.events[4].action: equal
+$.events[4].actor: equal
+$.events[4].card: equal (both null)
+$.events[4].index: equal
+$.events[4].phase: equal
+$.events[4].stateAfter.note: equal
+$.events[4].stateAfter.phase: equal
+$.events[4].targets: equal (both null)
+$.events[4].turn: equal
+$.meta.created: equal
+$.meta.source: equal
+$.traceVersion: equal

@@ -1,0 +1,263 @@
+{
+  "path": "$",
+  "status": "equal",
+  "fields": {
+    "events": {
+      "path": "$.events",
+      "status": "equal",
+      "items": [
+        {
+          "path": "$.events[0]",
+          "status": "equal",
+          "fields": {
+            "action": {
+              "path": "$.events[0].action",
+              "status": "equal"
+            },
+            "actor": {
+              "path": "$.events[0].actor",
+              "status": "equal"
+            },
+            "card": {
+              "path": "$.events[0].card"
+            },
+            "index": {
+              "path": "$.events[0].index",
+              "status": "equal"
+            },
+            "phase": {
+              "path": "$.events[0].phase",
+              "status": "equal"
+            },
+            "stateAfter": {
+              "path": "$.events[0].stateAfter",
+              "status": "equal",
+              "fields": {
+                "note": {
+                  "path": "$.events[0].stateAfter.note",
+                  "status": "equal"
+                },
+                "phase": {
+                  "path": "$.events[0].stateAfter.phase",
+                  "status": "equal"
+                }
+              }
+            },
+            "targets": {
+              "path": "$.events[0].targets"
+            },
+            "turn": {
+              "path": "$.events[0].turn",
+              "status": "equal"
+            }
+          }
+        },
+        {
+          "path": "$.events[1]",
+          "status": "equal",
+          "fields": {
+            "action": {
+              "path": "$.events[1].action",
+              "status": "equal"
+            },
+            "actor": {
+              "path": "$.events[1].actor",
+              "status": "equal"
+            },
+            "card": {
+              "path": "$.events[1].card",
+              "status": "equal"
+            },
+            "index": {
+              "path": "$.events[1].index",
+              "status": "equal"
+            },
+            "phase": {
+              "path": "$.events[1].phase",
+              "status": "equal"
+            },
+            "stateAfter": {
+              "path": "$.events[1].stateAfter",
+              "status": "equal",
+              "fields": {
+                "note": {
+                  "path": "$.events[1].stateAfter.note",
+                  "status": "equal"
+                },
+                "phase": {
+                  "path": "$.events[1].stateAfter.phase",
+                  "status": "equal"
+                }
+              }
+            },
+            "targets": {
+              "path": "$.events[1].targets"
+            },
+            "turn": {
+              "path": "$.events[1].turn",
+              "status": "equal"
+            }
+          }
+        },
+        {
+          "path": "$.events[2]",
+          "status": "equal",
+          "fields": {
+            "action": {
+              "path": "$.events[2].action",
+              "status": "equal"
+            },
+            "actor": {
+              "path": "$.events[2].actor",
+              "status": "equal"
+            },
+            "card": {
+              "path": "$.events[2].card",
+              "status": "equal"
+            },
+            "index": {
+              "path": "$.events[2].index",
+              "status": "equal"
+            },
+            "phase": {
+              "path": "$.events[2].phase",
+              "status": "equal"
+            },
+            "stateAfter": {
+              "path": "$.events[2].stateAfter",
+              "status": "equal",
+              "fields": {
+                "note": {
+                  "path": "$.events[2].stateAfter.note",
+                  "status": "equal"
+                },
+                "phase": {
+                  "path": "$.events[2].stateAfter.phase",
+                  "status": "equal"
+                }
+              }
+            },
+            "targets": {
+              "path": "$.events[2].targets"
+            },
+            "turn": {
+              "path": "$.events[2].turn",
+              "status": "equal"
+            }
+          }
+        },
+        {
+          "path": "$.events[3]",
+          "status": "equal",
+          "fields": {
+            "action": {
+              "path": "$.events[3].action",
+              "status": "equal"
+            },
+            "actor": {
+              "path": "$.events[3].actor",
+              "status": "equal"
+            },
+            "card": {
+              "path": "$.events[3].card",
+              "status": "equal"
+            },
+            "index": {
+              "path": "$.events[3].index",
+              "status": "equal"
+            },
+            "phase": {
+              "path": "$.events[3].phase",
+              "status": "equal"
+            },
+            "stateAfter": {
+              "path": "$.events[3].stateAfter",
+              "status": "equal",
+              "fields": {
+                "note": {
+                  "path": "$.events[3].stateAfter.note",
+                  "status": "equal"
+                },
+                "phase": {
+                  "path": "$.events[3].stateAfter.phase",
+                  "status": "equal"
+                }
+              }
+            },
+            "targets": {
+              "path": "$.events[3].targets"
+            },
+            "turn": {
+              "path": "$.events[3].turn",
+              "status": "equal"
+            }
+          }
+        },
+        {
+          "path": "$.events[4]",
+          "status": "equal",
+          "fields": {
+            "action": {
+              "path": "$.events[4].action",
+              "status": "equal"
+            },
+            "actor": {
+              "path": "$.events[4].actor",
+              "status": "equal"
+            },
+            "card": {
+              "path": "$.events[4].card"
+            },
+            "index": {
+              "path": "$.events[4].index",
+              "status": "equal"
+            },
+            "phase": {
+              "path": "$.events[4].phase",
+              "status": "equal"
+            },
+            "stateAfter": {
+              "path": "$.events[4].stateAfter",
+              "status": "equal",
+              "fields": {
+                "note": {
+                  "path": "$.events[4].stateAfter.note",
+                  "status": "equal"
+                },
+                "phase": {
+                  "path": "$.events[4].stateAfter.phase",
+                  "status": "equal"
+                }
+              }
+            },
+            "targets": {
+              "path": "$.events[4].targets"
+            },
+            "turn": {
+              "path": "$.events[4].turn",
+              "status": "equal"
+            }
+          }
+        }
+      ]
+    },
+    "meta": {
+      "path": "$.meta",
+      "status": "equal",
+      "fields": {
+        "created": {
+          "path": "$.meta.created",
+          "status": "equal"
+        },
+        "source": {
+          "path": "$.meta.source",
+          "status": "equal"
+        }
+      }
+    },
+    "traceVersion": {
+      "path": "$.traceVersion",
+      "status": "equal"
+    }
+  }
+}
