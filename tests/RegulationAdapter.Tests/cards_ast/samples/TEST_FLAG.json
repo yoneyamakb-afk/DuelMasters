@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "cardId": "TEST_FLAG",
+  "name": "FlagCard",
+  "types": [
+    "クリーチャー"
+  ],
+  "cost": 3,
+  "civilizations": [
+    "光"
+  ],
+  "power": 1000,
+  "race": [
+    "テスト"
+  ],
+  "effects": [],
+  "flags": [
+    "Blocker",
+    "SpeedAttacker",
+    "ShieldTrigger"
+  ]
+}

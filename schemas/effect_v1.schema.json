@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dm://schemas/effect_v1.schema.json",
+  "title": "Duel Masters Effect AST v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "cardId",
+    "name",
+    "types",
+    "civilizations",
+    "effects"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "cardId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cost": {
+      "type": "integer"
+    },
+    "civilizations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "power": {
+      "type": "integer"
+    },
+    "race": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": true
+}

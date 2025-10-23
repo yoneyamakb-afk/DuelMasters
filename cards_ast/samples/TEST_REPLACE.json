@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "cardId": "TEST_REPLACE",
+  "name": "ReplaceCard",
+  "types": [
+    "クリーチャー"
+  ],
+  "cost": 4,
+  "civilizations": [
+    "水"
+  ],
+  "power": 1000,
+  "race": [
+    "テスト"
+  ],
+  "effects": [
+    {
+      "kind": "replacement",
+      "id": "save_by_tap",
+      "text": "このクリーチャーが破壊されるなら、代わりにタップされる。",
+      "replacement": [
+        {
+          "replace": "WouldBeDestroyed",
+          "by": [
+            {
+              "op": "Tap",
+              "selector": {
+                "who": "source"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "flags": []
+}

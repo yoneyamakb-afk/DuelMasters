@@ -1,6 +1,0 @@
-{"Ordinal":0,"Kind":"Init","Detail":"RealRun start (DMRules.Engine.DuelRunner.RunOneGame)"}
-{"Ordinal":1,"Kind":"Battle.Start","Detail":"Duel started"}
-{"Ordinal":2,"Kind":"Turn.1","Detail":"Player0 plays Dream Bolmeteus White Dragon"}
-{"Ordinal":3,"Kind":"Attack","Detail":"Bolmeteus destroys opponent shield"}
-{"Ordinal":4,"Kind":"Battle.End","Detail":"Player0 wins"}
-{"Ordinal":5,"Kind":"End","Detail":"RealRun end"}

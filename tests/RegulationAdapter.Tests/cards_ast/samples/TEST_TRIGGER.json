@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "cardId": "TEST_TRIGGER",
+  "name": "TriggerCard",
+  "types": [
+    "クリーチャー"
+  ],
+  "cost": 4,
+  "civilizations": [
+    "火"
+  ],
+  "power": 1000,
+  "race": [
+    "テスト"
+  ],
+  "effects": [
+    {
+      "kind": "triggered",
+      "id": "atk_boost_demo",
+      "text": "攻撃時：このクリーチャーはターン終了まで+2000。",
+      "condition": {
+        "when": "OnAttack",
+        "if": [
+          {
+            "type": "SourceIs",
+            "value": "this"
+          }
+        ]
+      },
+      "effect": [
+        {
+          "op": "PowerMod",
+          "selector": {
+            "who": "source"
+          },
+          "delta": 2000,
+          "duration": "UntilEndOfTurn"
+        }
+      ]
+    }
+  ],
+  "flags": []
+}
