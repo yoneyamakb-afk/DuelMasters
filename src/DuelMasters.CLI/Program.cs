@@ -1,56 +1,183 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Collections.Immutable;
 using DuelMasters.Engine;
+using DuelMasters.Engine.Integration.M11;
 
-class Program
+namespace DuelMasters.CLI;
+
+internal static class Program
 {
-    static void Main(string[] args)
+    private static bool _traceConsole = false;
+    private static string? _traceJsonPath = null;
+    private static string _traceLevel = "basic"; // basic|detail|debug
+
+    // ---- Event tracing (wrap EngineHooks.OnEvent) ----
+    private static void InstallTracing()
     {
-        string dbPath = "Duelmasters.db";
-        using var db = System.IO.File.Exists(dbPath) ? new SqliteCardDatabase(dbPath) : null;
-        var sim = new Simulator(db);
-
-        var a = new Deck(ImmutableArray.CreateRange(Enumerable.Range(0,40).Select(i => new CardId(i))));
-        var b = new Deck(ImmutableArray.CreateRange(Enumerable.Range(1000,40).Select(i => new CardId(i))));
-        var s = sim.InitialState(a,b,7);
-
-        // P0召喚 → パス・パス → P1召喚
-        s = sim.Step(s, new ActionIntent(ActionType.SummonDummyFromHand, 0));
-        s = sim.Step(s, new ActionIntent(ActionType.PassPriority));
-        s = sim.Step(s, new ActionIntent(ActionType.PassPriority));
-        s = sim.Step(s, new ActionIntent(ActionType.SummonDummyFromHand, 0));
-
-        // 双方のクリーチャーに -20000 を与えて確実に破壊させる
-        var p0inst = s.Players[0].BattleIds.FirstOrDefault();
-        var p1inst = s.Players[1].BattleIds.FirstOrDefault();
-        s = s with
+        var prev = EngineHooks.OnEvent;
+        EngineHooks.OnEvent = ev =>
         {
-            ContinuousEffects = s.ContinuousEffects
-                .Add(new PowerBuff(new PlayerId(0), p0inst, -20000, s.TurnNumber))
-                .Add(new PowerBuff(new PlayerId(1), p1inst, -20000, s.TurnNumber))
+            if (_traceConsole)
+            {
+                Console.WriteLine($"[M11] {ev.TimestampUtc:O} {ev.Kind} phase={ev.PhaseName ?? "-"} ap={ev.ActivePlayerId?.ToString() ?? "-"}");
+            }
+
+            if (!string.IsNullOrEmpty(_traceJsonPath))
+            {
+                try
+                {
+                    var line = JsonSerializer.Serialize(ev, new JsonSerializerOptions
+                    {
+                        WriteIndented = false,
+                        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+                    });
+                    File.AppendAllText(_traceJsonPath!, line + Environment.NewLine);
+                }
+                catch { /* ignore logging errors */ }
+            }
+
+            prev?.Invoke(ev);
         };
+    }
 
-        s = s.RunStateBasedActions();
-        Console.WriteLine("After forced SBA, stack size: " + s.Stack.Count);
-
-        // パス・パス → SBA処理 → 誘発(APNAP)をスタックへ
-        s = sim.Step(s, new ActionIntent(ActionType.PassPriority));
-        s = sim.Step(s, new ActionIntent(ActionType.PassPriority));
-
-        Console.WriteLine("Demo finished.");
-        Console.WriteLine("Stack size after SBA & triggers: " + s.Stack.Count);
-
-        // パス・パス後にSBAを明示的に再評価
-        s = s.RunStateBasedActions();
-
-        // 結果の表示
-        Console.WriteLine("After SBA re-evaluation, stack size: " + s.Stack.Count);
-
-        // スタックの内容を確認（デバッグ出力）
-        foreach (var item in s.Stack.Items)
+    // ---- CLI args ----
+    private static void ParseArgs(string[] args)
+    {
+        foreach (var a in args)
         {
-            Console.WriteLine($"  kind={item.Kind}, controller={item.Controller.Value}, info={item.Info}");
+            if (a.Equals("--trace", StringComparison.OrdinalIgnoreCase)) _traceConsole = true;
+            else if (a.StartsWith("--trace-json=", StringComparison.OrdinalIgnoreCase))
+            {
+                _traceJsonPath = a.Substring("--trace-json=".Length).Trim('"');
+                if (string.IsNullOrWhiteSpace(_traceJsonPath)) _traceJsonPath = "trace.jsonl";
+                try { File.WriteAllText(_traceJsonPath, string.Empty); } catch { }
+            }
+            else if (a.StartsWith("--trace-level=", StringComparison.OrdinalIgnoreCase))
+            {
+                _traceLevel = a.Substring("--trace-level=".Length).Trim().ToLowerInvariant();
+                if (_traceLevel != "basic" && _traceLevel != "detail" && _traceLevel != "debug") _traceLevel = "basic";
+            }
+        }
+    }
+
+    // ---- Snapshot / helpers ----
+    private sealed class Snapshot
+    {
+        public int Turn { get; init; }
+        public string Phase { get; init; } = "";
+        public int ActivePlayer { get; init; }
+        public int PriorityPlayer { get; init; }
+        public int ConsecutivePasses { get; init; }
+        public int StackCount { get; init; }
+        public int PendingTriggers { get; init; }
+    }
+
+    private static Snapshot Take(GameState g)
+    {
+        // StackState は IEnumerable を実装していないため、Count取得に失敗したら 0 にフォールバックする
+        int stackCount;
+        try
+        {
+            stackCount = g.Stack.Count;
+        }
+        catch
+        {
+            stackCount = 0; // 列挙不能な型。トレース用途なので安全に 0 固定
+        }
+
+        int triggers = 0;
+        try { triggers = g.PendingTriggers.Length; } catch { triggers = 0; }
+
+        return new Snapshot
+        {
+            Turn = g.TurnNumber,
+            Phase = g.Phase.ToString(),
+            ActivePlayer = g.ActivePlayer.Value,
+            PriorityPlayer = g.PriorityPlayer.Value,
+            ConsecutivePasses = g.ConsecutivePasses,
+            StackCount = stackCount,
+            PendingTriggers = triggers
+        };
+    }
+
+    private static void EmitStepTrace(string title, Snapshot before, Snapshot after)
+    {
+        void diffLine(string key, object a, object b)
+        {
+            if (!Equals(a, b) && _traceConsole && (_traceLevel == "detail" || _traceLevel == "debug"))
+                Console.WriteLine($"  - {key}: {a} -> {b}");
+        }
+
+        if (_traceConsole)
+            Console.WriteLine($"[STEP] {title}");
+
+        diffLine("Turn", before.Turn, after.Turn);
+        diffLine("Phase", before.Phase, after.Phase);
+        diffLine("ActivePlayer", before.ActivePlayer, after.ActivePlayer);
+        diffLine("PriorityPlayer", before.PriorityPlayer, after.PriorityPlayer);
+        diffLine("ConsecutivePasses", before.ConsecutivePasses, after.ConsecutivePasses);
+        diffLine("StackCount", before.StackCount, after.StackCount);
+        diffLine("PendingTriggers", before.PendingTriggers, after.PendingTriggers);
+
+        if (!string.IsNullOrEmpty(_traceJsonPath))
+        {
+            try
+            {
+                var obj = new { kind = "step", title, before, after };
+                File.AppendAllText(_traceJsonPath!, JsonSerializer.Serialize(obj) + Environment.NewLine);
+            }
+            catch { }
+        }
+
+        if (_traceConsole && _traceLevel == "debug")
+        {
+            Console.WriteLine($"  before: Turn={before.Turn}, Phase={before.Phase}, AP={before.ActivePlayer}, PP={before.PriorityPlayer}, Passes={before.ConsecutivePasses}, Stack={before.StackCount}, Trig={before.PendingTriggers}");
+            Console.WriteLine($"  after : Turn={after.Turn}, Phase={after.Phase}, AP={after.ActivePlayer}, PP={after.PriorityPlayer}, Passes={after.ConsecutivePasses}, Stack={after.StackCount}, Trig={after.PendingTriggers}");
+        }
+    }
+
+    private static Deck MakeDeck(params int[] ids)
+    {
+        return new Deck(ImmutableArray.Create<CardId>(ids.Select(i => new CardId(i)).ToArray()));
+    }
+
+    private static void Main(string[] args)
+    {
+        ParseArgs(args);
+        InstallTracing();
+
+        Console.WriteLine("=== DuelMasters Simulator CLI (M11.6 Trace) ===");
+
+        var deckA = MakeDeck(1, 2, 3, 4, 5);
+        var deckB = MakeDeck(6, 7, 8, 9, 10);
+
+        var game = GameState.Create(deckA, deckB, seed: 1234);
+
+        Console.WriteLine($"Game initialized: Turn {game.TurnNumber}, ActivePlayer={game.ActivePlayer.Value}");
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine($"-- Turn {game.TurnNumber} -- Active={game.ActivePlayer.Value}");
+
+            var actions = game.GenerateLegalActions(game.PriorityPlayer).ToList();
+            Console.WriteLine($"Available actions: {actions.Count}");
+            if (actions.Count == 0) break;
+
+            var before = Take(game);
+            var first = actions.First();
+            game = game.Apply(first);
+            var after = Take(game);
+            EmitStepTrace($"Apply({first.Type})", before, after);
+        }
+
+        Console.WriteLine("=== Simulation End ===");
+        if (!string.IsNullOrEmpty(_traceJsonPath))
+        {
+            Console.WriteLine($"Trace written to {_traceJsonPath}");
         }
     }
 }
