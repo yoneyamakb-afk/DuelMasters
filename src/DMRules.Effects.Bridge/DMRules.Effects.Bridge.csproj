@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>DMRules.Effects.Bridge</AssemblyName>
+    <RootNamespace>DMRules.Effects.Bridge</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DMRules.Effects\DMRules.Effects.csproj" />
+  </ItemGroup>
+</Project>
