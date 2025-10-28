@@ -1,6 +1,0 @@
-<Project>
-  <!-- TraceCompat は DMRules.Tests 専用 -->
-  <ItemGroup Condition=" '$(MSBuildProjectName)' == 'DMRules.Tests' ">
-    <Compile Include="tests\DMRules.Tests\TraceCompat.cs" />
-  </ItemGroup>
-</Project>

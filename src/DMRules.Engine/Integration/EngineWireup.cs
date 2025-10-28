@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using DMRules.Engine.Integration;
 using DMRules.Engine.Tracing;
 
@@ -18,7 +18,7 @@ namespace DMRules.Engine.Integration
             _configured = true;
 
             // Trace 配線（必要に応じて強化）
-            EngineHooks.OnTrace += msg => TraceExporter.Append(msg, traceOutputDir);
+            EngineHooks.OnTrace += msg => TraceExporter.Write(msg, traceOutputDir);
 
             // 例: SBA 前後で軽いログを吐く（必要に応じて削除/調整）
             EngineHooks.OnBeforeSBA += _ => EngineHooks.Trace("[Engine] Before SBA");
