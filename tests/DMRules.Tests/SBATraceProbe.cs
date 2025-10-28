@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
-using DMRules.Trace;
+using DMRules.Engine.Tracing;
 using Xunit;
 
 namespace DMRules.Tests

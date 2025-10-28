@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.IO;
-using DMRules.Trace;
+using DMRules.Engine.Tracing;
 using Xunit;
 
 namespace DMRules.Tests

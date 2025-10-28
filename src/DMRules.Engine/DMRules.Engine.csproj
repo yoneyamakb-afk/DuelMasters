@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <ProjectReference Include="..\DMRules.Trace\DMRules.Trace.csproj" />
-  </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- Ensure all .cs files are compiled by default -->
+    <EnableDefaultItems>true</EnableDefaultItems>
   </PropertyGroup>
 </Project>

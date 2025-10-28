@@ -1,8 +1,7 @@
-using System;
-using System.IO;
-using System.Linq;
+﻿using DMRules.Engine;
+using DMRules.Engine.Tracing;
 using System.Reflection;
-using DMRules.Engine;
+
 
 class Program
 {

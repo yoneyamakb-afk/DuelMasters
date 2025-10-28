@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using DMRules.Trace;
+using DMRules.Engine.Tracing; // ←ここ変更
 
 namespace DMRules.Engine.Tracing
 {
-    /// <summary>Engine側から呼べるトレース補助。外部依存なし。</summary>
     public static class EngineTrace
     {
         public static void Event(string action, string? phase = null, string? player = null, string? card = null, int? stackSize = null, string? state = null, Dictionary<string, object?>? details = null)
         {
             try
             {
-                global::DMRules.Trace.TraceExporter.Write(new global::DMRules.Trace.TraceEvent
+                TraceExporter.Write(new TraceEvent
                 {
                     Phase = phase,
                     Action = action,

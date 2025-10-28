@@ -1,39 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <!-- 既定の「*.csを全部拾う」を無効化 -->
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <Nullable>enable</Nullable>
+    <EnableDefaultItems>true</EnableDefaultItems>
   </PropertyGroup>
-
   <ItemGroup>
-    <!-- ここに“だけ”含めます：重複定義があっても無視される -->
-    <Compile Include="Ids.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="Zone.cs" />
-    <Compile Include="Deck.cs" />
-    <Compile Include="ContinuousEffects.cs" />
-    <Compile Include="Targets.cs" />
-    <Compile Include="Actions.cs" />
-    <Compile Include="Stack.cs" />
-    <Compile Include="Random.cs" />
-    <Compile Include="Triggers.cs" />
-    <Compile Include="CardDatabase.cs" />
-    <Compile Include="StateRules.cs" />
-    <Compile Include="GameState.cs" />
-    <Compile Include="Simulator.cs" />
+    <ProjectReference Include="..\DMRules.Engine\DMRules.Engine.csproj" />
+	<PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.4" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.5" />
-    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
-  </ItemGroup>
-
-	<ItemGroup>
-		<Compile Include="Integration\EventTypes.cs" />
-		<Compile Include="Integration\RegulationAdapter.cs" />
-		<Compile Include="Integration\EngineHooks.cs" />
-	</ItemGroup>
-
 </Project>

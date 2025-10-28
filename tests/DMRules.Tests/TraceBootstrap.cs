@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
-using DMRules.Trace;
+using DMRules.Engine.Tracing;
 
 namespace DMRules.Tests
 {
