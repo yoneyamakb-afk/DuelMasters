@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="e74354c9-ffdf-4b88-a1b7-5ff3e0816bc8" name="米山@DESKTOP-DE0SNP1 2025-10-30 19:30:32" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-10-30T19:30:32.3237877+09:00" queuing="2025-10-30T19:30:32.3237881+09:00" start="2025-10-30T19:30:29.9077391+09:00" finish="2025-10-30T19:30:34.4524800+09:00" />
+  <TestSettings name="default" id="93d81a08-afc8-41c4-a06f-41b977cce995">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-10-30_19_30_32" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="88506549-5d6c-4578-9c71-e63c6e7a90b0" testId="f959d5f6-f634-40b9-f7fa-f89cb13b7aea" testName="DMRules.Tests.ExecutionLogicTests.Basic_RunAll_Works" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0008158" startTime="2025-10-30T19:30:32.2101657+09:00" endTime="2025-10-30T19:30:32.2101662+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88506549-5d6c-4578-9c71-e63c6e7a90b0" />
+    <UnitTestResult executionId="8aff5f14-9ab9-45cd-8607-9df7216ad6eb" testId="d82d5ee9-e660-1990-9516-d9336b24b0a7" testName="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Prevent" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0019212" startTime="2025-10-30T19:30:32.2082490+09:00" endTime="2025-10-30T19:30:32.2082495+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8aff5f14-9ab9-45cd-8607-9df7216ad6eb" />
+    <UnitTestResult executionId="8f5e3548-26db-460c-9f33-61239aaf3df1" testId="fad816e5-419a-4ef4-9784-de2c41451f2f" testName="DMRules.Tests.ReplacementCompetitionTests.Affected_Owner_Controls_Choice_Over_Priority" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0008601" startTime="2025-10-30T19:30:32.2824019+09:00" endTime="2025-10-30T19:30:32.2824020+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f5e3548-26db-460c-9f33-61239aaf3df1" />
+    <UnitTestResult executionId="8b4ba9f2-09c2-44b4-9d8d-1c24ba1a9c66" testId="3bad7155-3bfd-ae16-6c34-2aa1a3203191" testName="DMRules.Tests.ReplacementEffectTests.Without_Replacement_Destroy_Proceeds_And_Death_Trigger_Fires" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0003412" startTime="2025-10-30T19:30:32.2759368+09:00" endTime="2025-10-30T19:30:32.2759369+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b4ba9f2-09c2-44b4-9d8d-1c24ba1a9c66" />
+    <UnitTestResult executionId="6af351b3-ccb1-4d61-905b-d0fb472caedc" testId="2d67af9d-7923-e734-f65e-39e6404c676f" testName="DMRules.Tests.ContinuousEffectOrderTests.Uses_Phase_Type_Not_String" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0002426" startTime="2025-10-30T19:30:32.2757559+09:00" endTime="2025-10-30T19:30:32.2757560+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6af351b3-ccb1-4d61-905b-d0fb472caedc" />
+    <UnitTestResult executionId="9035670b-292d-4746-9994-d27424f83938" testId="25430ab6-3504-76c9-5a09-5b505db11791" testName="DMRules.Tests.PriorityOrderingTests.AP_Triggers_Order_By_Priority_Then_Sequence" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0027029" startTime="2025-10-30T19:30:32.2824913+09:00" endTime="2025-10-30T19:30:32.2824914+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9035670b-292d-4746-9994-d27424f83938" />
+    <UnitTestResult executionId="a82f9722-d616-47b7-a7b4-026374173fa6" testId="9a2bf151-3330-eb8b-41a1-1acf21ecafdb" testName="Engine SBAInstrumentation TryProbeAndRun()" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0024659" startTime="2025-10-30T19:30:32.2761527+09:00" endTime="2025-10-30T19:30:32.2761528+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a82f9722-d616-47b7-a7b4-026374173fa6" />
+    <UnitTestResult executionId="1cbaa2dc-5ae0-4990-8d40-c6ba4c8ab156" testId="51a38d1d-c05f-3046-3575-d7bb83a750dd" testName="Phase instrumentation can probe (no-op safe)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0002086" startTime="2025-10-30T19:30:32.2089656+09:00" endTime="2025-10-30T19:30:32.2089660+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1cbaa2dc-5ae0-4990-8d40-c6ba4c8ab156" />
+    <UnitTestResult executionId="eca74c6a-1a80-430e-a390-e056579381a5" testId="8b9f0361-dfbe-3e8d-4040-36502dcf871b" testName="DMRules.Tests.APNAPTests.Active_Player_Triggers_Resolve_Before_NonActive" computerName="DESKTOP-DE0SNP1" duration="00:00:00.1131436" startTime="2025-10-30T19:30:32.1913458+09:00" endTime="2025-10-30T19:30:32.1913462+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eca74c6a-1a80-430e-a390-e056579381a5" />
+    <UnitTestResult executionId="7593290b-2c40-4095-b379-b5e76dcbd726" testId="3e229045-87c4-0ccc-0650-bfd9a7f29ce5" testName="SBA Trace Probe (reflection)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.1008132" startTime="2025-10-30T19:30:32.1865745+09:00" endTime="2025-10-30T19:30:32.1865748+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7593290b-2c40-4095-b379-b5e76dcbd726" />
+    <UnitTestResult executionId="cf12cd5e-ff27-4ad9-9636-3f306f75ecc1" testId="df1d1174-53b5-1c0b-bbfa-d3d10f4da562" testName="DMRules.Tests.TraceAndChooserTests.Trace_Is_Appended_On_Key_Steps" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0090333" startTime="2025-10-30T19:30:32.2755889+09:00" endTime="2025-10-30T19:30:32.2755889+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf12cd5e-ff27-4ad9-9636-3f306f75ecc1" />
+    <UnitTestResult executionId="99768672-a0fa-4ff0-a8a2-035ad92e0365" testId="bf80f9e0-e8f4-598b-68e9-0acf655f9f3a" testName="Trigger/APNAP instrumentation can probe (no-op safe)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0957252" startTime="2025-10-30T19:30:32.1789112+09:00" endTime="2025-10-30T19:30:32.1789431+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99768672-a0fa-4ff0-a8a2-035ad92e0365" />
+    <UnitTestResult executionId="87387d04-2c5d-4530-9caf-457b6298b567" testId="fd22107e-1dc6-ca78-19a8-11a02a740ec6" testName="DMRules.Tests.TurnPhaseTests.Phase_Cycles_And_Active_Player_Swaps_At_End" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0141312" startTime="2025-10-30T19:30:32.2760432+09:00" endTime="2025-10-30T19:30:32.2760433+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87387d04-2c5d-4530-9caf-457b6298b567" />
+    <UnitTestResult executionId="8c4827a8-8f78-492c-a768-54f906979c14" testId="3fbdf731-95be-b264-b310-09e3f3204e5a" testName="DMRules.Tests.PriorityOrderingTests.AP_Before_NAP_Even_If_NAP_Has_Higher_Priority" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004921" startTime="2025-10-30T19:30:32.2825808+09:00" endTime="2025-10-30T19:30:32.2825809+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c4827a8-8f78-492c-a768-54f906979c14" />
+    <UnitTestResult executionId="c1f70f75-2609-49dc-9087-b10ac97b9439" testId="b767f714-5ff3-5c71-f81e-8daeb35dba3b" testName="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Exile" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0232321" startTime="2025-10-30T19:30:32.2060894+09:00" endTime="2025-10-30T19:30:32.2060899+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1f70f75-2609-49dc-9087-b10ac97b9439" />
+    <UnitTestResult executionId="1bea6d23-136e-4bb9-8256-776464a7acfe" testId="fa4ec649-a6c0-5809-b4d3-0927a382c747" testName="DMRules.Tests.TraceAndChooserTests.Custom_Chooser_Picks_Last_Candidate_And_Trace_Records_It" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0320022" startTime="2025-10-30T19:30:32.2754641+09:00" endTime="2025-10-30T19:30:32.2754642+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1bea6d23-136e-4bb9-8256-776464a7acfe" />
+    <UnitTestResult executionId="5c5d52f2-c623-46fb-80a2-de5a87f580fb" testId="a27f7af6-8930-e922-1865-2f3b63a04862" testName="TraceExporter writes JSONL when DM_TRACE=1" computerName="DESKTOP-DE0SNP1" duration="00:00:02.0121878" startTime="2025-10-30T19:30:34.2042825+09:00" endTime="2025-10-30T19:30:34.2042831+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c5d52f2-c623-46fb-80a2-de5a87f580fb" />
+    <UnitTestResult executionId="db0b525e-bb94-4072-a187-c5bfb1f1a741" testId="6fced7b2-2265-3759-f3f3-0ec22e570450" testName="DMRules.Tests.ReplacementCompetitionTests.If_Same_Controller_Then_Higher_Priority_Wins" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004333" startTime="2025-10-30T19:30:32.2761917+09:00" endTime="2025-10-30T19:30:32.2761918+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db0b525e-bb94-4072-a187-c5bfb1f1a741" />
+    <UnitTestResult executionId="9b9f87d9-8244-46bb-8e3c-1e4e07790786" testId="5c9c3afa-5f8c-d3c9-8211-58d31c98833f" testName="DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0010000" startTime="2025-10-30T19:30:32.2749352+09:00" endTime="2025-10-30T19:30:32.2749357+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b9f87d9-8244-46bb-8e3c-1e4e07790786">
+      <Output>
+        <ErrorInfo>
+          <Message>Enable after ReplayRunner is wired to engine.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c7f366b1-7b15-4515-a987-67003667652a" testId="c0757847-5274-8879-f4e6-1a027de14ebe" testName="DMRules.Tests.ReplacementEffectTests.PreventNextDestroy_Stops_ZoneChange_And_Enqueues_Draw" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004862" startTime="2025-10-30T19:30:32.2758600+09:00" endTime="2025-10-30T19:30:32.2758601+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7f366b1-7b15-4515-a987-67003667652a" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="DMRules.Tests.ExecutionLogicTests.Basic_RunAll_Works" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="f959d5f6-f634-40b9-f7fa-f89cb13b7aea">
+      <Execution id="88506549-5d6c-4578-9c71-e63c6e7a90b0" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ExecutionLogicTests" name="Basic_RunAll_Works" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TraceAndChooserTests.Custom_Chooser_Picks_Last_Candidate_And_Trace_Records_It" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="fa4ec649-a6c0-5809-b4d3-0927a382c747">
+      <Execution id="1bea6d23-136e-4bb9-8256-776464a7acfe" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceAndChooserTests" name="Custom_Chooser_Picks_Last_Candidate_And_Trace_Records_It" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.APNAPTests.Active_Player_Triggers_Resolve_Before_NonActive" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="8b9f0361-dfbe-3e8d-4040-36502dcf871b">
+      <Execution id="eca74c6a-1a80-430e-a390-e056579381a5" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.APNAPTests" name="Active_Player_Triggers_Resolve_Before_NonActive" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.PriorityOrderingTests.AP_Before_NAP_Even_If_NAP_Has_Higher_Priority" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3fbdf731-95be-b264-b310-09e3f3204e5a">
+      <Execution id="8c4827a8-8f78-492c-a768-54f906979c14" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.PriorityOrderingTests" name="AP_Before_NAP_Even_If_NAP_Has_Higher_Priority" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="5c9c3afa-5f8c-d3c9-8211-58d31c98833f">
+      <Execution id="9b9f87d9-8244-46bb-8e3c-1e4e07790786" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplayTests" name="SampleRealLogExistsAndReplayToolOutputsTrace" />
+    </UnitTest>
+    <UnitTest name="Phase instrumentation can probe (no-op safe)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="51a38d1d-c05f-3046-3575-d7bb83a750dd">
+      <Execution id="1cbaa2dc-5ae0-4990-8d40-c6ba4c8ab156" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.PhaseInstrumentationTest" name="ProbeNoopSafe" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementCompetitionTests.If_Same_Controller_Then_Higher_Priority_Wins" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="6fced7b2-2265-3759-f3f3-0ec22e570450">
+      <Execution id="db0b525e-bb94-4072-a187-c5bfb1f1a741" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementCompetitionTests" name="If_Same_Controller_Then_Higher_Priority_Wins" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TurnPhaseTests.Phase_Cycles_And_Active_Player_Swaps_At_End" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="fd22107e-1dc6-ca78-19a8-11a02a740ec6">
+      <Execution id="87387d04-2c5d-4530-9caf-457b6298b567" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TurnPhaseTests" name="Phase_Cycles_And_Active_Player_Swaps_At_End" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementCompetitionTests.Affected_Owner_Controls_Choice_Over_Priority" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="fad816e5-419a-4ef4-9784-de2c41451f2f">
+      <Execution id="8f5e3548-26db-460c-9f33-61239aaf3df1" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementCompetitionTests" name="Affected_Owner_Controls_Choice_Over_Priority" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.PriorityOrderingTests.AP_Triggers_Order_By_Priority_Then_Sequence" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="25430ab6-3504-76c9-5a09-5b505db11791">
+      <Execution id="9035670b-292d-4746-9994-d27424f83938" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.PriorityOrderingTests" name="AP_Triggers_Order_By_Priority_Then_Sequence" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Prevent" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="d82d5ee9-e660-1990-9516-d9336b24b0a7">
+      <Execution id="8aff5f14-9ab9-45cd-8607-9df7216ad6eb" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementChainingTests" name="Destroy_Then_FlipFlag_Then_Prevent" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ContinuousEffectOrderTests.Uses_Phase_Type_Not_String" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="2d67af9d-7923-e734-f65e-39e6404c676f">
+      <Execution id="6af351b3-ccb1-4d61-905b-d0fb472caedc" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ContinuousEffectOrderTests" name="Uses_Phase_Type_Not_String" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementEffectTests.Without_Replacement_Destroy_Proceeds_And_Death_Trigger_Fires" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3bad7155-3bfd-ae16-6c34-2aa1a3203191">
+      <Execution id="8b4ba9f2-09c2-44b4-9d8d-1c24ba1a9c66" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementEffectTests" name="Without_Replacement_Destroy_Proceeds_And_Death_Trigger_Fires" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Exile" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="b767f714-5ff3-5c71-f81e-8daeb35dba3b">
+      <Execution id="c1f70f75-2609-49dc-9087-b10ac97b9439" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementChainingTests" name="Destroy_Then_FlipFlag_Then_Exile" />
+    </UnitTest>
+    <UnitTest name="TraceExporter writes JSONL when DM_TRACE=1" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="a27f7af6-8930-e922-1865-2f3b63a04862">
+      <Execution id="5c5d52f2-c623-46fb-80a2-de5a87f580fb" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceSmokeTest" name="WritesJsonlWhenEnabled" />
+    </UnitTest>
+    <UnitTest name="Trigger/APNAP instrumentation can probe (no-op safe)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="bf80f9e0-e8f4-598b-68e9-0acf655f9f3a">
+      <Execution id="99768672-a0fa-4ff0-a8a2-035ad92e0365" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TriggerInstrumentationTest" name="ProbeNoopSafe" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementEffectTests.PreventNextDestroy_Stops_ZoneChange_And_Enqueues_Draw" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="c0757847-5274-8879-f4e6-1a027de14ebe">
+      <Execution id="c7f366b1-7b15-4515-a987-67003667652a" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementEffectTests" name="PreventNextDestroy_Stops_ZoneChange_And_Enqueues_Draw" />
+    </UnitTest>
+    <UnitTest name="Engine SBAInstrumentation TryProbeAndRun()" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="9a2bf151-3330-eb8b-41a1-1acf21ecafdb">
+      <Execution id="a82f9722-d616-47b7-a7b4-026374173fa6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.EngineSBAInvokeTest" name="InvokeIfFound" />
+    </UnitTest>
+    <UnitTest name="SBA Trace Probe (reflection)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3e229045-87c4-0ccc-0650-bfd9a7f29ce5">
+      <Execution id="7593290b-2c40-4095-b379-b5e76dcbd726" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.SBATraceProbe" name="ProbeSbaViaReflection" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TraceAndChooserTests.Trace_Is_Appended_On_Key_Steps" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="df1d1174-53b5-1c0b-bbfa-d3d10f4da562">
+      <Execution id="cf12cd5e-ff27-4ad9-9636-3f306f75ecc1" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceAndChooserTests" name="Trace_Is_Appended_On_Key_Steps" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f959d5f6-f634-40b9-f7fa-f89cb13b7aea" executionId="88506549-5d6c-4578-9c71-e63c6e7a90b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d82d5ee9-e660-1990-9516-d9336b24b0a7" executionId="8aff5f14-9ab9-45cd-8607-9df7216ad6eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fad816e5-419a-4ef4-9784-de2c41451f2f" executionId="8f5e3548-26db-460c-9f33-61239aaf3df1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3bad7155-3bfd-ae16-6c34-2aa1a3203191" executionId="8b4ba9f2-09c2-44b4-9d8d-1c24ba1a9c66" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d67af9d-7923-e734-f65e-39e6404c676f" executionId="6af351b3-ccb1-4d61-905b-d0fb472caedc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25430ab6-3504-76c9-5a09-5b505db11791" executionId="9035670b-292d-4746-9994-d27424f83938" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a2bf151-3330-eb8b-41a1-1acf21ecafdb" executionId="a82f9722-d616-47b7-a7b4-026374173fa6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51a38d1d-c05f-3046-3575-d7bb83a750dd" executionId="1cbaa2dc-5ae0-4990-8d40-c6ba4c8ab156" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8b9f0361-dfbe-3e8d-4040-36502dcf871b" executionId="eca74c6a-1a80-430e-a390-e056579381a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e229045-87c4-0ccc-0650-bfd9a7f29ce5" executionId="7593290b-2c40-4095-b379-b5e76dcbd726" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df1d1174-53b5-1c0b-bbfa-d3d10f4da562" executionId="cf12cd5e-ff27-4ad9-9636-3f306f75ecc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf80f9e0-e8f4-598b-68e9-0acf655f9f3a" executionId="99768672-a0fa-4ff0-a8a2-035ad92e0365" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd22107e-1dc6-ca78-19a8-11a02a740ec6" executionId="87387d04-2c5d-4530-9caf-457b6298b567" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3fbdf731-95be-b264-b310-09e3f3204e5a" executionId="8c4827a8-8f78-492c-a768-54f906979c14" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b767f714-5ff3-5c71-f81e-8daeb35dba3b" executionId="c1f70f75-2609-49dc-9087-b10ac97b9439" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa4ec649-a6c0-5809-b4d3-0927a382c747" executionId="1bea6d23-136e-4bb9-8256-776464a7acfe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a27f7af6-8930-e922-1865-2f3b63a04862" executionId="5c5d52f2-c623-46fb-80a2-de5a87f580fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6fced7b2-2265-3759-f3f3-0ec22e570450" executionId="db0b525e-bb94-4072-a187-c5bfb1f1a741" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c9c3afa-5f8c-d3c9-8211-58d31c98833f" executionId="9b9f87d9-8244-46bb-8e3c-1e4e07790786" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0757847-5274-8879-f4e6-1a027de14ebe" executionId="c7f366b1-7b15-4515-a987-67003667652a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="一覧に存在しない結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="読み込まれたすべての結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="20" executed="19" passed="19" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.20)&#xD;
+[xUnit.net 00:00:00.53]   Discovering: DMRules.Tests&#xD;
+[xUnit.net 00:00:00.58]   Discovered:  DMRules.Tests&#xD;
+[xUnit.net 00:00:00.59]   Starting:    DMRules.Tests&#xD;
+[DEBUG] DM_TRACE=1&#xD;
+[DEBUG] DM_TRACE_DIR=&#xD;
+[DEBUG] Environment.CurrentDirectory=C:\Users\�ĎR\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0&#xD;
+[DEBUG] AppContext.BaseDirectory=C:\Users\�ĎR\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\&#xD;
+[DEBUG] Exists(Environment.CurrentDirectory/.trace)=True&#xD;
+[DEBUG] Exists(AppContext.BaseDirectory/.trace)=True&#xD;
+[xUnit.net 00:00:00.86]       Enable after ReplayRunner is wired to engine.&#xD;
+テストの実行でテスト 'DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace' がスキップされました。&#xD;
+[xUnit.net 00:00:02.81]   Finished:    DMRules.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Warning" timestamp="2025-10-30T19:30:32.3400656+09:00">
+        <Text>[xUnit.net 00:00:00.86]     DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace [SKIP]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="0f3d44ad-fef2-4d58-a756-6ba0223608ea" name="米山@DESKTOP-DE0SNP1 2025-11-02 08:35:41" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-02T08:35:42.0056035+09:00" queuing="2025-11-02T08:35:42.0056039+09:00" start="2025-11-02T08:35:39.6999867+09:00" finish="2025-11-02T08:35:42.0376822+09:00" />
+  <TestSettings name="default" id="ed147ef1-d5e4-42b8-b237-277dab094e9f">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-11-02_08_35_41" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="d1c8bfd0-8bd9-4f2f-9584-a8eb2a9ded4c" testId="15544d6e-69ed-58d0-b6c5-c24705e4fd11" testName="EffectRunnerTests.RunOnEnterBattlezone_UsesDelegates" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0005192" startTime="2025-11-02T08:35:41.7197039+09:00" endTime="2025-11-02T08:35:41.7197041+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1c8bfd0-8bd9-4f2f-9584-a8eb2a9ded4c" />
+    <UnitTestResult executionId="793dd103-268f-499a-87af-56fce2095d66" testId="5457531a-b283-7a22-b448-98e4148f33c0" testName="EffectRunnerTests.RunOnAttackDeclared_UsesDelegates" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0030411" startTime="2025-11-02T08:35:41.7190891+09:00" endTime="2025-11-02T08:35:41.7190896+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="793dd103-268f-499a-87af-56fce2095d66" />
+    <UnitTestResult executionId="fb73fbb4-4d8c-4177-9ce1-13e4e2ad83fa" testId="7835a6ab-5198-2574-b6e7-3babccfd3fc1" testName="EffectRunnerTests.UnknownText_IsNoOp" computerName="DESKTOP-DE0SNP1" duration="00:00:00.1411133" startTime="2025-11-02T08:35:41.7131514+09:00" endTime="2025-11-02T08:35:41.7131924+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb73fbb4-4d8c-4177-9ce1-13e4e2ad83fa" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="EffectRunnerTests.RunOnAttackDeclared_UsesDelegates" storage="c:\users\米山\duelmasters\tests\dmrules.effects.bridge.tests\bin\debug\net8.0\dmrules.effects.bridge.tests.dll" id="5457531a-b283-7a22-b448-98e4148f33c0">
+      <Execution id="793dd103-268f-499a-87af-56fce2095d66" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Bridge.Tests\bin\Debug\net8.0\DMRules.Effects.Bridge.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectRunnerTests" name="RunOnAttackDeclared_UsesDelegates" />
+    </UnitTest>
+    <UnitTest name="EffectRunnerTests.UnknownText_IsNoOp" storage="c:\users\米山\duelmasters\tests\dmrules.effects.bridge.tests\bin\debug\net8.0\dmrules.effects.bridge.tests.dll" id="7835a6ab-5198-2574-b6e7-3babccfd3fc1">
+      <Execution id="fb73fbb4-4d8c-4177-9ce1-13e4e2ad83fa" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Bridge.Tests\bin\Debug\net8.0\DMRules.Effects.Bridge.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectRunnerTests" name="UnknownText_IsNoOp" />
+    </UnitTest>
+    <UnitTest name="EffectRunnerTests.RunOnEnterBattlezone_UsesDelegates" storage="c:\users\米山\duelmasters\tests\dmrules.effects.bridge.tests\bin\debug\net8.0\dmrules.effects.bridge.tests.dll" id="15544d6e-69ed-58d0-b6c5-c24705e4fd11">
+      <Execution id="d1c8bfd0-8bd9-4f2f-9584-a8eb2a9ded4c" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Bridge.Tests\bin\Debug\net8.0\DMRules.Effects.Bridge.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectRunnerTests" name="RunOnEnterBattlezone_UsesDelegates" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="15544d6e-69ed-58d0-b6c5-c24705e4fd11" executionId="d1c8bfd0-8bd9-4f2f-9584-a8eb2a9ded4c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5457531a-b283-7a22-b448-98e4148f33c0" executionId="793dd103-268f-499a-87af-56fce2095d66" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7835a6ab-5198-2574-b6e7-3babccfd3fc1" executionId="fb73fbb4-4d8c-4177-9ce1-13e4e2ad83fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.1+ce9211e970 (64-bit .NET 8.0.21)&#xD;
+[xUnit.net 00:00:00.30]   Discovering: DMRules.Effects.Bridge.Tests&#xD;
+[xUnit.net 00:00:00.37]   Discovered:  DMRules.Effects.Bridge.Tests&#xD;
+[xUnit.net 00:00:00.38]   Starting:    DMRules.Effects.Bridge.Tests&#xD;
+[xUnit.net 00:00:00.61]   Finished:    DMRules.Effects.Bridge.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="646aabee-4afe-4c3e-bc0f-8e2ab74cb946" name="米山@DESKTOP-DE0SNP1 2025-11-01 19:18:02" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-01T19:18:02.4897126+09:00" queuing="2025-11-01T19:18:02.4897129+09:00" start="2025-11-01T19:17:56.6448887+09:00" finish="2025-11-01T19:18:03.3766118+09:00" />
+  <TestSettings name="default" id="1de15735-bd15-44ad-ab03-ed723ffadb67">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-11-01_19_18_02" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="6d3e548c-a8c6-429e-8fd1-37ada2ab2704" testId="55e5642a-c6f4-2d92-2f5e-4630a37ca171" testName="DMRules.Tests.KeywordTemplateTests.PeriodExpressions_AreRecognized(text: &quot;相手の次のターンのはじめまで、攻撃できない。&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0145584" startTime="2025-11-01T19:18:02.4733508+09:00" endTime="2025-11-01T19:18:02.4733512+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d3e548c-a8c6-429e-8fd1-37ada2ab2704">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.True() Failure&#xD;
+Expected: True&#xD;
+Actual:   False</Message>
+          <StackTrace>   at DMRules.Tests.KeywordTemplateTests.PeriodExpressions_AreRecognized(String text) in C:\Users\米山\DuelMasters\tests\DMRules.Tests\KeywordTemplateTests.cs:line 35&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="811e7c65-0f95-41a6-9b34-c37205a22e4d" testId="2f7c30bf-6db1-6880-1b28-a242cfd3d827" testName="DMRules.Tests.TemplateAutoAddTests.Dummy_Skip" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0010000" startTime="2025-11-01T19:18:02.5282968+09:00" endTime="2025-11-01T19:18:02.5282973+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="811e7c65-0f95-41a6-9b34-c37205a22e4d">
+      <Output>
+        <ErrorInfo>
+          <Message>Obsolete TemplateKey mapping; skipped for M15.4b normalization</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="13c2aaab-036e-4128-bc3c-2c146372ee30" testId="cae72dce-32fd-9a73-3da0-bd0eea2717f8" testName="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0007208" startTime="2025-11-01T19:18:02.5106101+09:00" endTime="2025-11-01T19:18:02.5106102+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13c2aaab-036e-4128-bc3c-2c146372ee30" />
+    <UnitTestResult executionId="6aacb930-3cef-4689-9484-9e9005419910" testId="4ced3bb4-cb47-19ad-008c-a5dc3b468040" testName="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0086671" startTime="2025-11-01T19:18:02.2797169+09:00" endTime="2025-11-01T19:18:02.2797173+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6aacb930-3cef-4689-9484-9e9005419910" />
+    <UnitTestResult executionId="967a9d0c-e53b-4cf8-af71-0265d44445f1" testId="daa8af6c-922f-4c95-1fc4-a6688d350e31" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;シールドトリガー&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.1014656" startTime="2025-11-01T19:18:02.4200963+09:00" endTime="2025-11-01T19:18:02.4200969+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="967a9d0c-e53b-4cf8-af71-0265d44445f1">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: True&#xD;
+Actual:   False</Message>
+          <StackTrace>   at DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(String text, Boolean expectedAny) in C:\Users\米山\DuelMasters\tests\DMRules.Tests\CardTextTemplateTests.cs:line 27&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e53da838-cf49-45a3-a543-397a2f0f7cde" testId="aa5ac725-0913-a4bf-abcb-62cfb998df61" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;コストを1減らす。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000562" startTime="2025-11-01T19:18:02.4594857+09:00" endTime="2025-11-01T19:18:02.4594857+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e53da838-cf49-45a3-a543-397a2f0f7cde" />
+    <UnitTestResult executionId="f1ad3e54-4c7f-407a-a6fb-a640bba413ae" testId="0697eaba-ff92-42ba-8681-2396a89dfdc6" testName="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0041472" startTime="2025-11-01T19:18:02.5106753+09:00" endTime="2025-11-01T19:18:02.5106754+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1ad3e54-4c7f-407a-a6fb-a640bba413ae" />
+    <UnitTestResult executionId="864fff74-e4b5-4032-900a-896997731ef7" testId="72810a86-3fef-d1f1-79a5-d285980bd79c" testName="DMRules.Tests.KeywordPack2Tests.Dummy_Skip" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0010000" startTime="2025-11-01T19:18:02.5273795+09:00" endTime="2025-11-01T19:18:02.5273801+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="864fff74-e4b5-4032-900a-896997731ef7">
+      <Output>
+        <ErrorInfo>
+          <Message>Obsolete TemplateKey mapping; skipped for M15.4b normalization</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ee391a55-cb8d-4fb9-ae5d-6f66ce1ec432" testId="54107dff-d86e-d293-9c37-c9ade7abac92" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;W・ブレイカー&quot;, key: WBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000426" startTime="2025-11-01T19:18:02.3178878+09:00" endTime="2025-11-01T19:18:02.3178879+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee391a55-cb8d-4fb9-ae5d-6f66ce1ec432" />
+    <UnitTestResult executionId="5a43b105-dab3-47ac-b1ca-e385c4c42ca1" testId="9a2bf151-3330-eb8b-41a1-1acf21ecafdb" testName="Engine SBAInstrumentation TryProbeAndRun()" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0097379" startTime="2025-11-01T19:18:02.5646167+09:00" endTime="2025-11-01T19:18:02.5646167+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a43b105-dab3-47ac-b1ca-e385c4c42ca1" />
+    <UnitTestResult executionId="5bb07551-8d19-41ad-bd04-7829918ca6a0" testId="d545c8b4-72a4-5ba0-8ce4-82b497574348" testName="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER の効果を得る。&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000699" startTime="2025-11-01T19:18:02.2800096+09:00" endTime="2025-11-01T19:18:02.2800098+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bb07551-8d19-41ad-bd04-7829918ca6a0" />
+    <UnitTestResult executionId="9cbe4be3-dc0c-455d-a68b-f3786ee1e9b6" testId="770fde55-59e7-de19-4704-dcdecb70cca8" testName="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;このターンの終わりまで&quot;, expectedFragment: &quot;ターンの終わりまで&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000670" startTime="2025-11-01T19:18:02.6630503+09:00" endTime="2025-11-01T19:18:02.6630505+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9cbe4be3-dc0c-455d-a68b-f3786ee1e9b6" />
+    <UnitTestResult executionId="cb83b59f-1c2e-431f-9772-06797fe57aef" testId="0841e814-6564-232d-ebdc-14b8278f3318" testName="DMRules.Tests.TemplateEnumerationTests.Dummy_Skip" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0010000" startTime="2025-11-01T19:18:02.5658223+09:00" endTime="2025-11-01T19:18:02.5658227+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb83b59f-1c2e-431f-9772-06797fe57aef">
+      <Output>
+        <ErrorInfo>
+          <Message>Snapshot removed; this test is obsolete for M15.4b normalization</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="969e2449-3a66-476e-9656-5b8336dd65b8" testId="de5b6168-a3c9-1304-c168-82a66e49c50e" testName="DMRules.Tests.KeywordTemplateTests.SetMarkers_AreIgnored(text: &quot;[ll03] この呪文を唱えた後、マナゾーンに置く。&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0296812" startTime="2025-11-01T19:18:02.4895559+09:00" endTime="2025-11-01T19:18:02.4895566+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="969e2449-3a66-476e-9656-5b8336dd65b8">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+             ↓ (pos 0)&#xD;
+Collection: ["[ll03] この呪文を唱えた後、マナゾーンに置く。"]</Message>
+          <StackTrace>   at DMRules.Tests.KeywordTemplateTests.SetMarkers_AreIgnored(String text) in C:\Users\米山\DuelMasters\tests\DMRules.Tests\KeywordTemplateTests.cs:line 44&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1c9fdef4-a2c4-45dd-b4a2-e987c0f0de2b" testId="25430ab6-3504-76c9-5a09-5b505db11791" testName="DMRules.Tests.PriorityOrderingTests.AP_Triggers_Order_By_Priority_Then_Sequence" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0171827" startTime="2025-11-01T19:18:02.3170522+09:00" endTime="2025-11-01T19:18:02.3170523+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c9fdef4-a2c4-45dd-b4a2-e987c0f0de2b" />
+    <UnitTestResult executionId="1972c757-6d0f-4be9-bb3b-c86b76d3565b" testId="3bad7155-3bfd-ae16-6c34-2aa1a3203191" testName="DMRules.Tests.ReplacementEffectTests.Without_Replacement_Destroy_Proceeds_And_Death_Trigger_Fires" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0003141" startTime="2025-11-01T19:18:02.4959801+09:00" endTime="2025-11-01T19:18:02.4959802+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1972c757-6d0f-4be9-bb3b-c86b76d3565b" />
+    <UnitTestResult executionId="ece99dd9-9270-476e-a83e-5516a5835bec" testId="4bed076d-95c2-387b-4f51-5559af9a17cc" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;相手の次のターン中、攻撃できない。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000252" startTime="2025-11-01T19:18:02.4597739+09:00" endTime="2025-11-01T19:18:02.4597740+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ece99dd9-9270-476e-a83e-5516a5835bec" />
+    <UnitTestResult executionId="c1e09130-ca73-49c7-9df8-7948154837a6" testId="ec1f0943-85aa-dced-d77c-aa2b3dec4b99" testName="Golden 20 cards snapshot (DB preferred, fallback; supports update mode)" computerName="DESKTOP-DE0SNP1" duration="00:00:01.2673154" startTime="2025-11-01T19:18:02.4897763+09:00" endTime="2025-11-01T19:18:02.4897763+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1e09130-ca73-49c7-9df8-7948154837a6" />
+    <UnitTestResult executionId="b7b93880-cd79-4051-81f6-9b046564d030" testId="7ab24402-bd2c-7574-1e9a-28fe1eabfbf8" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;コスト-1。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000510" startTime="2025-11-01T19:18:02.4595567+09:00" endTime="2025-11-01T19:18:02.4595568+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7b93880-cd79-4051-81f6-9b046564d030" />
+    <UnitTestResult executionId="1b69a3df-83f1-4570-8ccb-6155dc5fec52" testId="2d67af9d-7923-e734-f65e-39e6404c676f" testName="DMRules.Tests.ContinuousEffectOrderTests.Uses_Phase_Type_Not_String" computerName="DESKTOP-DE0SNP1" duration="00:00:00.5492676" startTime="2025-11-01T19:18:01.7763830+09:00" endTime="2025-11-01T19:18:01.7764816+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b69a3df-83f1-4570-8ccb-6155dc5fec52" />
+    <UnitTestResult executionId="6619aaec-6d04-46ac-bd25-725f15261c55" testId="d82d5ee9-e660-1990-9516-d9336b24b0a7" testName="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Prevent" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0071162" startTime="2025-11-01T19:18:02.4961051+09:00" endTime="2025-11-01T19:18:02.4961052+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6619aaec-6d04-46ac-bd25-725f15261c55" />
+    <UnitTestResult executionId="d834324e-4857-4117-bfd9-91c216a0f543" testId="3e6878a1-5d39-1a56-27be-ee092e0c3db5" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;ランダムに相手の手札を1枚捨てる。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0117134" startTime="2025-11-01T19:18:02.4516432+09:00" endTime="2025-11-01T19:18:02.4516435+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d834324e-4857-4117-bfd9-91c216a0f543">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: True&#xD;
+Actual:   False</Message>
+          <StackTrace>   at DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(String text, Boolean expectedAny) in C:\Users\米山\DuelMasters\tests\DMRules.Tests\CardTextTemplateTests.cs:line 27&#xD;
+   at InvokeStub_CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a5a2b28a-d310-4c42-bbf3-4064b4107f79" testId="dd85dc3e-89db-08a0-417f-ca230acb2645" testName="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;最大 2&quot;, expectedFragment: &quot;最大2&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0026161" startTime="2025-11-01T19:18:02.6639684+09:00" endTime="2025-11-01T19:18:02.6639685+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a5a2b28a-d310-4c42-bbf3-4064b4107f79" />
+    <UnitTestResult executionId="5734e2d2-4315-4509-9cfd-b7ffedea2fde" testId="a8c76f3a-b23b-c2fa-c5f5-213ba61d0010" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;相手のターンの間、攻撃できない。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000248" startTime="2025-11-01T19:18:02.4597228+09:00" endTime="2025-11-01T19:18:02.4597229+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5734e2d2-4315-4509-9cfd-b7ffedea2fde" />
+    <UnitTestResult executionId="62f9dfbc-bce0-42d4-a8f3-2aa3af7e70e2" testId="2d7ac208-7dec-bf7e-f60a-85a2654b245f" testName="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0005369" startTime="2025-11-01T19:18:02.1578818+09:00" endTime="2025-11-01T19:18:02.1578822+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62f9dfbc-bce0-42d4-a8f3-2aa3af7e70e2" />
+    <UnitTestResult executionId="cfed1f9f-69f1-4647-98be-7313e2dcabc8" testId="37e78d1a-725f-7fd4-191a-3a848934df1d" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;いずれかのプレイヤーは手札を1枚捨てる。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0253871" startTime="2025-11-01T19:18:02.4757132+09:00" endTime="2025-11-01T19:18:02.4757133+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cfed1f9f-69f1-4647-98be-7313e2dcabc8" />
+    <UnitTestResult executionId="3ff331d8-91f0-4aca-9406-4cf23f2f437b" testId="edce870b-c0b4-4f10-7593-ffb77132982d" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;D・D・D&quot;, key: DDD)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0148019" startTime="2025-11-01T19:18:02.3172407+09:00" endTime="2025-11-01T19:18:02.3172407+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ff331d8-91f0-4aca-9406-4cf23f2f437b" />
+    <UnitTestResult executionId="41beaa90-48e5-44d6-ad80-e52363d1e779" testId="12097e5b-bedc-72c7-e9f7-04e90344aa15" testName="DMRules.Tests.KeywordTemplateFinalFixTests.Charger_Parens_Full_Or_Half(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.9210307" startTime="2025-11-01T19:18:02.0901917+09:00" endTime="2025-11-01T19:18:02.0901923+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41beaa90-48e5-44d6-ad80-e52363d1e779" />
+    <UnitTestResult executionId="e4416d7a-e421-46fe-9aa6-e99de7376a6f" testId="34314fee-1c8d-9227-c066-50b90e8e7353" testName="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;この ターン の 終わり まで&quot;, expectedFragment: &quot;ターンの終わりまで&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0042721" startTime="2025-11-01T19:18:02.6546068+09:00" endTime="2025-11-01T19:18:02.6546078+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4416d7a-e421-46fe-9aa6-e99de7376a6f" />
+    <UnitTestResult executionId="94d1f8ff-3a03-4dd8-afe5-cde7888bb7a7" testId="fa4ec649-a6c0-5809-b4d3-0927a382c747" testName="DMRules.Tests.TraceAndChooserTests.Custom_Chooser_Picks_Last_Candidate_And_Trace_Records_It" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0872288" startTime="2025-11-01T19:18:02.5191293+09:00" endTime="2025-11-01T19:18:02.5191294+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94d1f8ff-3a03-4dd8-afe5-cde7888bb7a7" />
+    <UnitTestResult executionId="4494cfff-f673-44ab-8765-8aa1456daa70" testId="c338454d-dacd-ba0d-10ad-d746c6c805c1" testName="DMRules.Tests.KeywordTemplateTests.SetMarkers_AreIgnored(text: &quot;【lwn05】 このカードを出した時、カードを1枚引いてもよい。&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004291" startTime="2025-11-01T19:18:02.4896841+09:00" endTime="2025-11-01T19:18:02.4896841+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4494cfff-f673-44ab-8765-8aa1456daa70" />
+    <UnitTestResult executionId="2f6852ad-17cd-436e-8c5d-cb2d37ea2287" testId="2b467f3f-657d-a65b-0734-622dbc6503f8" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;このクリーチャーはワールド・ブレイカーを得る。&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000455" startTime="2025-11-01T19:18:02.2803137+09:00" endTime="2025-11-01T19:18:02.2803138+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f6852ad-17cd-436e-8c5d-cb2d37ea2287" />
+    <UnitTestResult executionId="206d8f65-2560-4089-adeb-fdfc134d0f2a" testId="f959d5f6-f634-40b9-f7fa-f89cb13b7aea" testName="DMRules.Tests.ExecutionLogicTests.Basic_RunAll_Works" computerName="DESKTOP-DE0SNP1" duration="00:00:00.2176239" startTime="2025-11-01T19:18:02.0549584+09:00" endTime="2025-11-01T19:18:02.0549588+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="206d8f65-2560-4089-adeb-fdfc134d0f2a" />
+    <UnitTestResult executionId="958f49d6-9095-4ae4-8513-165a2884f86d" testId="fd00d2bf-c5b8-fd1c-8ea5-20f09324be55" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;革命チェンジ-光または水のドラゴン&quot;, key: KakumeiChange)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000833" startTime="2025-11-01T19:18:02.3178298+09:00" endTime="2025-11-01T19:18:02.3178299+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="958f49d6-9095-4ae4-8513-165a2884f86d" />
+    <UnitTestResult executionId="c3604960-cd58-4cfd-970e-670c49d5b114" testId="67b8e860-cbb0-8205-a2f0-296452336ea9" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000462" startTime="2025-11-01T19:18:02.4325186+09:00" endTime="2025-11-01T19:18:02.4325192+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3604960-cd58-4cfd-970e-670c49d5b114" />
+    <UnitTestResult executionId="a30a1a31-d56e-4fa1-b884-22f22103aaaf" testId="fd22107e-1dc6-ca78-19a8-11a02a740ec6" testName="DMRules.Tests.TurnPhaseTests.Phase_Cycles_And_Active_Player_Swaps_At_End" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0313546" startTime="2025-11-01T19:18:02.5940459+09:00" endTime="2025-11-01T19:18:02.5940463+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a30a1a31-d56e-4fa1-b884-22f22103aaaf" />
+    <UnitTestResult executionId="c3f51d0d-1da4-4aab-8b92-7b0d0cca0767" testId="c93e5753-0be0-6a58-9e06-416fb6ca50d9" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;G・ストライク&quot;, key: GStrike)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000992" startTime="2025-11-01T19:18:02.4321031+09:00" endTime="2025-11-01T19:18:02.4321033+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3f51d0d-1da4-4aab-8b92-7b0d0cca0767" />
+    <UnitTestResult executionId="de8a9507-f014-4671-80ad-aad2b801c905" testId="29e7250a-623e-1040-a469-5bda616b27b9" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後\nマナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0006401" startTime="2025-11-01T19:18:02.5460356+09:00" endTime="2025-11-01T19:18:02.5460357+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de8a9507-f014-4671-80ad-aad2b801c905" />
+    <UnitTestResult executionId="5a75421a-5bb5-4bb8-bfc9-b7c1247996fa" testId="70ed8dcf-0409-48b1-0c14-e6eec829a1e1" testName="DMRules.Tests.TraceSnapshotTests.CardTraceSnapshot_Basic(cardName: &quot;AquaSurfer&quot;, text: &quot;シールドトリガー。相手のクリーチャーを1体選び、持ち主の手札に戻す。&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0668775" startTime="2025-11-01T19:18:02.5641622+09:00" endTime="2025-11-01T19:18:02.5641624+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a75421a-5bb5-4bb8-bfc9-b7c1247996fa" />
+    <UnitTestResult executionId="fe2e7cd0-db9e-416f-97cd-34d9a31f857a" testId="f1c7d817-8e07-9d83-1fce-a1684de1e5e5" testName="DMRules.Tests.KeywordPack2QuickFixTests.InvasionZero_Prioritized_Over_Invasion" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0080690" startTime="2025-11-01T19:18:02.5005269+09:00" endTime="2025-11-01T19:18:02.5005270+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe2e7cd0-db9e-416f-97cd-34d9a31f857a" />
+    <UnitTestResult executionId="ba47c786-ecd6-4df8-8e95-adf6a5fe204e" testId="e664ccdb-53f1-4205-799e-56c7bda644fd" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;このクリーチャーはワールド・ブレイカーを得る。&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000448" startTime="2025-11-01T19:18:02.5459671+09:00" endTime="2025-11-01T19:18:02.5459672+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba47c786-ecd6-4df8-8e95-adf6a5fe204e" />
+    <UnitTestResult executionId="67ad9d08-5d81-459c-99ef-eed7aae181fc" testId="ecc2a8c4-43a3-f2fb-17e6-045484606900" testName="DMRules.Tests.KeywordTemplateFixTests.SetMarker_Kakko_Is_Ignored" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0003146" startTime="2025-11-01T19:18:02.5192054+09:00" endTime="2025-11-01T19:18:02.5192054+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67ad9d08-5d81-459c-99ef-eed7aae181fc" />
+    <UnitTestResult executionId="0d5d1928-afa1-4020-ad37-9ab9914e0f11" testId="4c461252-5425-a866-9846-8f7d14da2689" testName="DMRules.Tests.KeywordTemplateTests.PeriodExpressions_AreRecognized(text: &quot;自分のターンの終わりまで、このクリーチャーは破壊されない。&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0117904" startTime="2025-11-01T19:18:02.4756066+09:00" endTime="2025-11-01T19:18:02.4756071+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d5d1928-afa1-4020-ad37-9ab9914e0f11" />
+    <UnitTestResult executionId="22440531-aa91-4db2-b064-5272a03d3437" testId="5c9c3afa-5f8c-d3c9-8211-58d31c98833f" testName="DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0010000" startTime="2025-11-01T19:18:02.5101955+09:00" endTime="2025-11-01T19:18:02.5101963+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="22440531-aa91-4db2-b064-5272a03d3437">
+      <Output>
+        <ErrorInfo>
+          <Message>Enable after ReplayRunner is wired to engine.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ae6757ff-7647-4090-a29a-2449ccb75362" testId="60ed9250-a21f-3700-be87-6b6c1bfde575" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後\nマナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0117778" startTime="2025-11-01T19:18:02.2804243+09:00" endTime="2025-11-01T19:18:02.2804244+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae6757ff-7647-4090-a29a-2449ccb75362" />
+    <UnitTestResult executionId="8cd9470c-624c-4293-9045-4e7dfc6d4e2c" testId="5a32cb95-31c7-e35d-332b-6968f9c82f4d" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0103740" startTime="2025-11-01T19:18:02.2802014+09:00" endTime="2025-11-01T19:18:02.2802015+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8cd9470c-624c-4293-9045-4e7dfc6d4e2c" />
+    <UnitTestResult executionId="94544ab3-932c-4254-9e74-ce703dff6e64" testId="88f31864-7328-fc03-4bd6-35084d342336" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.SetMarker_Wide_Pattern_Ignored" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0039506" startTime="2025-11-01T19:18:02.5463198+09:00" endTime="2025-11-01T19:18:02.5463199+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94544ab3-932c-4254-9e74-ce703dff6e64" />
+    <UnitTestResult executionId="96d4d5a0-58b2-480e-a280-a16f27471664" testId="1e5b644e-9182-5235-d0a8-9e3a85e2fa89" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004108" startTime="2025-11-01T19:18:02.2804763+09:00" endTime="2025-11-01T19:18:02.2804764+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="96d4d5a0-58b2-480e-a280-a16f27471664" />
+    <UnitTestResult executionId="478a517b-ff3e-461c-a955-f4e2ba53a92f" testId="e6560cf2-81dd-94df-2e89-d12a6290a288" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER の効果を得る。&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0012104" startTime="2025-11-01T19:18:02.2802597+09:00" endTime="2025-11-01T19:18:02.2802598+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="478a517b-ff3e-461c-a955-f4e2ba53a92f" />
+    <UnitTestResult executionId="8b6bbe15-c704-45e8-86b4-579350eb471c" testId="72108263-2a22-0d2b-f193-c0ce6520c69e" testName="DMRules.Tests.KeywordTemplateFixTests.GNeo_Prioritized_Over_Neo" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0006843" startTime="2025-11-01T19:18:02.5190466+09:00" endTime="2025-11-01T19:18:02.5190467+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b6bbe15-c704-45e8-86b4-579350eb471c" />
+    <UnitTestResult executionId="cb28cdb7-9656-4db3-84df-542e9de2bd19" testId="3421d927-2202-c9d2-3adb-15a2d9fcaa1a" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;このクリーチャーがバトルゾーンに出た時、カードを1枚引いてもよい。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000371" startTime="2025-11-01T19:18:02.4596102+09:00" endTime="2025-11-01T19:18:02.4596103+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb28cdb7-9656-4db3-84df-542e9de2bd19" />
+    <UnitTestResult executionId="40620cf1-99f6-44a3-a929-55fa02767457" testId="ded85a13-6425-d8b7-19c3-f7e6df4a549c" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000434" startTime="2025-11-01T19:18:02.5461908+09:00" endTime="2025-11-01T19:18:02.5461909+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="40620cf1-99f6-44a3-a929-55fa02767457" />
+    <UnitTestResult executionId="efa2bc99-a8ec-4ef6-9692-644595921b69" testId="07dd7a65-b3c6-632e-22e1-3313bab542ec" testName="DMRules.Tests.NlpNormalizationTests.Strips_SetMarkers" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0947934" startTime="2025-11-01T19:18:02.6505606+09:00" endTime="2025-11-01T19:18:02.6505609+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="efa2bc99-a8ec-4ef6-9692-644595921b69">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.DoesNotContain() Failure: Sub-string found&#xD;
+         ↓ (pos 0)&#xD;
+String: "《テスト》【能力】する。"&#xD;
+Found:  "《"</Message>
+          <StackTrace>   at DMRules.Tests.NlpNormalizationTests.Strips_SetMarkers() in C:\Users\米山\DuelMasters\tests\DMRules.Tests\NlpNormalizationTests.cs:line 25&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5c2d2d4a-29f9-4f9e-916a-2a3942dea93f" testId="a27f7af6-8930-e922-1865-2f3b63a04862" testName="TraceExporter writes JSON(L) when DM_TRACE=1" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0209769" startTime="2025-11-01T19:18:01.8817097+09:00" endTime="2025-11-01T19:18:01.8817098+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c2d2d4a-29f9-4f9e-916a-2a3942dea93f" />
+    <UnitTestResult executionId="fa8b8154-73ae-43b7-a636-23399e1ebdf2" testId="e1a56818-012b-4006-cc10-df9989bb21bf" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.SetMarker_Wide_Pattern_Ignored" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0006223" startTime="2025-11-01T19:18:02.3168584+09:00" endTime="2025-11-01T19:18:02.3168585+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa8b8154-73ae-43b7-a636-23399e1ebdf2" />
+    <UnitTestResult executionId="b69d1657-264e-441a-88b1-2b52e23cd002" testId="dc4d77c2-571f-c1ac-5ab2-4884b6079125" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;T・ブレイカー&quot;, key: TBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000388" startTime="2025-11-01T19:18:02.4327963+09:00" endTime="2025-11-01T19:18:02.4327966+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b69d1657-264e-441a-88b1-2b52e23cd002" />
+    <UnitTestResult executionId="c88c6acf-518a-4623-ac0a-6e02bcf21a78" testId="613fa2b3-dc8a-128f-0655-9456ee272bd2" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;コストを上げる。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000272" startTime="2025-11-01T19:18:02.4596703+09:00" endTime="2025-11-01T19:18:02.4596703+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c88c6acf-518a-4623-ac0a-6e02bcf21a78" />
+    <UnitTestResult executionId="f9ab6665-136c-45b8-884c-4ebad1dcee67" testId="52fc0496-4484-fe53-b6b0-d86f12277e57" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;革命2&quot;, key: KakumeiChange)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0374772" startTime="2025-11-01T19:18:02.3177396+09:00" endTime="2025-11-01T19:18:02.3177401+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9ab6665-136c-45b8-884c-4ebad1dcee67" />
+    <UnitTestResult executionId="16135e95-b54a-4ab1-a2ce-7a6a755955d5" testId="3bc788e1-8d1c-09e7-90aa-f5d0cad72e11" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;NEO進化：光のクリーチャー1体の上に置いてもよい&quot;, key: NeoEvo)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0037370" startTime="2025-11-01T19:18:02.3179459+09:00" endTime="2025-11-01T19:18:02.3179459+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16135e95-b54a-4ab1-a2ce-7a6a755955d5" />
+    <UnitTestResult executionId="ad98269d-565f-496e-84f9-040ee3d35f7c" testId="3e229045-87c4-0ccc-0650-bfd9a7f29ce5" testName="SBA Trace Probe (reflection)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0745181" startTime="2025-11-01T19:18:02.5825917+09:00" endTime="2025-11-01T19:18:02.5825923+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad98269d-565f-496e-84f9-040ee3d35f7c" />
+    <UnitTestResult executionId="5125ff66-825a-47f1-958a-a681caa39412" testId="1631f2c4-f5cd-a56a-a47b-d9532063f7d6" testName="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000397" startTime="2025-11-01T19:18:02.5188523+09:00" endTime="2025-11-01T19:18:02.5188527+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5125ff66-825a-47f1-958a-a681caa39412" />
+    <UnitTestResult executionId="95967b8a-7dbc-46e7-9459-38191747c1e6" testId="225dee68-3947-4422-448c-a8962f150e10" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後, マナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000852" startTime="2025-11-01T19:18:02.5461403+09:00" endTime="2025-11-01T19:18:02.5461404+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="95967b8a-7dbc-46e7-9459-38191747c1e6" />
+    <UnitTestResult executionId="8768f077-1ddf-4eac-8f05-fde3a63dae56" testId="ed65487b-e75c-f1f6-3a34-be1a1d600ee3" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0002987" startTime="2025-11-01T19:18:02.3167552+09:00" endTime="2025-11-01T19:18:02.3167555+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8768f077-1ddf-4eac-8f05-fde3a63dae56" />
+    <UnitTestResult executionId="14bb0f98-d1b1-4ed8-ace7-0be825c163ba" testId="6fced7b2-2265-3759-f3f3-0ec22e570450" testName="DMRules.Tests.ReplacementCompetitionTests.If_Same_Controller_Then_Higher_Priority_Wins" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0005509" startTime="2025-11-01T19:18:02.5763581+09:00" endTime="2025-11-01T19:18:02.5763584+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14bb0f98-d1b1-4ed8-ace7-0be825c163ba" />
+    <UnitTestResult executionId="3f8f616d-9987-4c0d-991c-f61a3e4f6090" testId="175f1ecf-2c38-99f2-2ab2-a7662d759288" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0071014" startTime="2025-11-01T19:18:02.5458208+09:00" endTime="2025-11-01T19:18:02.5458210+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f8f616d-9987-4c0d-991c-f61a3e4f6090" />
+    <UnitTestResult executionId="a6b7ac1f-713f-4860-ab09-d2404fd43a68" testId="4f83fe3d-a0fc-29cf-8191-c6a677249691" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER の効果を得る。&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0008057" startTime="2025-11-01T19:18:02.5374675+09:00" endTime="2025-11-01T19:18:02.5374676+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6b7ac1f-713f-4860-ab09-d2404fd43a68" />
+    <UnitTestResult executionId="f6176f18-973d-4e19-bcc9-ea0a2974d985" testId="32005fd6-c69e-c1af-8ea7-8c9be4172f65" testName="DMRules.Tests.TraceSnapshotTests.CardTraceSnapshot_Basic(cardName: &quot;BolmeteusWhiteDragon&quot;, text: &quot;このクリーチャーが攻撃する時、相手のシールドを1つ選び、墓地に置く。&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0107998" startTime="2025-11-01T19:18:02.5644180+09:00" endTime="2025-11-01T19:18:02.5644181+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6176f18-973d-4e19-bcc9-ea0a2974d985" />
+    <UnitTestResult executionId="29168db5-e9a0-44ff-9a39-801974e0107d" testId="8b9f0361-dfbe-3e8d-4040-36502dcf871b" testName="DMRules.Tests.APNAPTests.Active_Player_Triggers_Resolve_Before_NonActive" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0076966" startTime="2025-11-01T19:18:02.5643659+09:00" endTime="2025-11-01T19:18:02.5643660+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29168db5-e9a0-44ff-9a39-801974e0107d" />
+    <UnitTestResult executionId="8ad8e5a9-64a5-431e-8c5c-b51a296411b6" testId="ddd2c47b-425b-2617-d94d-3e30d6123a90" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000303" startTime="2025-11-01T19:18:02.4329022+09:00" endTime="2025-11-01T19:18:02.4329023+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ad8e5a9-64a5-431e-8c5c-b51a296411b6" />
+    <UnitTestResult executionId="3e5c024e-a8a8-46fe-9353-815e4aaf7282" testId="f2594f6f-0d21-6832-bf2d-bee787f115c9" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000320" startTime="2025-11-01T19:18:02.4327074+09:00" endTime="2025-11-01T19:18:02.4327075+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e5c024e-a8a8-46fe-9353-815e4aaf7282" />
+    <UnitTestResult executionId="2bdf5cda-2a78-4135-bda3-79354f4c339f" testId="c8b9456c-eec5-4025-a378-606d41b5574d" testName="DMRules.Tests.TriggerPriorityFixTests.Dummy_Skip" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0010000" startTime="2025-11-01T19:18:02.5373067+09:00" endTime="2025-11-01T19:18:02.5373071+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2bdf5cda-2a78-4135-bda3-79354f4c339f">
+      <Output>
+        <ErrorInfo>
+          <Message>Obsolete TemplateKey mapping; skipped for M15.4b normalization</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="24afe330-9c3e-4759-87ea-9f17bb3f6384" testId="3fbdf731-95be-b264-b310-09e3f3204e5a" testName="DMRules.Tests.PriorityOrderingTests.AP_Before_NAP_Even_If_NAP_Has_Higher_Priority" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0020791" startTime="2025-11-01T19:18:02.3171497+09:00" endTime="2025-11-01T19:18:02.3171498+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24afe330-9c3e-4759-87ea-9f17bb3f6384" />
+    <UnitTestResult executionId="aba4eb7d-66de-4565-8c62-fa65b87056ed" testId="291e3098-4594-27d7-f6c8-a0af0ccd6269" testName="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;このクリーチャーはワールド・ブレイカーを得る。&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0463813" startTime="2025-11-01T19:18:02.1504939+09:00" endTime="2025-11-01T19:18:02.1504945+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aba4eb7d-66de-4565-8c62-fa65b87056ed" />
+    <UnitTestResult executionId="964d25bd-de55-4c34-a0df-e85142d0185b" testId="5b23b3fd-7ad5-60c5-4c1a-f4b6f5db4324" testName="DMRules.Tests.KeywordTemplateFinalFixTests.Charger_Parens_Full_Or_Half(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0009035" startTime="2025-11-01T19:18:02.1036450+09:00" endTime="2025-11-01T19:18:02.1036458+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="964d25bd-de55-4c34-a0df-e85142d0185b" />
+    <UnitTestResult executionId="4ed45d6d-f2a3-43ec-b428-c4ca2fab94ad" testId="c8f509ac-2e62-fb8d-392d-971386b5fce7" testName="DMRules.Tests.KeywordPack2QuickFixTests.GZero_LineStart_Anchored" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0085122" startTime="2025-11-01T19:18:02.4962523+09:00" endTime="2025-11-01T19:18:02.4962524+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ed45d6d-f2a3-43ec-b428-c4ca2fab94ad" />
+    <UnitTestResult executionId="8430282a-3fb1-44a9-9e8a-3f3fb9c36f94" testId="84d1ad1b-75ee-2471-a382-ce3df3c8d88b" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004650" startTime="2025-11-01T19:18:02.5460908+09:00" endTime="2025-11-01T19:18:02.5460909+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8430282a-3fb1-44a9-9e8a-3f3fb9c36f94" />
+    <UnitTestResult executionId="864677ab-2ae0-4cd2-8cfc-c7082c3e24a6" testId="e1b7d86c-8620-ab27-d0c8-a9c151f02c8b" testName="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;次の相手のターンのはじめまで&quot;, expectedFragment: &quot;次の相手のターンの間&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0007199" startTime="2025-11-01T19:18:02.6507115+09:00" endTime="2025-11-01T19:18:02.6507116+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="864677ab-2ae0-4cd2-8cfc-c7082c3e24a6" />
+    <UnitTestResult executionId="a7334888-110f-45f1-8537-941f03207074" testId="4ab31090-6101-5ea5-c736-ff12f541f9cd" testName="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;G-NEO進化：自然のクリーチャー1体の上に置いてもよい&quot;, key: GNeoEvo)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0585428" startTime="2025-11-01T19:18:02.4206011+09:00" endTime="2025-11-01T19:18:02.4206013+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a7334888-110f-45f1-8537-941f03207074" />
+    <UnitTestResult executionId="32b91ed2-90e7-488b-8a2e-5840f0736fdb" testId="0cb469c0-6c50-4ff4-cb00-5527539f57f1" testName="DMRules.Tests.KeywordTemplateFinalFixTests.SetMarker_Wide_Pattern_Ignored" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0123316" startTime="2025-11-01T19:18:02.2800941+09:00" endTime="2025-11-01T19:18:02.2800941+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="32b91ed2-90e7-488b-8a2e-5840f0736fdb" />
+    <UnitTestResult executionId="010b9dc8-3992-447f-ba58-f6e6722cb6a3" testId="49cd98f7-b162-598b-ac14-4bb2b8db69ee" testName="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;いずれかの1体&quot;, expectedFragment: &quot;いずれか1体&quot;)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0001367" startTime="2025-11-01T19:18:02.6629456+09:00" endTime="2025-11-01T19:18:02.6629460+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="010b9dc8-3992-447f-ba58-f6e6722cb6a3" />
+    <UnitTestResult executionId="2c440621-f393-483e-9baf-591db8edbcc6" testId="51a38d1d-c05f-3046-3575-d7bb83a750dd" testName="Phase instrumentation can probe (no-op safe)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0002259" startTime="2025-11-01T19:18:02.5645176+09:00" endTime="2025-11-01T19:18:02.5645176+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c440621-f393-483e-9baf-591db8edbcc6" />
+    <UnitTestResult executionId="8ef56cac-d7ee-433b-8b31-a3b3b85bc00a" testId="027f548f-2b43-98df-d533-af5f137c5cdc" testName="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000307" startTime="2025-11-01T19:18:02.2803661+09:00" endTime="2025-11-01T19:18:02.2803661+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ef56cac-d7ee-433b-8b31-a3b3b85bc00a" />
+    <UnitTestResult executionId="2b80901f-d241-4eff-b0b0-1652078ce336" testId="c678575c-066d-8593-ef1c-6f1abb27717f" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;相手のクリーチャーを最大2体まで選ぶ。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0002449" startTime="2025-11-01T19:18:02.4662548+09:00" endTime="2025-11-01T19:18:02.4662553+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b80901f-d241-4eff-b0b0-1652078ce336">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: True&#xD;
+Actual:   False</Message>
+          <StackTrace>   at DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(String text, Boolean expectedAny) in C:\Users\米山\DuelMasters\tests\DMRules.Tests\CardTextTemplateTests.cs:line 27&#xD;
+   at InvokeStub_CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c176bacb-8ddb-4aec-9ed3-33fea3e787c3" testId="df1d1174-53b5-1c0b-bbfa-d3d10f4da562" testName="DMRules.Tests.TraceAndChooserTests.Trace_Is_Appended_On_Key_Steps" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0390962" startTime="2025-11-01T19:18:02.5549384+09:00" endTime="2025-11-01T19:18:02.5549392+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c176bacb-8ddb-4aec-9ed3-33fea3e787c3" />
+    <UnitTestResult executionId="da05ddd1-9053-49fe-b262-0ece5cac512e" testId="bf80f9e0-e8f4-598b-68e9-0acf655f9f3a" testName="Trigger/APNAP instrumentation can probe (no-op safe)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0003128" startTime="2025-11-01T19:18:02.5642671+09:00" endTime="2025-11-01T19:18:02.5642672+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da05ddd1-9053-49fe-b262-0ece5cac512e" />
+    <UnitTestResult executionId="6b93b11a-1cb9-4d51-a3e0-db11fd3a4717" testId="3736f69e-6b39-cd52-7375-a70f98bda793" testName="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000696" startTime="2025-11-01T19:18:02.5459013+09:00" endTime="2025-11-01T19:18:02.5459014+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b93b11a-1cb9-4d51-a3e0-db11fd3a4717" />
+    <UnitTestResult executionId="a068d089-2014-4b1a-beeb-886e6bd28bfa" testId="fad816e5-419a-4ef4-9784-de2c41451f2f" testName="DMRules.Tests.ReplacementCompetitionTests.Affected_Owner_Controls_Choice_Over_Priority" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004749" startTime="2025-11-01T19:18:02.5764505+09:00" endTime="2025-11-01T19:18:02.5764506+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a068d089-2014-4b1a-beeb-886e6bd28bfa" />
+    <UnitTestResult executionId="b3c90c8e-142a-44bf-bdfd-aa59676a36ed" testId="e32be671-1831-03f7-1af8-4bb07c077975" testName="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;カードを1枚引いてもよい。&quot;, expectedAny: True)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000782" startTime="2025-11-01T19:18:02.4594048+09:00" endTime="2025-11-01T19:18:02.4594050+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3c90c8e-142a-44bf-bdfd-aa59676a36ed" />
+    <UnitTestResult executionId="dd70bbbe-2f46-4d1a-9d46-9b3b058f3197" testId="b767f714-5ff3-5c71-f81e-8daeb35dba3b" testName="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Exile" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0176635" startTime="2025-11-01T19:18:02.4898721+09:00" endTime="2025-11-01T19:18:02.4898721+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd70bbbe-2f46-4d1a-9d46-9b3b058f3197" />
+    <UnitTestResult executionId="9455d61c-fd1c-4586-9048-21b65f762a98" testId="2e7e8209-4d39-aebe-8f47-23f67f681744" testName="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000600" startTime="2025-11-01T19:18:02.5107324+09:00" endTime="2025-11-01T19:18:02.5107324+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9455d61c-fd1c-4586-9048-21b65f762a98" />
+    <UnitTestResult executionId="9f55bfa7-688c-4629-9fa3-17334467dce4" testId="c0757847-5274-8879-f4e6-1a027de14ebe" testName="DMRules.Tests.ReplacementEffectTests.PreventNextDestroy_Stops_ZoneChange_And_Enqueues_Draw" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0819016" startTime="2025-11-01T19:18:02.4898852+09:00" endTime="2025-11-01T19:18:02.4898853+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f55bfa7-688c-4629-9fa3-17334467dce4" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;コスト-1。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="7ab24402-bd2c-7574-1e9a-28fe1eabfbf8">
+      <Execution id="b7b93880-cd79-4051-81f6-9b046564d030" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.NlpNormalizationTests.Strips_SetMarkers" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="07dd7a65-b3c6-632e-22e1-3313bab542ec">
+      <Execution id="efa2bc99-a8ec-4ef6-9692-644595921b69" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.NlpNormalizationTests" name="Strips_SetMarkers" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;いずれかの1体&quot;, expectedFragment: &quot;いずれか1体&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="49cd98f7-b162-598b-ac14-4bb2b8db69ee">
+      <Execution id="010b9dc8-3992-447f-ba58-f6e6722cb6a3" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.NlpNormalizationTests" name="Canonicalizes_Common_Phrases" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TriggerPriorityFixTests.Dummy_Skip" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="c8b9456c-eec5-4025-a378-606d41b5574d">
+      <Execution id="2bdf5cda-2a78-4135-bda3-79354f4c339f" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TriggerPriorityFixTests" name="Dummy_Skip" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="ddd2c47b-425b-2617-d94d-3e30d6123a90">
+      <Execution id="8ad8e5a9-64a5-431e-8c5c-b51a296411b6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="67b8e860-cbb0-8205-a2f0-296452336ea9">
+      <Execution id="c3604960-cd58-4cfd-970e-670c49d5b114" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFixTests.GNeo_Prioritized_Over_Neo" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="72108263-2a22-0d2b-f193-c0ce6520c69e">
+      <Execution id="8b6bbe15-c704-45e8-86b4-579350eb471c" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFixTests" name="GNeo_Prioritized_Over_Neo" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;革命チェンジ-光または水のドラゴン&quot;, key: KakumeiChange)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="fd00d2bf-c5b8-fd1c-8ea5-20f09324be55">
+      <Execution id="958f49d6-9095-4ae4-8513-165a2884f86d" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementCompetitionTests.Affected_Owner_Controls_Choice_Over_Priority" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="fad816e5-419a-4ef4-9784-de2c41451f2f">
+      <Execution id="a068d089-2014-4b1a-beeb-886e6bd28bfa" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementCompetitionTests" name="Affected_Owner_Controls_Choice_Over_Priority" />
+    </UnitTest>
+    <UnitTest name="Trigger/APNAP instrumentation can probe (no-op safe)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="bf80f9e0-e8f4-598b-68e9-0acf655f9f3a">
+      <Execution id="da05ddd1-9053-49fe-b262-0ece5cac512e" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TriggerInstrumentationTest" name="ProbeNoopSafe" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ContinuousEffectOrderTests.Uses_Phase_Type_Not_String" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="2d67af9d-7923-e734-f65e-39e6404c676f">
+      <Execution id="1b69a3df-83f1-4570-8ccb-6155dc5fec52" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ContinuousEffectOrderTests" name="Uses_Phase_Type_Not_String" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementCompetitionTests.If_Same_Controller_Then_Higher_Priority_Wins" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="6fced7b2-2265-3759-f3f3-0ec22e570450">
+      <Execution id="14bb0f98-d1b1-4ed8-ace7-0be825c163ba" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementCompetitionTests" name="If_Same_Controller_Then_Higher_Priority_Wins" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="1631f2c4-f5cd-a56a-a47b-d9532063f7d6">
+      <Execution id="5125ff66-825a-47f1-958a-a681caa39412" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFixTests" name="WorldBreaker_CaseInsensitive_And_Charger_Parens" />
+    </UnitTest>
+    <UnitTest name="SBA Trace Probe (reflection)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3e229045-87c4-0ccc-0650-bfd9a7f29ce5">
+      <Execution id="ad98269d-565f-496e-84f9-040ee3d35f7c" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.SBATraceProbe" name="ProbeSbaViaReflection" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="4ced3bb4-cb47-19ad-008c-a5dc3b468040">
+      <Execution id="6aacb930-3cef-4689-9484-9e9005419910" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFixTests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.PriorityOrderingTests.AP_Before_NAP_Even_If_NAP_Has_Higher_Priority" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3fbdf731-95be-b264-b310-09e3f3204e5a">
+      <Execution id="24afe330-9c3e-4759-87ea-9f17bb3f6384" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.PriorityOrderingTests" name="AP_Before_NAP_Even_If_NAP_Has_Higher_Priority" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="2e7e8209-4d39-aebe-8f47-23f67f681744">
+      <Execution id="9455d61c-fd1c-4586-9048-21b65f762a98" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFixTests" name="WorldBreaker_CaseInsensitive_And_Charger_Parens" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER の効果を得る。&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="e6560cf2-81dd-94df-2e89-d12a6290a288">
+      <Execution id="478a517b-ff3e-461c-a955-f4e2ba53a92f" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="0697eaba-ff92-42ba-8681-2396a89dfdc6">
+      <Execution id="f1ad3e54-4c7f-407a-a6fb-a640bba413ae" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFixTests" name="WorldBreaker_CaseInsensitive_And_Charger_Parens" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3736f69e-6b39-cd52-7375-a70f98bda793">
+      <Execution id="6b93b11a-1cb9-4d51-a3e0-db11fd3a4717" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;革命2&quot;, key: KakumeiChange)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="52fc0496-4484-fe53-b6b0-d86f12277e57">
+      <Execution id="f9ab6665-136c-45b8-884c-4ebad1dcee67" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="84d1ad1b-75ee-2471-a382-ce3df3c8d88b">
+      <Execution id="8430282a-3fb1-44a9-9e8a-3f3fb9c36f94" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="Charger_Parens_With_Comma_And_Newline" />
+    </UnitTest>
+    <UnitTest name="Phase instrumentation can probe (no-op safe)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="51a38d1d-c05f-3046-3575-d7bb83a750dd">
+      <Execution id="2c440621-f393-483e-9baf-591db8edbcc6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.PhaseInstrumentationTest" name="ProbeNoopSafe" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後\nマナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="60ed9250-a21f-3700-be87-6b6c1bfde575">
+      <Execution id="ae6757ff-7647-4090-a29a-2449ccb75362" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="Charger_Parens_With_Comma_And_Newline" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Prevent" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="d82d5ee9-e660-1990-9516-d9336b24b0a7">
+      <Execution id="6619aaec-6d04-46ac-bd25-725f15261c55" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementChainingTests" name="Destroy_Then_FlipFlag_Then_Prevent" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TraceSnapshotTests.CardTraceSnapshot_Basic(cardName: &quot;AquaSurfer&quot;, text: &quot;シールドトリガー。相手のクリーチャーを1体選び、持ち主の手札に戻す。&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="70ed8dcf-0409-48b1-0c14-e6eec829a1e1">
+      <Execution id="5a75421a-5bb5-4bb8-bfc9-b7c1247996fa" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceSnapshotTests" name="CardTraceSnapshot_Basic" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;シールドトリガー&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="daa8af6c-922f-4c95-1fc4-a6688d350e31">
+      <Execution id="967a9d0c-e53b-4cf8-af71-0265d44445f1" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ExecutionLogicTests.Basic_RunAll_Works" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="f959d5f6-f634-40b9-f7fa-f89cb13b7aea">
+      <Execution id="206d8f65-2560-4089-adeb-fdfc134d0f2a" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ExecutionLogicTests" name="Basic_RunAll_Works" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;最大 2&quot;, expectedFragment: &quot;最大2&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="dd85dc3e-89db-08a0-417f-ca230acb2645">
+      <Execution id="a5a2b28a-d310-4c42-bbf3-4064b4107f79" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.NlpNormalizationTests" name="Canonicalizes_Common_Phrases" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;コストを上げる。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="613fa2b3-dc8a-128f-0655-9456ee272bd2">
+      <Execution id="c88c6acf-518a-4623-ac0a-6e02bcf21a78" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.APNAPTests.Active_Player_Triggers_Resolve_Before_NonActive" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="8b9f0361-dfbe-3e8d-4040-36502dcf871b">
+      <Execution id="29168db5-e9a0-44ff-9a39-801974e0107d" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.APNAPTests" name="Active_Player_Triggers_Resolve_Before_NonActive" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="027f548f-2b43-98df-d533-af5f137c5cdc">
+      <Execution id="8ef56cac-d7ee-433b-8b31-a3b3b85bc00a" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;ワールド・ブレイカー&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="2d7ac208-7dec-bf7e-f60a-85a2654b245f">
+      <Execution id="62f9dfbc-bce0-42d4-a8f3-2aa3af7e70e2" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFixTests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TraceSnapshotTests.CardTraceSnapshot_Basic(cardName: &quot;BolmeteusWhiteDragon&quot;, text: &quot;このクリーチャーが攻撃する時、相手のシールドを1つ選び、墓地に置く。&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="32005fd6-c69e-c1af-8ea7-8c9be4172f65">
+      <Execution id="f6176f18-973d-4e19-bcc9-ea0a2974d985" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceSnapshotTests" name="CardTraceSnapshot_Basic" />
+    </UnitTest>
+    <UnitTest name="Golden 20 cards snapshot (DB preferred, fallback; supports update mode)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="ec1f0943-85aa-dced-d77c-aa2b3dec4b99">
+      <Execution id="c1e09130-ca73-49c7-9df8-7948154837a6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.GoldenSnapshotSuite" name="GoldenSnapshots_Run" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementEffectTests.PreventNextDestroy_Stops_ZoneChange_And_Enqueues_Draw" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="c0757847-5274-8879-f4e6-1a027de14ebe">
+      <Execution id="9f55bfa7-688c-4629-9fa3-17334467dce4" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementEffectTests" name="PreventNextDestroy_Stops_ZoneChange_And_Enqueues_Draw" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;コストを1減らす。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="aa5ac725-0913-a4bf-abcb-62cfb998df61">
+      <Execution id="e53da838-cf49-45a3-a543-397a2f0f7cde" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;いずれかのプレイヤーは手札を1枚捨てる。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="37e78d1a-725f-7fd4-191a-3a848934df1d">
+      <Execution id="cfed1f9f-69f1-4647-98be-7313e2dcabc8" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFixTests.Charger_Parens_Full_Or_Half(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="12097e5b-bedc-72c7-e9f7-04e90344aa15">
+      <Execution id="41beaa90-48e5-44d6-ad80-e52363d1e779" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFixTests" name="Charger_Parens_Full_Or_Half" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.SetMarkers_AreIgnored(text: &quot;【lwn05】 このカードを出した時、カードを1枚引いてもよい。&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="c338454d-dacd-ba0d-10ad-d746c6c805c1">
+      <Execution id="4494cfff-f673-44ab-8765-8aa1456daa70" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="SetMarkers_AreIgnored" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFixTests.Charger_Parens_Full_Or_Half(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="5b23b3fd-7ad5-60c5-4c1a-f4b6f5db4324">
+      <Execution id="964d25bd-de55-4c34-a0df-e85142d0185b" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFixTests" name="Charger_Parens_Full_Or_Half" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;NEO進化：光のクリーチャー1体の上に置いてもよい&quot;, key: NeoEvo)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3bc788e1-8d1c-09e7-90aa-f5d0cad72e11">
+      <Execution id="16135e95-b54a-4ab1-a2ce-7a6a755955d5" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;このクリーチャーはワールド・ブレイカーを得る。&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="e664ccdb-53f1-4205-799e-56c7bda644fd">
+      <Execution id="ba47c786-ecd6-4df8-8e95-adf6a5fe204e" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後, マナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="225dee68-3947-4422-448c-a8962f150e10">
+      <Execution id="95967b8a-7dbc-46e7-9459-38191747c1e6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="Charger_Parens_With_Comma_And_Newline" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordPack2QuickFixTests.InvasionZero_Prioritized_Over_Invasion" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="f1c7d817-8e07-9d83-1fce-a1684de1e5e5">
+      <Execution id="fe2e7cd0-db9e-416f-97cd-34d9a31f857a" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordPack2QuickFixTests" name="InvasionZero_Prioritized_Over_Invasion" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="f2594f6f-0d21-6832-bf2d-bee787f115c9">
+      <Execution id="3e5c024e-a8a8-46fe-9353-815e4aaf7282" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementChainingTests.Destroy_Then_FlipFlag_Then_Exile" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="b767f714-5ff3-5c71-f81e-8daeb35dba3b">
+      <Execution id="dd70bbbe-2f46-4d1a-9d46-9b3b058f3197" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementChainingTests" name="Destroy_Then_FlipFlag_Then_Exile" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;G-NEO進化：自然のクリーチャー1体の上に置いてもよい&quot;, key: GNeoEvo)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="4ab31090-6101-5ea5-c736-ff12f541f9cd">
+      <Execution id="a7334888-110f-45f1-8537-941f03207074" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordPack2QuickFixTests.GZero_LineStart_Anchored" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="c8f509ac-2e62-fb8d-392d-971386b5fce7">
+      <Execution id="4ed45d6d-f2a3-43ec-b428-c4ca2fab94ad" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordPack2QuickFixTests" name="GZero_LineStart_Anchored" />
+    </UnitTest>
+    <UnitTest name="TraceExporter writes JSON(L) when DM_TRACE=1" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="a27f7af6-8930-e922-1865-2f3b63a04862">
+      <Execution id="5c2d2d4a-29f9-4f9e-916a-2a3942dea93f" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceSmokeTest" name="WritesJsonlWhenEnabled" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER の効果を得る。&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="4f83fe3d-a0fc-29cf-8191-c6a677249691">
+      <Execution id="a6b7ac1f-713f-4860-ab09-d2404fd43a68" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;このクリーチャーがバトルゾーンに出た時、カードを1枚引いてもよい。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3421d927-2202-c9d2-3adb-15a2d9fcaa1a">
+      <Execution id="cb28cdb7-9656-4db3-84df-542e9de2bd19" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="1e5b644e-9182-5235-d0a8-9e3a85e2fa89">
+      <Execution id="96d4d5a0-58b2-480e-a280-a16f27471664" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="Charger_Parens_With_Comma_And_Newline" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後\nマナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="29e7250a-623e-1040-a469-5bda616b27b9">
+      <Execution id="de8a9507-f014-4671-80ad-aad2b801c905" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="Charger_Parens_With_Comma_And_Newline" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;T・ブレイカー&quot;, key: TBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="dc4d77c2-571f-c1ac-5ab2-4884b6079125">
+      <Execution id="b69d1657-264e-441a-88b1-2b52e23cd002" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="175f1ecf-2c38-99f2-2ab2-a7662d759288">
+      <Execution id="3f8f616d-9987-4c0d-991c-f61a3e4f6090" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFixTests.SetMarker_Kakko_Is_Ignored" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="ecc2a8c4-43a3-f2fb-17e6-045484606900">
+      <Execution id="67ad9d08-5d81-459c-99ef-eed7aae181fc" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFixTests" name="SetMarker_Kakko_Is_Ignored" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.PeriodExpressions_AreRecognized(text: &quot;相手の次のターンのはじめまで、攻撃できない。&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="55e5642a-c6f4-2d92-2f5e-4630a37ca171">
+      <Execution id="6d3e548c-a8c6-429e-8fd1-37ada2ab2704" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="PeriodExpressions_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER の効果を得る。&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="d545c8b4-72a4-5ba0-8ce4-82b497574348">
+      <Execution id="5bb07551-8d19-41ad-bd04-7829918ca6a0" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFixTests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;D・D・D&quot;, key: DDD)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="edce870b-c0b4-4f10-7593-ffb77132982d">
+      <Execution id="3ff331d8-91f0-4aca-9406-4cf23f2f437b" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordPack2Tests.Dummy_Skip" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="72810a86-3fef-d1f1-79a5-d285980bd79c">
+      <Execution id="864fff74-e4b5-4032-900a-896997731ef7" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordPack2Tests" name="Dummy_Skip" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;次の相手のターンのはじめまで&quot;, expectedFragment: &quot;次の相手のターンの間&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="e1b7d86c-8620-ab27-d0c8-a9c151f02c8b">
+      <Execution id="864677ab-2ae0-4cd2-8cfc-c7082c3e24a6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.NlpNormalizationTests" name="Canonicalizes_Common_Phrases" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TraceAndChooserTests.Custom_Chooser_Picks_Last_Candidate_And_Trace_Records_It" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="fa4ec649-a6c0-5809-b4d3-0927a382c747">
+      <Execution id="94d1f8ff-3a03-4dd8-afe5-cde7888bb7a7" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceAndChooserTests" name="Custom_Chooser_Picks_Last_Candidate_And_Trace_Records_It" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;相手のクリーチャーを最大2体まで選ぶ。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="c678575c-066d-8593-ef1c-6f1abb27717f">
+      <Execution id="2b80901f-d241-4eff-b0b0-1652078ce336" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー(この呪文を唱えた後、マナゾーンに置く)&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="ed65487b-e75c-f1f6-3a34-be1a1d600ee3">
+      <Execution id="8768f077-1ddf-4eac-8f05-fde3a63dae56" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="Charger_Parens_With_Comma_And_Newline" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;カードを1枚引いてもよい。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="e32be671-1831-03f7-1af8-4bb07c077975">
+      <Execution id="b3c90c8e-142a-44bf-bdfd-aa59676a36ed" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;相手の次のターン中、攻撃できない。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="4bed076d-95c2-387b-4f51-5559af9a17cc">
+      <Execution id="ece99dd9-9270-476e-a83e-5516a5835bec" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFixTests.WorldBreaker_CaseInsensitive_And_Charger_Parens(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="cae72dce-32fd-9a73-3da0-bd0eea2717f8">
+      <Execution id="13c2aaab-036e-4128-bc3c-2c146372ee30" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFixTests" name="WorldBreaker_CaseInsensitive_And_Charger_Parens" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TurnPhaseTests.Phase_Cycles_And_Active_Player_Swaps_At_End" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="fd22107e-1dc6-ca78-19a8-11a02a740ec6">
+      <Execution id="a30a1a31-d56e-4fa1-b884-22f22103aaaf" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TurnPhaseTests" name="Phase_Cycles_And_Active_Player_Swaps_At_End" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;このクリーチャーはワールド・ブレイカーを得る。&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="2b467f3f-657d-a65b-0734-622dbc6503f8">
+      <Execution id="2f6852ad-17cd-436e-8c5d-cb2d37ea2287" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TemplateAutoAddTests.Dummy_Skip" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="2f7c30bf-6db1-6880-1b28-a242cfd3d827">
+      <Execution id="811e7c65-0f95-41a6-9b34-c37205a22e4d" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TemplateAutoAddTests" name="Dummy_Skip" />
+    </UnitTest>
+    <UnitTest name="Engine SBAInstrumentation TryProbeAndRun()" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="9a2bf151-3330-eb8b-41a1-1acf21ecafdb">
+      <Execution id="5a43b105-dab3-47ac-b1ca-e385c4c42ca1" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.EngineSBAInvokeTest" name="InvokeIfFound" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFixTests.WorldBreaker_RomanOrKana(text: &quot;このクリーチャーはワールド・ブレイカーを得る。&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="291e3098-4594-27d7-f6c8-a0af0ccd6269">
+      <Execution id="aba4eb7d-66de-4565-8c62-fa65b87056ed" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFixTests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="5c9c3afa-5f8c-d3c9-8211-58d31c98833f">
+      <Execution id="22440531-aa91-4db2-b064-5272a03d3437" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplayTests" name="SampleRealLogExistsAndReplayToolOutputsTrace" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;相手のターンの間、攻撃できない。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="a8c76f3a-b23b-c2fa-c5f5-213ba61d0010">
+      <Execution id="5734e2d2-4315-4509-9cfd-b7ffedea2fde" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: &quot;ランダムに相手の手札を1枚捨てる。&quot;, expectedAny: True)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3e6878a1-5d39-1a56-27be-ee092e0c3db5">
+      <Execution id="d834324e-4857-4117-bfd9-91c216a0f543" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.CardTextTemplateTests" name="Templates_BasicPatterns_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TemplateEnumerationTests.Dummy_Skip" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="0841e814-6564-232d-ebdc-14b8278f3318">
+      <Execution id="cb83b59f-1c2e-431f-9772-06797fe57aef" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TemplateEnumerationTests" name="Dummy_Skip" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFixTests.SetMarker_Wide_Pattern_Ignored" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="0cb469c0-6c50-4ff4-cb00-5527539f57f1">
+      <Execution id="32b91ed2-90e7-488b-8a2e-5840f0736fdb" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFixTests" name="SetMarker_Wide_Pattern_Ignored" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.Charger_Parens_With_Comma_And_Newline(text: &quot;チャージャー（この呪文を唱えた後、マナゾーンに置く）&quot;, key: Charger)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="ded85a13-6425-d8b7-19c3-f7e6df4a549c">
+      <Execution id="40620cf1-99f6-44a3-a929-55fa02767457" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="Charger_Parens_With_Comma_And_Newline" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.ReplacementEffectTests.Without_Replacement_Destroy_Proceeds_And_Death_Trigger_Fires" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="3bad7155-3bfd-ae16-6c34-2aa1a3203191">
+      <Execution id="1972c757-6d0f-4be9-bb3b-c86b76d3565b" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.ReplacementEffectTests" name="Without_Replacement_Destroy_Proceeds_And_Death_Trigger_Fires" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.PriorityOrderingTests.AP_Triggers_Order_By_Priority_Then_Sequence" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="25430ab6-3504-76c9-5a09-5b505db11791">
+      <Execution id="1c9fdef4-a2c4-45dd-b4a2-e987c0f0de2b" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.PriorityOrderingTests" name="AP_Triggers_Order_By_Priority_Then_Sequence" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;G・ストライク&quot;, key: GStrike)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="c93e5753-0be0-6a58-9e06-416fb6ca50d9">
+      <Execution id="c3f51d0d-1da4-4aab-8b92-7b0d0cca0767" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.WorldBreaker_RomanOrKana(text: &quot;WORLD・BREAKER&quot;, key: WorldBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="5a32cb95-31c7-e35d-332b-6968f9c82f4d">
+      <Execution id="8cd9470c-624c-4293-9045-4e7dfc6d4e2c" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="WorldBreaker_RomanOrKana" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.PeriodExpressions_AreRecognized(text: &quot;自分のターンの終わりまで、このクリーチャーは破壊されない。&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="4c461252-5425-a866-9846-8f7d14da2689">
+      <Execution id="0d5d1928-afa1-4020-ad37-9ab9914e0f11" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="PeriodExpressions_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;この ターン の 終わり まで&quot;, expectedFragment: &quot;ターンの終わりまで&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="34314fee-1c8d-9227-c066-50b90e8e7353">
+      <Execution id="e4416d7a-e421-46fe-9aa6-e99de7376a6f" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.NlpNormalizationTests" name="Canonicalizes_Common_Phrases" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix3Tests.SetMarker_Wide_Pattern_Ignored" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="88f31864-7328-fc03-4bd6-35084d342336">
+      <Execution id="94544ab3-932c-4254-9e74-ce703dff6e64" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix3Tests" name="SetMarker_Wide_Pattern_Ignored" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.NlpNormalizationTests.Canonicalizes_Common_Phrases(input: &quot;このターンの終わりまで&quot;, expectedFragment: &quot;ターンの終わりまで&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="770fde55-59e7-de19-4704-dcdecb70cca8">
+      <Execution id="9cbe4be3-dc0c-455d-a68b-f3786ee1e9b6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.NlpNormalizationTests" name="Canonicalizes_Common_Phrases" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateFinalFix2Tests.SetMarker_Wide_Pattern_Ignored" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="e1a56818-012b-4006-cc10-df9989bb21bf">
+      <Execution id="fa8b8154-73ae-43b7-a636-23399e1ebdf2" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateFinalFix2Tests" name="SetMarker_Wide_Pattern_Ignored" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.SetMarkers_AreIgnored(text: &quot;[ll03] この呪文を唱えた後、マナゾーンに置く。&quot;)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="de5b6168-a3c9-1304-c168-82a66e49c50e">
+      <Execution id="969e2449-3a66-476e-9656-5b8336dd65b8" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="SetMarkers_AreIgnored" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.KeywordTemplateTests.KeywordTemplates_AreRecognized(text: &quot;W・ブレイカー&quot;, key: WBreaker)" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="54107dff-d86e-d293-9c37-c9ade7abac92">
+      <Execution id="ee391a55-cb8d-4fb9-ae5d-6f66ce1ec432" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.KeywordTemplateTests" name="KeywordTemplates_AreRecognized" />
+    </UnitTest>
+    <UnitTest name="DMRules.Tests.TraceAndChooserTests.Trace_Is_Appended_On_Key_Steps" storage="c:\users\米山\duelmasters\tests\dmrules.tests\bin\debug\net8.0\dmrules.tests.dll" id="df1d1174-53b5-1c0b-bbfa-d3d10f4da562">
+      <Execution id="c176bacb-8ddb-4aec-9ed3-33fea3e787c3" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Tests\bin\Debug\net8.0\DMRules.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DMRules.Tests.TraceAndChooserTests" name="Trace_Is_Appended_On_Key_Steps" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="55e5642a-c6f4-2d92-2f5e-4630a37ca171" executionId="6d3e548c-a8c6-429e-8fd1-37ada2ab2704" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2f7c30bf-6db1-6880-1b28-a242cfd3d827" executionId="811e7c65-0f95-41a6-9b34-c37205a22e4d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cae72dce-32fd-9a73-3da0-bd0eea2717f8" executionId="13c2aaab-036e-4128-bc3c-2c146372ee30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ced3bb4-cb47-19ad-008c-a5dc3b468040" executionId="6aacb930-3cef-4689-9484-9e9005419910" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="daa8af6c-922f-4c95-1fc4-a6688d350e31" executionId="967a9d0c-e53b-4cf8-af71-0265d44445f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa5ac725-0913-a4bf-abcb-62cfb998df61" executionId="e53da838-cf49-45a3-a543-397a2f0f7cde" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0697eaba-ff92-42ba-8681-2396a89dfdc6" executionId="f1ad3e54-4c7f-407a-a6fb-a640bba413ae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="72810a86-3fef-d1f1-79a5-d285980bd79c" executionId="864fff74-e4b5-4032-900a-896997731ef7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54107dff-d86e-d293-9c37-c9ade7abac92" executionId="ee391a55-cb8d-4fb9-ae5d-6f66ce1ec432" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9a2bf151-3330-eb8b-41a1-1acf21ecafdb" executionId="5a43b105-dab3-47ac-b1ca-e385c4c42ca1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d545c8b4-72a4-5ba0-8ce4-82b497574348" executionId="5bb07551-8d19-41ad-bd04-7829918ca6a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="770fde55-59e7-de19-4704-dcdecb70cca8" executionId="9cbe4be3-dc0c-455d-a68b-f3786ee1e9b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0841e814-6564-232d-ebdc-14b8278f3318" executionId="cb83b59f-1c2e-431f-9772-06797fe57aef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de5b6168-a3c9-1304-c168-82a66e49c50e" executionId="969e2449-3a66-476e-9656-5b8336dd65b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25430ab6-3504-76c9-5a09-5b505db11791" executionId="1c9fdef4-a2c4-45dd-b4a2-e987c0f0de2b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3bad7155-3bfd-ae16-6c34-2aa1a3203191" executionId="1972c757-6d0f-4be9-bb3b-c86b76d3565b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4bed076d-95c2-387b-4f51-5559af9a17cc" executionId="ece99dd9-9270-476e-a83e-5516a5835bec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec1f0943-85aa-dced-d77c-aa2b3dec4b99" executionId="c1e09130-ca73-49c7-9df8-7948154837a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ab24402-bd2c-7574-1e9a-28fe1eabfbf8" executionId="b7b93880-cd79-4051-81f6-9b046564d030" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d67af9d-7923-e734-f65e-39e6404c676f" executionId="1b69a3df-83f1-4570-8ccb-6155dc5fec52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d82d5ee9-e660-1990-9516-d9336b24b0a7" executionId="6619aaec-6d04-46ac-bd25-725f15261c55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e6878a1-5d39-1a56-27be-ee092e0c3db5" executionId="d834324e-4857-4117-bfd9-91c216a0f543" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dd85dc3e-89db-08a0-417f-ca230acb2645" executionId="a5a2b28a-d310-4c42-bbf3-4064b4107f79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8c76f3a-b23b-c2fa-c5f5-213ba61d0010" executionId="5734e2d2-4315-4509-9cfd-b7ffedea2fde" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d7ac208-7dec-bf7e-f60a-85a2654b245f" executionId="62f9dfbc-bce0-42d4-a8f3-2aa3af7e70e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37e78d1a-725f-7fd4-191a-3a848934df1d" executionId="cfed1f9f-69f1-4647-98be-7313e2dcabc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edce870b-c0b4-4f10-7593-ffb77132982d" executionId="3ff331d8-91f0-4aca-9406-4cf23f2f437b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12097e5b-bedc-72c7-e9f7-04e90344aa15" executionId="41beaa90-48e5-44d6-ad80-e52363d1e779" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34314fee-1c8d-9227-c066-50b90e8e7353" executionId="e4416d7a-e421-46fe-9aa6-e99de7376a6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa4ec649-a6c0-5809-b4d3-0927a382c747" executionId="94d1f8ff-3a03-4dd8-afe5-cde7888bb7a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c338454d-dacd-ba0d-10ad-d746c6c805c1" executionId="4494cfff-f673-44ab-8765-8aa1456daa70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2b467f3f-657d-a65b-0734-622dbc6503f8" executionId="2f6852ad-17cd-436e-8c5d-cb2d37ea2287" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f959d5f6-f634-40b9-f7fa-f89cb13b7aea" executionId="206d8f65-2560-4089-adeb-fdfc134d0f2a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd00d2bf-c5b8-fd1c-8ea5-20f09324be55" executionId="958f49d6-9095-4ae4-8513-165a2884f86d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="67b8e860-cbb0-8205-a2f0-296452336ea9" executionId="c3604960-cd58-4cfd-970e-670c49d5b114" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd22107e-1dc6-ca78-19a8-11a02a740ec6" executionId="a30a1a31-d56e-4fa1-b884-22f22103aaaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c93e5753-0be0-6a58-9e06-416fb6ca50d9" executionId="c3f51d0d-1da4-4aab-8b92-7b0d0cca0767" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="29e7250a-623e-1040-a469-5bda616b27b9" executionId="de8a9507-f014-4671-80ad-aad2b801c905" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70ed8dcf-0409-48b1-0c14-e6eec829a1e1" executionId="5a75421a-5bb5-4bb8-bfc9-b7c1247996fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1c7d817-8e07-9d83-1fce-a1684de1e5e5" executionId="fe2e7cd0-db9e-416f-97cd-34d9a31f857a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e664ccdb-53f1-4205-799e-56c7bda644fd" executionId="ba47c786-ecd6-4df8-8e95-adf6a5fe204e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecc2a8c4-43a3-f2fb-17e6-045484606900" executionId="67ad9d08-5d81-459c-99ef-eed7aae181fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4c461252-5425-a866-9846-8f7d14da2689" executionId="0d5d1928-afa1-4020-ad37-9ab9914e0f11" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5c9c3afa-5f8c-d3c9-8211-58d31c98833f" executionId="22440531-aa91-4db2-b064-5272a03d3437" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60ed9250-a21f-3700-be87-6b6c1bfde575" executionId="ae6757ff-7647-4090-a29a-2449ccb75362" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a32cb95-31c7-e35d-332b-6968f9c82f4d" executionId="8cd9470c-624c-4293-9045-4e7dfc6d4e2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="88f31864-7328-fc03-4bd6-35084d342336" executionId="94544ab3-932c-4254-9e74-ce703dff6e64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1e5b644e-9182-5235-d0a8-9e3a85e2fa89" executionId="96d4d5a0-58b2-480e-a280-a16f27471664" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6560cf2-81dd-94df-2e89-d12a6290a288" executionId="478a517b-ff3e-461c-a955-f4e2ba53a92f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="72108263-2a22-0d2b-f193-c0ce6520c69e" executionId="8b6bbe15-c704-45e8-86b4-579350eb471c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3421d927-2202-c9d2-3adb-15a2d9fcaa1a" executionId="cb28cdb7-9656-4db3-84df-542e9de2bd19" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ded85a13-6425-d8b7-19c3-f7e6df4a549c" executionId="40620cf1-99f6-44a3-a929-55fa02767457" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07dd7a65-b3c6-632e-22e1-3313bab542ec" executionId="efa2bc99-a8ec-4ef6-9692-644595921b69" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a27f7af6-8930-e922-1865-2f3b63a04862" executionId="5c2d2d4a-29f9-4f9e-916a-2a3942dea93f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1a56818-012b-4006-cc10-df9989bb21bf" executionId="fa8b8154-73ae-43b7-a636-23399e1ebdf2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc4d77c2-571f-c1ac-5ab2-4884b6079125" executionId="b69d1657-264e-441a-88b1-2b52e23cd002" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="613fa2b3-dc8a-128f-0655-9456ee272bd2" executionId="c88c6acf-518a-4623-ac0a-6e02bcf21a78" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="52fc0496-4484-fe53-b6b0-d86f12277e57" executionId="f9ab6665-136c-45b8-884c-4ebad1dcee67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3bc788e1-8d1c-09e7-90aa-f5d0cad72e11" executionId="16135e95-b54a-4ab1-a2ce-7a6a755955d5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e229045-87c4-0ccc-0650-bfd9a7f29ce5" executionId="ad98269d-565f-496e-84f9-040ee3d35f7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1631f2c4-f5cd-a56a-a47b-d9532063f7d6" executionId="5125ff66-825a-47f1-958a-a681caa39412" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="225dee68-3947-4422-448c-a8962f150e10" executionId="95967b8a-7dbc-46e7-9459-38191747c1e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed65487b-e75c-f1f6-3a34-be1a1d600ee3" executionId="8768f077-1ddf-4eac-8f05-fde3a63dae56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6fced7b2-2265-3759-f3f3-0ec22e570450" executionId="14bb0f98-d1b1-4ed8-ace7-0be825c163ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="175f1ecf-2c38-99f2-2ab2-a7662d759288" executionId="3f8f616d-9987-4c0d-991c-f61a3e4f6090" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f83fe3d-a0fc-29cf-8191-c6a677249691" executionId="a6b7ac1f-713f-4860-ab09-d2404fd43a68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32005fd6-c69e-c1af-8ea7-8c9be4172f65" executionId="f6176f18-973d-4e19-bcc9-ea0a2974d985" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8b9f0361-dfbe-3e8d-4040-36502dcf871b" executionId="29168db5-e9a0-44ff-9a39-801974e0107d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ddd2c47b-425b-2617-d94d-3e30d6123a90" executionId="8ad8e5a9-64a5-431e-8c5c-b51a296411b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f2594f6f-0d21-6832-bf2d-bee787f115c9" executionId="3e5c024e-a8a8-46fe-9353-815e4aaf7282" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8b9456c-eec5-4025-a378-606d41b5574d" executionId="2bdf5cda-2a78-4135-bda3-79354f4c339f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3fbdf731-95be-b264-b310-09e3f3204e5a" executionId="24afe330-9c3e-4759-87ea-9f17bb3f6384" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="291e3098-4594-27d7-f6c8-a0af0ccd6269" executionId="aba4eb7d-66de-4565-8c62-fa65b87056ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b23b3fd-7ad5-60c5-4c1a-f4b6f5db4324" executionId="964d25bd-de55-4c34-a0df-e85142d0185b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8f509ac-2e62-fb8d-392d-971386b5fce7" executionId="4ed45d6d-f2a3-43ec-b428-c4ca2fab94ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84d1ad1b-75ee-2471-a382-ce3df3c8d88b" executionId="8430282a-3fb1-44a9-9e8a-3f3fb9c36f94" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1b7d86c-8620-ab27-d0c8-a9c151f02c8b" executionId="864677ab-2ae0-4cd2-8cfc-c7082c3e24a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ab31090-6101-5ea5-c736-ff12f541f9cd" executionId="a7334888-110f-45f1-8537-941f03207074" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0cb469c0-6c50-4ff4-cb00-5527539f57f1" executionId="32b91ed2-90e7-488b-8a2e-5840f0736fdb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49cd98f7-b162-598b-ac14-4bb2b8db69ee" executionId="010b9dc8-3992-447f-ba58-f6e6722cb6a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51a38d1d-c05f-3046-3575-d7bb83a750dd" executionId="2c440621-f393-483e-9baf-591db8edbcc6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="027f548f-2b43-98df-d533-af5f137c5cdc" executionId="8ef56cac-d7ee-433b-8b31-a3b3b85bc00a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c678575c-066d-8593-ef1c-6f1abb27717f" executionId="2b80901f-d241-4eff-b0b0-1652078ce336" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df1d1174-53b5-1c0b-bbfa-d3d10f4da562" executionId="c176bacb-8ddb-4aec-9ed3-33fea3e787c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf80f9e0-e8f4-598b-68e9-0acf655f9f3a" executionId="da05ddd1-9053-49fe-b262-0ece5cac512e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3736f69e-6b39-cd52-7375-a70f98bda793" executionId="6b93b11a-1cb9-4d51-a3e0-db11fd3a4717" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fad816e5-419a-4ef4-9784-de2c41451f2f" executionId="a068d089-2014-4b1a-beeb-886e6bd28bfa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e32be671-1831-03f7-1af8-4bb07c077975" executionId="b3c90c8e-142a-44bf-bdfd-aa59676a36ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b767f714-5ff3-5c71-f81e-8daeb35dba3b" executionId="dd70bbbe-2f46-4d1a-9d46-9b3b058f3197" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e7e8209-4d39-aebe-8f47-23f67f681744" executionId="9455d61c-fd1c-4586-9048-21b65f762a98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0757847-5274-8879-f4e6-1a027de14ebe" executionId="9f55bfa7-688c-4629-9fa3-17334467dce4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="91" executed="86" passed="80" failed="6" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.21)&#xD;
+[xUnit.net 00:00:00.63]   Discovering: DMRules.Tests&#xD;
+[xUnit.net 00:00:01.49]   Discovered:  DMRules.Tests&#xD;
+[xUnit.net 00:00:01.51]   Starting:    DMRules.Tests&#xD;
+[xUnit.net 00:00:03.30]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.31]       Expected: True&#xD;
+[xUnit.net 00:00:03.31]       Actual:   False&#xD;
+[xUnit.net 00:00:03.32]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.33]         C:\Users\米山\DuelMasters\tests\DMRules.Tests\CardTextTemplateTests.cs(27,0): at DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(String text, Boolean expectedAny)&#xD;
+[xUnit.net 00:00:03.33]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:03.33]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:03.36]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.36]       Expected: True&#xD;
+[xUnit.net 00:00:03.37]       Actual:   False&#xD;
+[xUnit.net 00:00:03.37]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.37]         C:\Users\米山\DuelMasters\tests\DMRules.Tests\CardTextTemplateTests.cs(27,0): at DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(String text, Boolean expectedAny)&#xD;
+[xUnit.net 00:00:03.38]            at InvokeStub_CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(Object, Span`1)&#xD;
+[xUnit.net 00:00:03.38]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:03.39]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.39]       Expected: True&#xD;
+[xUnit.net 00:00:03.39]       Actual:   False&#xD;
+[xUnit.net 00:00:03.39]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.39]         C:\Users\米山\DuelMasters\tests\DMRules.Tests\CardTextTemplateTests.cs(27,0): at DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(String text, Boolean expectedAny)&#xD;
+[xUnit.net 00:00:03.39]            at InvokeStub_CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(Object, Span`1)&#xD;
+[xUnit.net 00:00:03.39]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:03.40]       Assert.True() Failure&#xD;
+[xUnit.net 00:00:03.40]       Expected: True&#xD;
+[xUnit.net 00:00:03.40]       Actual:   False&#xD;
+[xUnit.net 00:00:03.40]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.40]         C:\Users\米山\DuelMasters\tests\DMRules.Tests\KeywordTemplateTests.cs(35,0): at DMRules.Tests.KeywordTemplateTests.PeriodExpressions_AreRecognized(String text)&#xD;
+[xUnit.net 00:00:03.40]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:03.40]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:03.41]       Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+[xUnit.net 00:00:03.41]                    ↓ (pos 0)&#xD;
+[xUnit.net 00:00:03.41]       Collection: ["[ll03] この呪文を唱えた後、マナゾーンに置く。"]&#xD;
+[xUnit.net 00:00:03.41]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.42]         C:\Users\米山\DuelMasters\tests\DMRules.Tests\KeywordTemplateTests.cs(44,0): at DMRules.Tests.KeywordTemplateTests.SetMarkers_AreIgnored(String text)&#xD;
+[xUnit.net 00:00:03.42]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:03.42]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:03.43]       Enable after ReplayRunner is wired to engine.&#xD;
+Test 'DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace' was skipped in the test run.&#xD;
+[xUnit.net 00:00:03.46]       Obsolete TemplateKey mapping; skipped for M15.4b normalization&#xD;
+[xUnit.net 00:00:03.46]       Obsolete TemplateKey mapping; skipped for M15.4b normalization&#xD;
+[xUnit.net 00:00:03.47]       Obsolete TemplateKey mapping; skipped for M15.4b normalization&#xD;
+Test 'DMRules.Tests.KeywordPack2Tests.Dummy_Skip' was skipped in the test run.&#xD;
+Test 'DMRules.Tests.TemplateAutoAddTests.Dummy_Skip' was skipped in the test run.&#xD;
+Test 'DMRules.Tests.TriggerPriorityFixTests.Dummy_Skip' was skipped in the test run.&#xD;
+[xUnit.net 00:00:03.49]       Snapshot removed; this test is obsolete for M15.4b normalization&#xD;
+Test 'DMRules.Tests.TemplateEnumerationTests.Dummy_Skip' was skipped in the test run.&#xD;
+[xUnit.net 00:00:03.58]       Assert.DoesNotContain() Failure: Sub-string found&#xD;
+[xUnit.net 00:00:03.58]                ↓ (pos 0)&#xD;
+[xUnit.net 00:00:03.58]       String: "《テスト》【能力】する。"&#xD;
+[xUnit.net 00:00:03.58]       Found:  "《"&#xD;
+[xUnit.net 00:00:03.58]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.58]         C:\Users\米山\DuelMasters\tests\DMRules.Tests\NlpNormalizationTests.cs(25,0): at DMRules.Tests.NlpNormalizationTests.Strips_SetMarkers()&#xD;
+[xUnit.net 00:00:03.58]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:03.58]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:03.61]   Finished:    DMRules.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Error" timestamp="2025-11-01T19:18:02.5459723+09:00">
+        <Text>[xUnit.net 00:00:03.29]     DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: "シールドトリガー", expectedAny: True) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Error" timestamp="2025-11-01T19:18:02.5554033+09:00">
+        <Text>[xUnit.net 00:00:03.36]     DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: "ランダムに相手の手札を1枚捨てる。", expectedAny: True) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Error" timestamp="2025-11-01T19:18:02.6535114+09:00">
+        <Text>[xUnit.net 00:00:03.39]     DMRules.Tests.CardTextTemplateTests.Templates_BasicPatterns_AreRecognized(text: "相手のクリーチャーを最大2体まで選ぶ。", expectedAny: True) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Error" timestamp="2025-11-01T19:18:02.6617235+09:00">
+        <Text>[xUnit.net 00:00:03.39]     DMRules.Tests.KeywordTemplateTests.PeriodExpressions_AreRecognized(text: "相手の次のターンのはじめまで、攻撃できない。") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Error" timestamp="2025-11-01T19:18:02.6744609+09:00">
+        <Text>[xUnit.net 00:00:03.40]     DMRules.Tests.KeywordTemplateTests.SetMarkers_AreIgnored(text: "[ll03] この呪文を唱えた後、マナゾーンに置く。") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Warning" timestamp="2025-11-01T19:18:02.6905559+09:00">
+        <Text>[xUnit.net 00:00:03.43]     DMRules.Tests.ReplayTests.SampleRealLogExistsAndReplayToolOutputsTrace [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Warning" timestamp="2025-11-01T19:18:02.7013470+09:00">
+        <Text>[xUnit.net 00:00:03.45]     DMRules.Tests.KeywordPack2Tests.Dummy_Skip [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Warning" timestamp="2025-11-01T19:18:02.7088721+09:00">
+        <Text>[xUnit.net 00:00:03.46]     DMRules.Tests.TemplateAutoAddTests.Dummy_Skip [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Warning" timestamp="2025-11-01T19:18:02.7097392+09:00">
+        <Text>[xUnit.net 00:00:03.46]     DMRules.Tests.TriggerPriorityFixTests.Dummy_Skip [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Warning" timestamp="2025-11-01T19:18:02.7340659+09:00">
+        <Text>[xUnit.net 00:00:03.49]     DMRules.Tests.TemplateEnumerationTests.Dummy_Skip [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Error" timestamp="2025-11-01T19:18:02.7534573+09:00">
+        <Text>[xUnit.net 00:00:03.58]     DMRules.Tests.NlpNormalizationTests.Strips_SetMarkers [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

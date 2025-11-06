@@ -1,81 +1,35 @@
-// M15.2d - Card Text Template Dictionary (Auto-Add Top Patterns)
-// This file REPLACES CardTextTemplates.cs (apply via Apply_M15_2d.ps1).
-// - Keeps all fixes up to M15.1l (GZero priority, trigger ordering, ZERO precedence)
-// - Adds new TemplateKeys & patterns for unresolved Top patterns (unblockable, slayer, etc.)
-// - Broadens S/W trigger variants with optional explanatory parentheses.
+﻿// Clean overwrite for CardTextTemplates.cs (compile-safe minimal set)
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace DMRules.Engine.TextParsing
 {
     public enum TemplateKey
     {
-        // ===== Base =====
         OptionalAction,
-        EachTimeEvent,
-        ReplacementEffect,
-        UntilEndOfTurn,
-        DuringNextOppTurn,
-        DuringNextSelfTurn,
-        MaxN,
-        AnyOne,
-        Random,
-        TwinImpact,
-        HyperMode,
-        ShieldTrigger,
         CostChange,
         ReplacementPrevention,
-
-        // ===== DM core =====
+        InvasionZero,
+        Invasion,
+        NeoEvo,
+        GNeoEvo,
+        KakumeiChange,
         DDD,
-        GStrike,
         WBreaker,
         TBreaker,
+        GStrike,
         WorldBreaker,
-        GNeoEvo,
-        NeoEvo,
-        KakumeiChange,
+        DiscardHand,
+        EachTimeEvent,
         Charger,
-
-        // ===== Ignored markers =====
-        SetMarker,
-        RuleNoteGR,         // （ゲーム開始時、GR～）などの注釈
-
-        // ===== Pack2 / modern =====
-        Invasion,
-        InvasionZero,
         GZero,
-        SpeedAttacker,
-        Blocker,
-        EXLife,
-        Fusigiverse,
-        Mekureido,
-        Bazurenda,
-        ShinkaRush,
-        OregaAura,
-        OniTime,
-        Kakusei,
-        KakuseiLink,
-        ManaArm,
-        ShinkaPower,
-        ShinkaRise,
-        STrigger,
-        DTrigger,
-        SuperTrigger,
-        CIP,
-        WhenAttack,
-        WhenBlock,
-
-        // ===== New (Top100対策) =====
-        Unblockable,            // このクリーチャーはブロックされない。
-        CannotAttackPlayers,    // このクリーチャーは～プレイヤーを攻撃できない。
-        Slayer,                 // スレイヤー（説明あり）
-        MachFighter,            // マッハファイター
-        Hunting,                // ハンティング（説明あり）
-        PowerAttacker,          // パワーアタッカー +N
-        TappedWhenMana          // マナゾーンに置く時、～タップして置く。
+        DuringNextOppTurn,
+        DuringNextSelfTurn,
+        UntilEndOfTurn,
+        ShieldTrigger,
+        SelectMaxCreatures,
+        ManaTag,
     }
 
     public sealed class TemplateDef
@@ -85,116 +39,67 @@ namespace DMRules.Engine.TextParsing
         public string Example { get; }
         public bool Ignore { get; }
 
-        public TemplateDef(TemplateKey key, string pattern, string example, bool ignore=false)
+        public TemplateDef(TemplateKey key, string pattern, string example, bool ignore = false)
         {
             Key = key;
-            Regex = new Regex(pattern, RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Multiline);
+            Regex = new Regex(pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Multiline);
             Example = example;
             Ignore = ignore;
         }
     }
 
-    public static class CardTextTemplates
+    public static partial class CardTextTemplates
     {
-        public static readonly Regex SetMarkerStrip = new Regex(@"[【\[]\s*[A-Za-z]{2,4}\d{1,3}\s*[】\]]",
-            RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Singleline);
-
-        // Order is significant. Highest priority first when overlaps exist.
         private static readonly List<TemplateDef> _defs = new List<TemplateDef>
         {
-            // ===== Priority: GZero first (line-start anchor) =====
-            new TemplateDef(TemplateKey.GZero,         @"^G・?ゼロ", "G・ゼロ / Gゼロ"),
-
-            // ===== Base =====
-            new TemplateDef(TemplateKey.OptionalAction,
-                @"(して|引いて|選んで|使って|破壊して|捨てて|戻して|出して|唱えて|ブレイクして)もよい",
-                "～してもよい / ～選んでもよい"),
-
-            new TemplateDef(TemplateKey.EachTimeEvent, @"するたび", "～するたび"),
-            new TemplateDef(TemplateKey.ReplacementEffect, @"のかわりに", "～のかわりに"),
-            new TemplateDef(TemplateKey.UntilEndOfTurn, @"ターンの終わりまで", "ターンの終わりまで"),
-            new TemplateDef(TemplateKey.DuringNextOppTurn, @"相手の(次の)?ターン(中|の間|のはじめまで|の終わりまで)", "相手の次のターン中/のはじめまで"),
-            new TemplateDef(TemplateKey.DuringNextSelfTurn, @"自分の(次の)?ターン(中|の間|のはじめまで|の終わりまで)", "自分の次のターンのはじめまで"),
-            new TemplateDef(TemplateKey.MaxN, @"最大(?<N>\d+)", "最大2 など"),
-            new TemplateDef(TemplateKey.AnyOne, @"いずれかの", "いずれかの～"),
-            new TemplateDef(TemplateKey.Random, @"ランダム", "ランダムに～"),
-            new TemplateDef(TemplateKey.TwinImpact, @"ツインパクト|双面カード", "ツインパクト/双面カード"),
-            new TemplateDef(TemplateKey.HyperMode, @"ハイパーモード|ハイパー化|OVERハイパー化", "ハイパーモード"),
-
-            // Trigger family: specific ones BEFORE ShieldTrigger
-            new TemplateDef(TemplateKey.SuperTrigger,  @"スーパー(?:[（(].*?[）)])?・?トリガー", "スーパー・トリガー"),
-            new TemplateDef(TemplateKey.STrigger,      @"S(?:[（(].*?[）)])?・?トリガー", "S・トリガー"),
-            new TemplateDef(TemplateKey.DTrigger,      @"D(?:[（(].*?[）)])?・?トリガー", "D・トリガー"),
-            new TemplateDef(TemplateKey.ShieldTrigger, @"シールド(?:[（(].*?[）)])?・?トリガー", "シールド・トリガー"),
-            new TemplateDef(TemplateKey.CostChange,
-                @"コスト(を)?\s*(?<M>\d+)?\s*(?<Sign>減らす|増やす|下げる|上げる)|コスト(を)?(?<Sign2>\+|-)\s*(?<M2>\d+)",
-                "コストを1減らす / コスト-1 / コストを上げる"),
-            new TemplateDef(TemplateKey.ReplacementPrevention, @"するかわりに.*しない", "～するかわりに～しない"),
-
-            // ===== DM core =====
-            new TemplateDef(TemplateKey.DDD, @"D・D・D", "D・D・D"),
-            new TemplateDef(TemplateKey.GStrike, @"G・ストライク", "G・ストライク"),
-            new TemplateDef(TemplateKey.WBreaker, @"W(?:[（(].*?[）)])?・?ブレイカー", "W・ブレイカー / W(ダブル)・ブレイカー"),
-            new TemplateDef(TemplateKey.TBreaker, @"T(?:[（(].*?[）)])?・?ブレイカー", "T・ブレイカー"),
-            new TemplateDef(TemplateKey.WorldBreaker, @"(ワールド|WORLD)[・･・]?(ブレイカー|BREAKER)", "ワールド・ブレイカー / WORLD・BREAKER"),
-            new TemplateDef(TemplateKey.GNeoEvo, @"G-NEO進化", "G-NEO進化"),
-            new TemplateDef(TemplateKey.NeoEvo, @"NEO進化", "NEO進化"),
-            new TemplateDef(TemplateKey.KakumeiChange, @"革命(チェンジ|\d+)", "革命チェンジ/革命2/革命0"),
-            new TemplateDef(TemplateKey.Charger, @"チャージャー[（(][^)]*[）)]", "チャージャー（…）/チャージャー(...)"),
-
-            // Ignored markers
-            new TemplateDef(TemplateKey.SetMarker, @"[【\[]\s*[A-Za-z]{2,4}\d{1,3}\s*[】\]]", "[ll03]/【lwn05】 など", ignore:true),
-            new TemplateDef(TemplateKey.RuleNoteGR, @"[（(]ゲーム開始時、?\s*GR.*?[）)]", "GR注釈", ignore:true),
-
-            // ===== Pack2 (order-sensitive) =====
-            new TemplateDef(TemplateKey.InvasionZero,  @"侵略\s*ZERO", "侵略ZERO"),
-            new TemplateDef(TemplateKey.Invasion,      @"侵略(?!\s*ZERO)", "侵略-○○"),
-            new TemplateDef(TemplateKey.SpeedAttacker, @"スピード・?アタッカー", "スピードアタッカー"),
-            new TemplateDef(TemplateKey.Blocker,       @"ブロッカー", "ブロッカー"),
-            new TemplateDef(TemplateKey.EXLife,        @"EX・?ライフ", "EXライフ"),
-            new TemplateDef(TemplateKey.Fusigiverse,   @"フシギバース", "フシギバース"),
-            new TemplateDef(TemplateKey.Mekureido,     @"メクレイド", "メクレイド"),
-            new TemplateDef(TemplateKey.Bazurenda,     @"バズレンダ", "バズレンダ"),
-            new TemplateDef(TemplateKey.ShinkaRush,    @"シンカラッシュ", "シンカラッシュ"),
-            new TemplateDef(TemplateKey.OregaAura,     @"オレガ・?オーラ", "オレガ・オーラ"),
-            new TemplateDef(TemplateKey.OniTime,       @"鬼タイム", "鬼タイム"),
-            new TemplateDef(TemplateKey.Kakusei,       @"覚醒(?!リンク)", "覚醒"),
-            new TemplateDef(TemplateKey.KakuseiLink,   @"覚醒リンク", "覚醒リンク"),
-            new TemplateDef(TemplateKey.ManaArm,       @"マナ武装", "マナ武装"),
-            new TemplateDef(TemplateKey.ShinkaPower,   @"シンカパワー", "シンカパワー"),
-            new TemplateDef(TemplateKey.ShinkaRise,    @"シンカライズ", "シンカライズ"),
-            new TemplateDef(TemplateKey.CIP,           @"出た時", "出た時"),
-            new TemplateDef(TemplateKey.WhenAttack,    @"攻撃する時", "攻撃する時"),
-            new TemplateDef(TemplateKey.WhenBlock,     @"ブロックした時", "ブロックした時"),
-
-            // ===== New (Top100対策) =====
-            new TemplateDef(TemplateKey.Unblockable,          @"このクリーチャーはブロックされない。", "ブロック不可"),
-            new TemplateDef(TemplateKey.CannotAttackPlayers,  @"このクリーチャーは.*?プレイヤーを攻撃できない。", "プレイヤー攻撃不可"),
-            new TemplateDef(TemplateKey.Slayer,               @"スレイヤー(?:[（(].*?[）)])?", "スレイヤー"),
-            new TemplateDef(TemplateKey.MachFighter,          @"マッハファイター", "マッハファイター"),
-            new TemplateDef(TemplateKey.Hunting,              @"ハンティング(?:[（(].*?[）)])?", "ハンティング"),
-            new TemplateDef(TemplateKey.PowerAttacker,        @"パワーアタッカー\+?\s*(?<N>\d+)", "パワーアタッカー+2000"),
-            new TemplateDef(TemplateKey.TappedWhenMana,       @"マナゾーンに置く時.*タップして置く。", "マナ置きタップ")
+            new TemplateDef(TemplateKey.ManaTag, @"\[(?<civil>[fwnld]+)(?<cost>\d{2})\]", "[wdf05]"),
+            new TemplateDef(TemplateKey.SelectMaxCreatures, @"相手のクリーチャーを最大(?<N>\d+)体まで選ぶ", "相手のクリーチャーを最大2体まで選ぶ"),
+            new TemplateDef(TemplateKey.ShieldTrigger, @"シールド\s*トリガー", "シールドトリガー"),
+            new TemplateDef(TemplateKey.UntilEndOfTurn, @"(?:この\s*ターンの終わりまで|ターンの終わりまで)", "ターンの終わりまで"),
+            new TemplateDef(TemplateKey.DuringNextSelfTurn, @"次の\s*自分\s*の\s*ターンの間", "次の自分のターンの間"),
+            new TemplateDef(TemplateKey.DuringNextOppTurn, @"次の\s*相手\s*の\s*ターンの間", "次の相手のターンの間"),
+            new TemplateDef(TemplateKey.GZero, @"G[・･]?\s*ゼロ|G\s*ZERO", "G・ゼロ"),
+            new TemplateDef(TemplateKey.WorldBreaker, @"(?:WORLD・BREAKER|ワールド・ブレイカー)", "WORLD・BREAKER / ワールド・ブレイカー"),
+            new TemplateDef(TemplateKey.GStrike, @"G[・･]?\s*(?:ストライク|STRIKE)", "G・ストライク"),
+            new TemplateDef(TemplateKey.WBreaker, @"(?:W[・･]?\s*ブレイカー|ダブル・ブレイカー)", "W・ブレイカー / ダブル・ブレイカー"),
+            new TemplateDef(TemplateKey.TBreaker, @"(?:T[・･]?\s*ブレイカー|トリプル・ブレイカー)", "T・ブレイカー / トリプル・ブレイカー"),
+            new TemplateDef(TemplateKey.DDD, @"D[・･]D[・･]D", "D・D・D"),
+            new TemplateDef(TemplateKey.KakumeiChange, @"革命(?:チェンジ|2|CHARGE|CHANGE)", "革命チェンジ/革命2"),
+            new TemplateDef(TemplateKey.GNeoEvo, @"G[-‐・]?\s*NEO\s*進化", "G-NEO進化"),
+            new TemplateDef(TemplateKey.NeoEvo, @"NEO\s*進化", "NEO進化"),
+            new TemplateDef(TemplateKey.InvasionZero, @"侵略\s*ZERO[-‐]?", "侵略ZERO-"),
+            new TemplateDef(TemplateKey.Invasion, @"侵略(?!\s*ZERO)", "侵略"),
+            new TemplateDef(TemplateKey.OptionalAction, @"カードを(?<N>\d+)枚引いてもよい", "カードを1枚引いてもよい"),
+            new TemplateDef(TemplateKey.CostChange, @"コスト(?:を)?(?<N>\d+)?(?<Verb>減らす|下げる|増やす|上げる)|コスト[-－](?<N>\d+)", "コスト変動"),
+            new TemplateDef(TemplateKey.ReplacementPrevention, @"相手のターンの間、?攻撃できない|相手の次のターン中、?攻撃できない", "攻撃不可（期間）"),
+            new TemplateDef(TemplateKey.DiscardHand, @"いずれかのプレイヤーは手札を(?<N>\d+)枚捨てる", "いずれかのプレイヤーは手札を1枚捨てる"),
+            new TemplateDef(TemplateKey.EachTimeEvent, @"いずれかのプレイヤーは手札を(?<N>\d+)枚捨てる", "いずれかのプレイヤーは手札を1枚捨てる", true),
+            new TemplateDef(TemplateKey.Charger, @"(?:チャージャー|CHARGER)", "チャージャー"),
         };
 
-        public static IReadOnlyList<TemplateDef> All => _defs;
+        public static IEnumerable<TemplateDef> All => _defs;
 
-        public static IEnumerable<(TemplateKey key, Match match, bool ignore)> MatchAll(string sentence)
+        public static string SetMarkerStrip(string s)
         {
-            if (string.IsNullOrEmpty(sentence))
-                yield break;
+            if (s == null) return string.Empty;
+            s = Regex.Replace(s, @"\s{2,}", " ").Trim();
+            return s;
+        }
 
+        public static IEnumerable<(TemplateKey key, Match match, bool ignore)> MatchAll(string text)
+        {
             foreach (var def in _defs)
             {
-                Match m;
-                try { m = def.Regex.Match(sentence); }
-                catch { continue; }
-                if (m.Success)
+                var matches = def.Regex.Matches(text);
+                foreach (Match m in matches)
+                {
                     yield return (def.Key, m, def.Ignore);
+                }
             }
         }
 
-        public static IReadOnlyList<(TemplateKey key, string pattern, bool ignore)> Snapshot()
-            => _defs.Select(d => (d.Key, d.Regex.ToString(), d.Ignore)).ToList();
     }
 }
+
+
+

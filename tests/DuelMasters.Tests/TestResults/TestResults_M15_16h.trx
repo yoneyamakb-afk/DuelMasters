@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="36ba9d68-3ea2-4277-a385-c4d4d1ae4fb8" name="米山@DESKTOP-DE0SNP1 2025-11-04 15:00:12" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-04T15:00:12.3911122+09:00" queuing="2025-11-04T15:00:12.3911125+09:00" start="2025-11-04T15:00:06.6812841+09:00" finish="2025-11-04T15:00:12.4408811+09:00" />
+  <TestSettings name="default" id="283bfd49-c795-46d8-91cb-43f4acd882c6">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-11-04_15_00_12" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e429592f-58f4-4e57-b31c-c5668cdb8255" testId="7d01a73e-d20a-44fe-9ae2-135f87bc6c9a" testName="SmokeTests.CompilesAndRuns" computerName="DESKTOP-DE0SNP1" duration="00:00:00.3184378" startTime="2025-11-04T15:00:12.1522675+09:00" endTime="2025-11-04T15:00:12.1523282+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e429592f-58f4-4e57-b31c-c5668cdb8255" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SmokeTests.CompilesAndRuns" storage="c:\users\米山\duelmasters\tests\duelmasters.tests\bin\debug\net8.0\duelmasters.tests.dll" id="7d01a73e-d20a-44fe-9ae2-135f87bc6c9a">
+      <Execution id="e429592f-58f4-4e57-b31c-c5668cdb8255" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DuelMasters.Tests\bin\Debug\net8.0\DuelMasters.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmokeTests" name="CompilesAndRuns" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7d01a73e-d20a-44fe-9ae2-135f87bc6c9a" executionId="e429592f-58f4-4e57-b31c-c5668cdb8255" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="一覧に存在しない結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="読み込まれたすべての結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.21)&#xD;
+[xUnit.net 00:00:00.93]   Discovering: DuelMasters.Tests&#xD;
+[xUnit.net 00:00:01.15]   Discovered:  DuelMasters.Tests&#xD;
+[xUnit.net 00:00:01.16]   Starting:    DuelMasters.Tests&#xD;
+[xUnit.net 00:00:01.71]   Finished:    DuelMasters.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

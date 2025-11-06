@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="34d1154b-7347-4f55-b78f-5b14c96d7d0e" name="米山@DESKTOP-DE0SNP1 2025-11-04 14:18:21" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-04T14:18:21.5201000+09:00" queuing="2025-11-04T14:18:21.5201004+09:00" start="2025-11-04T14:18:17.6927545+09:00" finish="2025-11-04T14:18:21.5485500+09:00" />
+  <TestSettings name="default" id="015d1d1c-1e9d-49ea-a56e-7fb1ee772ddd">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-11-04_14_18_21" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="865a8ae8-985d-40be-bbb3-86022f7f62bd" testId="dfd42984-d47a-2536-b71d-d09a209cc5e5" testName="EffectTraceTests.JsonlSink_WritesLines" computerName="DESKTOP-DE0SNP1" duration="00:00:00.3937980" startTime="2025-11-04T14:18:21.0975236+09:00" endTime="2025-11-04T14:18:21.0975805+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="865a8ae8-985d-40be-bbb3-86022f7f62bd" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="EffectTraceTests.JsonlSink_WritesLines" storage="c:\users\米山\duelmasters\tests\dmrules.effects.trace.tests\bin\debug\net8.0\dmrules.effects.trace.tests.dll" id="dfd42984-d47a-2536-b71d-d09a209cc5e5">
+      <Execution id="865a8ae8-985d-40be-bbb3-86022f7f62bd" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Trace.Tests\bin\Debug\net8.0\DMRules.Effects.Trace.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectTraceTests" name="JsonlSink_WritesLines" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="dfd42984-d47a-2536-b71d-d09a209cc5e5" executionId="865a8ae8-985d-40be-bbb3-86022f7f62bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="一覧に存在しない結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="読み込まれたすべての結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.1+ce9211e970 (64-bit .NET 8.0.21)&#xD;
+[xUnit.net 00:00:00.38]   Discovering: DMRules.Effects.Trace.Tests&#xD;
+[xUnit.net 00:00:00.47]   Discovered:  DMRules.Effects.Trace.Tests&#xD;
+[xUnit.net 00:00:00.47]   Starting:    DMRules.Effects.Trace.Tests&#xD;
+[xUnit.net 00:00:01.04]   Finished:    DMRules.Effects.Trace.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

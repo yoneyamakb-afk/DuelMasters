@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="a168113f-d712-44cb-8a82-946d2a6f86d8" name="米山@DESKTOP-DE0SNP1 2025-11-01 19:17:47" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-01T19:17:48.1992782+09:00" queuing="2025-11-01T19:17:48.1992787+09:00" start="2025-11-01T19:17:42.2056356+09:00" finish="2025-11-01T19:17:48.2000310+09:00" />
+  <TestSettings name="default" id="1953ef3c-04ab-429a-a37c-8546c0b1996d">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-11-01_19_17_47" />
+  </TestSettings>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="0" executed="0" passed="0" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.21)&#xD;
+[xUnit.net 00:00:00.93]   Discovering: RegulationAdapter&#xD;
+[xUnit.net 00:00:01.01]   Discovered:  RegulationAdapter&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-DE0SNP1" outcome="Warning" timestamp="2025-11-01T19:17:47.3151754+09:00">
+        <Text>No test is available in C:\Users\米山\DuelMasters\src\RegulationAdapter\bin\Debug\net8.0\RegulationAdapter.dll. Make sure that test discoverer &amp; executors are registered and platform &amp; framework version settings are appropriate and try again.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

@@ -11,6 +11,7 @@
     <None Remove="tests\**" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.10" />
     <PackageReference Include="xunit" Version="2.9.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
@@ -19,3 +20,5 @@
     <ProjectReference Include="..\..\src\DMRules.Engine\DMRules.Engine.csproj" />
   </ItemGroup>
 </Project>
+
+

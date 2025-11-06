@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="98d51d54-7df3-493c-af2c-095a2babadad" name="米山@DESKTOP-DE0SNP1 2025-11-02 08:35:31" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-02T08:35:32.7706289+09:00" queuing="2025-11-02T08:35:32.7706294+09:00" start="2025-11-02T08:35:24.4275823+09:00" finish="2025-11-02T08:35:33.8123207+09:00" />
+  <TestSettings name="default" id="03fc7092-ff1d-40dd-991d-d6c902ff5134">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-11-02_08_35_31" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="7bedba5d-d500-4331-948e-0ae8a03a3ada" testId="70aa5365-9ec5-7675-8ae0-7353ea820ee6" testName="SqliteEffectTextProviderTests.Can_Read_From_TempDb_ByName" computerName="DESKTOP-DE0SNP1" duration="00:00:01.1387901" startTime="2025-11-02T08:35:33.5441361+09:00" endTime="2025-11-02T08:35:33.5441368+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7bedba5d-d500-4331-948e-0ae8a03a3ada" />
+    <UnitTestResult executionId="9bf3f790-ebb3-4081-8c6a-6e51e5bedca0" testId="5f41c589-d743-4657-e841-1a4ef9c3b555" testName="DictionaryEffectTextProviderTests.InMemoryProvider_Works" computerName="DESKTOP-DE0SNP1" duration="00:00:00.6248446" startTime="2025-11-02T08:35:30.9505496+09:00" endTime="2025-11-02T08:35:30.9506825+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bf3f790-ebb3-4081-8c6a-6e51e5bedca0" />
+    <UnitTestResult executionId="81d22338-fa36-4822-b0a6-0e5f01ed1005" testId="6d16cc48-223a-525a-1ffe-c84962a1c5bc" testName="SqliteEffectTextProviderTests.Can_Read_From_TempDb_ByFaceId" computerName="DESKTOP-DE0SNP1" duration="00:00:02.0301768" startTime="2025-11-02T08:35:32.4050628+09:00" endTime="2025-11-02T08:35:32.4050649+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81d22338-fa36-4822-b0a6-0e5f01ed1005" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SqliteEffectTextProviderTests.Can_Read_From_TempDb_ByFaceId" storage="c:\users\米山\duelmasters\tests\dmrules.effects.text.tests\bin\debug\net8.0\dmrules.effects.text.tests.dll" id="6d16cc48-223a-525a-1ffe-c84962a1c5bc">
+      <Execution id="81d22338-fa36-4822-b0a6-0e5f01ed1005" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Text.Tests\bin\Debug\net8.0\DMRules.Effects.Text.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SqliteEffectTextProviderTests" name="Can_Read_From_TempDb_ByFaceId" />
+    </UnitTest>
+    <UnitTest name="SqliteEffectTextProviderTests.Can_Read_From_TempDb_ByName" storage="c:\users\米山\duelmasters\tests\dmrules.effects.text.tests\bin\debug\net8.0\dmrules.effects.text.tests.dll" id="70aa5365-9ec5-7675-8ae0-7353ea820ee6">
+      <Execution id="7bedba5d-d500-4331-948e-0ae8a03a3ada" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Text.Tests\bin\Debug\net8.0\DMRules.Effects.Text.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SqliteEffectTextProviderTests" name="Can_Read_From_TempDb_ByName" />
+    </UnitTest>
+    <UnitTest name="DictionaryEffectTextProviderTests.InMemoryProvider_Works" storage="c:\users\米山\duelmasters\tests\dmrules.effects.text.tests\bin\debug\net8.0\dmrules.effects.text.tests.dll" id="5f41c589-d743-4657-e841-1a4ef9c3b555">
+      <Execution id="9bf3f790-ebb3-4081-8c6a-6e51e5bedca0" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Text.Tests\bin\Debug\net8.0\DMRules.Effects.Text.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DictionaryEffectTextProviderTests" name="InMemoryProvider_Works" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="70aa5365-9ec5-7675-8ae0-7353ea820ee6" executionId="7bedba5d-d500-4331-948e-0ae8a03a3ada" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f41c589-d743-4657-e841-1a4ef9c3b555" executionId="9bf3f790-ebb3-4081-8c6a-6e51e5bedca0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d16cc48-223a-525a-1ffe-c84962a1c5bc" executionId="81d22338-fa36-4822-b0a6-0e5f01ed1005" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.1+ce9211e970 (64-bit .NET 8.0.21)&#xD;
+[xUnit.net 00:00:01.44]   Discovering: DMRules.Effects.Text.Tests&#xD;
+[xUnit.net 00:00:01.65]   Discovered:  DMRules.Effects.Text.Tests&#xD;
+[xUnit.net 00:00:01.66]   Starting:    DMRules.Effects.Text.Tests&#xD;
+[xUnit.net 00:00:05.31]   Finished:    DMRules.Effects.Text.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

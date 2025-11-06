@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -15,10 +16,10 @@ namespace DMRules.Tools
 
         public static int Run(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             if (args.Length < 2)
             {
-                Console.Error.WriteLine("Usage: dotnet run --project src/DMRules.Tools -- delta <old.json> <new.json> [--out ./artifacts]");
+                Console.Error.WriteLine("Usage: delta <old.json> <new.json> [--out ./artifacts]");
                 return 2;
             }
             string oldPath = args[0];
@@ -38,11 +39,10 @@ namespace DMRules.Tools
             var oldMap = oldList.ToDictionary(x => x.phrase, x => x, StringComparer.OrdinalIgnoreCase);
             var newMap = newList.ToDictionary(x => x.phrase, x => x, StringComparer.OrdinalIgnoreCase);
 
-            // Categories
-            var resolved = new List<(string phrase, int oldCount)>();                  // in old, not in new
-            var decreased = new List<(string phrase, int oldCount, int newCount)>();   // count down
-            var increased = new List<(string phrase, int oldCount, int newCount)>();   // count up (should be rare)
-            var emerged = new List<(string phrase, int newCount)>();                   // in new only
+            var resolved = new List<(string phrase, int oldCount)>();
+            var decreased = new List<(string phrase, int oldCount, int newCount)>();
+            var increased = new List<(string phrase, int oldCount, int newCount)>();
+            var emerged = new List<(string phrase, int newCount)>();
 
             foreach (var kv in oldMap)
             {
@@ -65,39 +65,27 @@ namespace DMRules.Tools
             }
 
             var ts = DateTimeOffset.Now.ToString("yyyyMMdd_HHmmss");
-            var csv1 = Path.Combine(outDir, $"DELTA_resolved_{ts}.csv");
-            var csv2 = Path.Combine(outDir, $"DELTA_decreased_{ts}.csv");
-            var csv3 = Path.Combine(outDir, $"DELTA_increased_{ts}.csv");
-            var csv4 = Path.Combine(outDir, $"DELTA_emerged_{ts}.csv");
-            var md   = Path.Combine(outDir, $"DELTA_summary_{ts}.md");
+            var csv1 = System.IO.Path.Combine(outDir, $"DELTA_resolved_{ts}.csv");
+            var csv2 = System.IO.Path.Combine(outDir, $"DELTA_decreased_{ts}.csv");
+            var csv3 = System.IO.Path.Combine(outDir, $"DELTA_increased_{ts}.csv");
+            var csv4 = System.IO.Path.Combine(outDir, $"DELTA_emerged_{ts}.csv");
+            var md   = System.IO.Path.Combine(outDir, $"DELTA_summary_{ts}.md");
 
             WriteCsv(csv1, new []{"phrase","oldCount"}, resolved.Select(x => new []{x.phrase, x.oldCount.ToString()}));
             WriteCsv(csv2, new []{"phrase","oldCount","newCount","delta"}, decreased.Select(x => new []{x.phrase, x.oldCount.ToString(), x.newCount.ToString(), (x.newCount-x.oldCount).ToString()}));
             WriteCsv(csv3, new []{"phrase","oldCount","newCount","delta"}, increased.Select(x => new []{x.phrase, x.oldCount.ToString(), x.newCount.ToString(), (x.newCount-x.oldCount).ToString()}));
             WriteCsv(csv4, new []{"phrase","newCount"}, emerged.Select(x => new []{x.phrase, x.newCount.ToString()}));
 
-            using (var w = new StreamWriter(md, false, new UTF8Encoding(true)))
+            using (var w = new StreamWriter(md, false, new System.Text.UTF8Encoding(true)))
             {
                 w.WriteLine("# Unresolved Delta Summary");
                 w.WriteLine();
-                w.WriteLine($"- Old JSON: `{Path.GetFileName(oldPath)}`");
-                w.WriteLine($"- New JSON: `{Path.GetFileName(newPath)}`");
+                w.WriteLine($"- Old JSON: `{System.IO.Path.GetFileName(oldPath)}`");
+                w.WriteLine($"- New JSON: `{System.IO.Path.GetFileName(newPath)}`");
                 w.WriteLine($"- Resolved   : {resolved.Count}");
                 w.WriteLine($"- Decreased  : {decreased.Count}");
                 w.WriteLine($"- Increased  : {increased.Count}");
                 w.WriteLine($"- Newly Emerged: {emerged.Count}");
-                w.WriteLine();
-                w.WriteLine("## Top Resolved (max 20)");
-                foreach (var p in resolved.Take(20))
-                    w.WriteLine($"- {p.phrase} (old {p.oldCount})");
-                w.WriteLine();
-                w.WriteLine("## Top Decreased (max 20)");
-                foreach (var p in decreased.OrderBy(x => x.newCount - x.oldCount).Take(20))
-                    w.WriteLine($"- {p.phrase} ({p.oldCount} -> {p.newCount})");
-                w.WriteLine();
-                w.WriteLine("## Newly Emerged (max 20)");
-                foreach (var p in emerged.OrderByDescending(x => x.newCount).Take(20))
-                    w.WriteLine($"- {p.phrase} (new {p.newCount})");
             }
 
             Console.WriteLine("Delta written:");
@@ -118,7 +106,7 @@ namespace DMRules.Tools
 
         private static void WriteCsv(string path, IEnumerable<string> headers, IEnumerable<string[]> rows)
         {
-            using var writer = new StreamWriter(path, false, new UTF8Encoding(true));
+            using var writer = new StreamWriter(path, false, new System.Text.UTF8Encoding(true));
             using var csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
             foreach (var h in headers) csv.WriteField(h);
             csv.NextRecord();

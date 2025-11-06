@@ -1,0 +1,102 @@
+﻿// Clean overwrite for CardTextTemplates.cs (compile-safe minimal set)
+using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
+namespace DMRules.Engine.TextParsing
+{
+    public enum TemplateKey
+    {
+        OptionalAction,
+        CostChange,
+        ReplacementPrevention,
+        InvasionZero,
+        Invasion,
+        NeoEvo,
+        GNeoEvo,
+        KakumeiChange,
+        DDD,
+        WBreaker,
+        TBreaker,
+        GStrike,
+        WorldBreaker,
+        DiscardHand,
+        EachTimeEvent,
+        Charger,
+        GZero,
+        DuringNextOppTurn,
+        DuringNextSelfTurn,
+        UntilEndOfTurn,
+        ShieldTrigger,
+        SelectMaxCreatures,
+    }
+
+    public sealed class TemplateDef
+    {
+        public TemplateKey Key { get; }
+        public Regex Regex { get; }
+        public string Example { get; }
+        public bool Ignore { get; }
+
+        public TemplateDef(TemplateKey key, string pattern, string example, bool ignore = false)
+        {
+            Key = key;
+            Regex = new Regex(pattern, RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Singleline | RegexOptions.Multiline);
+            Example = example;
+            Ignore = ignore;
+        }
+    }
+
+    public static partial class CardTextTemplates
+    {
+        private static readonly List<TemplateDef> _defs = new List<TemplateDef>
+        {
+            new TemplateDef(TemplateKey.SelectMaxCreatures, @"相手のクリーチャーを最大(?<N>\d+)体まで選ぶ", "相手のクリーチャーを最大2体まで選ぶ"),
+            new TemplateDef(TemplateKey.ShieldTrigger, @"シールド\s*トリガー", "シールドトリガー"),
+            new TemplateDef(TemplateKey.UntilEndOfTurn, @"(?:この\s*ターンの終わりまで|ターンの終わりまで)", "ターンの終わりまで"),
+            new TemplateDef(TemplateKey.DuringNextSelfTurn, @"次の\s*自分\s*の\s*ターンの間", "次の自分のターンの間"),
+            new TemplateDef(TemplateKey.DuringNextOppTurn, @"次の\s*相手\s*の\s*ターンの間", "次の相手のターンの間"),
+            new TemplateDef(TemplateKey.GZero, @"G[・･]?\s*ゼロ|G\s*ZERO", "G・ゼロ"),
+            new TemplateDef(TemplateKey.WorldBreaker, @"(?:WORLD・BREAKER|ワールド・ブレイカー)", "WORLD・BREAKER / ワールド・ブレイカー"),
+            new TemplateDef(TemplateKey.GStrike, @"G[・･]?\s*(?:ストライク|STRIKE)", "G・ストライク"),
+            new TemplateDef(TemplateKey.WBreaker, @"(?:W[・･]?\s*ブレイカー|ダブル・ブレイカー)", "W・ブレイカー / ダブル・ブレイカー"),
+            new TemplateDef(TemplateKey.TBreaker, @"(?:T[・･]?\s*ブレイカー|トリプル・ブレイカー)", "T・ブレイカー / トリプル・ブレイカー"),
+            new TemplateDef(TemplateKey.DDD, @"D[・･]D[・･]D", "D・D・D"),
+            new TemplateDef(TemplateKey.KakumeiChange, @"革命(?:チェンジ|2|CHARGE|CHANGE)", "革命チェンジ/革命2"),
+            new TemplateDef(TemplateKey.GNeoEvo, @"G[-‐・]?\s*NEO\s*進化", "G-NEO進化"),
+            new TemplateDef(TemplateKey.NeoEvo, @"NEO\s*進化", "NEO進化"),
+            new TemplateDef(TemplateKey.InvasionZero, @"侵略\s*ZERO[-‐]?", "侵略ZERO-"),
+            new TemplateDef(TemplateKey.Invasion, @"侵略(?!\s*ZERO)", "侵略"),
+            new TemplateDef(TemplateKey.OptionalAction, @"カードを(?<N>\d+)枚引いてもよい", "カードを1枚引いてもよい"),
+            new TemplateDef(TemplateKey.CostChange, @"コスト(?:を)?(?<N>\d+)?(?<Verb>減らす|下げる|増やす|上げる)|コスト[-－](?<N>\d+)", "コスト変動"),
+            new TemplateDef(TemplateKey.ReplacementPrevention, @"相手のターンの間、?攻撃できない|相手の次のターン中、?攻撃できない", "攻撃不可（期間）"),
+            new TemplateDef(TemplateKey.DiscardHand, @"いずれかのプレイヤーは手札を(?<N>\d+)枚捨てる", "いずれかのプレイヤーは手札を1枚捨てる"),
+            new TemplateDef(TemplateKey.EachTimeEvent, @"いずれかのプレイヤーは手札を(?<N>\d+)枚捨てる", "いずれかのプレイヤーは手札を1枚捨てる", true),
+            new TemplateDef(TemplateKey.Charger, @"(?:チャージャー|CHARGER)", "チャージャー"),
+        };
+
+        public static IEnumerable<TemplateDef> All => _defs;
+
+        public static string SetMarkerStrip(string s)
+        {
+            if (s == null) return string.Empty;
+            s = Regex.Replace(s, @"\s{2,}", " ").Trim();
+            return s;
+        }
+
+        public static IEnumerable<(TemplateKey key, Match match, bool ignore)> MatchAll(string text)
+        {
+            foreach (var def in _defs)
+            {
+                var matches = def.Regex.Matches(text);
+                foreach (Match m in matches)
+                {
+                    yield return (def.Key, m, def.Ignore);
+                }
+            }
+        }
+
+    }
+}
+
+

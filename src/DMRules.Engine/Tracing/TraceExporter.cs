@@ -1,4 +1,5 @@
-﻿// src/DMRules.Engine/Tracing/TraceExporter.cs
+﻿using System.Linq;
+using DMRules.Engine.Text.Overrides;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -90,21 +91,21 @@ namespace DMRules.Engine.Tracing
         public static void Write(string message, string? outputDir = null) => AppendLine(message, outputDir);
 
         public static void Write(TraceEvent evt, string? outputDir = null)
-            => AppendLine(JsonSerializer.Serialize(evt), outputDir);
+            => AppendLine(JsonSerializer.Serialize(M15_16_ExportSanitizer.Sanitize(evt)), outputDir);
 
         public static void Write(TimeSpan span, string? outputDir = null)
             => AppendLine(span.ToString(), outputDir);
 
         public static void WriteJson(object obj, string? outputDir = null)
-            => AppendLine(JsonSerializer.Serialize(obj), outputDir);
+            => AppendLine(JsonSerializer.Serialize(M15_16_ExportSanitizer.Sanitize(obj)), outputDir);
 
         public static void WriteNdjson(object obj, string? outputDir = null)
-            => AppendLine(JsonSerializer.Serialize(obj), outputDir);
+            => AppendLine(JsonSerializer.Serialize(M15_16_ExportSanitizer.Sanitize(obj)), outputDir);
 
         public static void WriteNdjson<T>(IEnumerable<T> items, string? outputDir = null)
         {
             foreach (var it in items)
-                AppendLine(JsonSerializer.Serialize(it), outputDir);
+                AppendLine(JsonSerializer.Serialize(M15_16_ExportSanitizer.Sanitize(it)), outputDir);
         }
 
         public static void WriteNdjson(string s, string? outputDir = null)
@@ -126,5 +127,94 @@ namespace DMRules.Engine.Tracing
         public int? StackSize { get; set; }
         public string? StateHash { get; set; }
         public Dictionary<string, object?>? Details { get; set; }
+    }
+}
+
+public static class M15_16_ExportSanitizer
+{
+    public static object Sanitize(object obj)
+    {
+        try
+        {
+            if (obj is DMRules.Engine.Tracing.TemplateParseTrace trace)
+            {
+                var field = typeof(DMRules.Engine.Tracing.TemplateParseTrace)
+                    .GetField("_records", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
+                var list = field?.GetValue(trace) as System.Collections.Generic.List<DMRules.Engine.Tracing.TemplateParseTrace.Record>;
+                if (list != null)
+                {
+                    foreach (var rec in list)
+                    {
+                        if (rec?.Tokens != null)
+                        {
+                            rec.Tokens = rec.Tokens
+                                .Select(tok => DMRules.Engine.Text.Overrides.M15_9TextNormalizer.RemoveShieldTriggerPrefix(tok))
+                                .ToList();
+                        }
+                    }
+                }
+                return trace;
+            }
+
+            if (obj is DMRules.Engine.Tracing.TemplateParseTrace.Record rec2 && rec2.Tokens != null)
+            {
+                rec2.Tokens = rec2.Tokens
+                    .Select(tok => DMRules.Engine.Text.Overrides.M15_9TextNormalizer.RemoveShieldTriggerPrefix(tok))
+                    .ToList();
+                return rec2;
+            }
+
+            if (obj is System.Collections.Generic.IEnumerable<DMRules.Engine.Tracing.TemplateParseTrace.Record> list2)
+            {
+                var copy = list2.Select(r => new DMRules.Engine.Tracing.TemplateParseTrace.Record
+                {
+                    CardName = r.CardName,
+                    Tokens = (r.Tokens ?? new System.Collections.Generic.List<string>())
+                                  .Select(tok => DMRules.Engine.Text.Overrides.M15_9TextNormalizer.RemoveShieldTriggerPrefix(tok))
+                                  .ToList(),
+                    Unresolved = r.Unresolved != null ? new System.Collections.Generic.List<string>(r.Unresolved)
+                                                      : new System.Collections.Generic.List<string>(),
+                    Timestamp = r.Timestamp
+                }).ToList();
+
+                return copy; // ← ここがポイント：変換済みコピーを返す
+            }
+
+
+            var prop = obj?.GetType().GetProperty("Tokens");
+            if (prop != null && typeof(System.Collections.Generic.IEnumerable<string>).IsAssignableFrom(prop.PropertyType))
+            {
+                var tokens = (System.Collections.Generic.IEnumerable<string>)prop.GetValue(obj);
+                if (tokens != null)
+                {
+                    var cleaned = tokens
+                        .Select(tok => DMRules.Engine.Text.Overrides.M15_9TextNormalizer.RemoveShieldTriggerPrefix(tok))
+                        .ToList();
+                    prop.SetValue(obj, cleaned);
+                }
+            }
+
+            // M15.16 Final: sanitize ShieldTrigger even inside Dictionary<string, object> containers
+            if (obj is System.Collections.Generic.Dictionary<string, object> dict)
+            {
+                foreach (var key in dict.Keys.ToList())
+                {
+                    if (dict[key] is System.Collections.Generic.IEnumerable<DMRules.Engine.Tracing.TemplateParseTrace.Record> recs)
+                    {
+                        dict[key] = DMRules.Engine.Tracing.M15_16r_SnapshotSanitizer
+                                       .RemoveShieldTriggerPrefix(recs)
+                                       .ToList();
+                    }
+                }
+                return dict;
+            }
+
+            return obj ?? new object();
+        }
+        catch
+        {
+            return obj ?? new object();
+        }
     }
 }

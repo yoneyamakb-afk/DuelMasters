@@ -1,0 +1,35 @@
+﻿using Xunit;
+using DMRules.Engine.Text.Overrides;
+
+namespace DMRules.Tests.TextNormalization
+{
+    public class CardTextTemplateTests
+    {
+        [Fact]
+        public void RandomDiscard_Compat_WithoutTrailingPeriod()
+        {
+            var input = "ランダムに相手の手札を２枚捨てる。";
+            var compat = M15_9TextNormalizer.NormalizeRandomDiscardCompat(input);
+            Assert.Equal("相手の手札をランダムに2枚捨てる", compat);
+        }
+
+        [Fact]
+        public void RandomDiscard_Strict_SubjectForm()
+        {
+            var input = "ランダムに相手の手札を１枚捨てる。";
+            var strict = M15_9TextNormalizer.NormalizeRandomDiscardStrict(input);
+            Assert.Equal("相手は自身の手札をランダムに1枚捨てる", strict);
+        }
+
+        [Fact]
+        public void ApplyAll_Pipeline_CoversRandomDiscard_AndShieldTriggerRemoval()
+        {
+            System.Environment.SetEnvironmentVariable("DMRULES_TEXT_NORMALIZATION_MODE", "Strict");
+            var input = "【注】S・トリガー：ランダムに相手の手札を１枚捨てる。";
+            var normalized = M15_9TextNormalizer.ApplyAll(input);
+            Assert.DoesNotContain("【", normalized);
+            Assert.DoesNotContain("S・トリガー：", normalized);
+            Assert.Contains("相手は自身の手札をランダムに1枚捨てる", normalized);
+        }
+    }
+}

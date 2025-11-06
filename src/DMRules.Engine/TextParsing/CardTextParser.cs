@@ -1,4 +1,4 @@
-// M15.1k - Card Text Parser (keeps M15.1h normalization & conservative splitter)
+﻿// M15.1k - Card Text Parser (keeps M15.1h normalization & conservative splitter)
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +47,7 @@ namespace DMRules.Engine.TextParsing
             text = Regex.Replace(text, @"[\r\n\t,　]+", " ");
 
             // strip set markers first
-            text = CardTextTemplates.SetMarkerStrip.Replace(text, " ");
+            text = CardTextTemplates.SetMarkerStrip(text);
 
             if (string.IsNullOrWhiteSpace(text))
                 return new ParseResult(new List<ParseToken>(), new List<string>());
@@ -76,3 +76,4 @@ namespace DMRules.Engine.TextParsing
         }
     }
 }
+

@@ -1,8 +1,11 @@
-// M15.x - Template Parse Trace writer (unchanged)
+﻿// M15.x - Template Parse Trace writer (unchanged)
+using DMRules.Engine.Text.Overrides;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Linq;
+
 
 namespace DMRules.Engine.Tracing
 {
@@ -25,8 +28,16 @@ namespace DMRules.Engine.Tracing
         public void WriteJson(string path)
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
+
+            // M15.16s: Apply sanitization on a deep clone to avoid residual ShieldTrigger prefixes
+            var sanitized = M15_16r_SnapshotSanitizer.RemoveShieldTriggerPrefix(_records).ToList();
+
             using var fs = File.Create(path);
-            JsonSerializer.Serialize(fs, _records, options);
+            JsonSerializer.Serialize(fs, sanitized, options);
         }
+
+
+
+
     }
 }

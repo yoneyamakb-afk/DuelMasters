@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="8b3cc30b-a587-41dd-9451-3aa5a748638e" name="米山@DESKTOP-DE0SNP1 2025-11-04 14:18:15" runUser="DESKTOP-DE0SNP1\米山" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-04T14:18:15.7153627+09:00" queuing="2025-11-04T14:18:15.7153632+09:00" start="2025-11-04T14:18:10.8359307+09:00" finish="2025-11-04T14:18:16.3008886+09:00" />
+  <TestSettings name="default" id="abd313ce-0da3-4058-b8ee-5a978370d67d">
+    <Deployment runDeploymentRoot="米山_DESKTOP-DE0SNP1_2025-11-04_14_18_15" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="bdbdae15-f0db-42d0-9699-62225f1e6750" testId="9f72cacd-628f-0b1a-ee69-6ed1725a4ab5" testName="EffectParserTests.Parse_DrawX_YieldsExpectedIR(text: &quot;on attack: draw 3&quot;, expectedTrigger: AttackDeclared, expectedDraw: 3)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0001011" startTime="2025-11-04T14:18:15.6565306+09:00" endTime="2025-11-04T14:18:15.6565306+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bdbdae15-f0db-42d0-9699-62225f1e6750" />
+    <UnitTestResult executionId="47d0ac1d-e6e2-48b0-8558-1fb0974ed735" testId="5a1f7ba7-7e6d-1044-e8d7-0d60cd4c8303" testName="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;バトルゾーンに出た時、カードを１枚引く。&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 1)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0001082" startTime="2025-11-04T14:18:15.6569274+09:00" endTime="2025-11-04T14:18:15.6569281+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47d0ac1d-e6e2-48b0-8558-1fb0974ed735" />
+    <UnitTestResult executionId="2fc7f158-7400-4c24-bc22-c6f6e1a0c159" testId="d176a24e-efc3-6fbb-7ed4-4f86a694e47a" testName="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;on battle win&quot;, expected: WinsBattle)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000842" startTime="2025-11-04T14:18:15.6630904+09:00" endTime="2025-11-04T14:18:15.6630905+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fc7f158-7400-4c24-bc22-c6f6e1a0c159" />
+    <UnitTestResult executionId="68e1730f-586f-44f6-a835-ad651452cd19" testId="50e13b99-ed59-40ff-b9a7-8a64c2b682a2" testName="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;シールドをブレイクした時&quot;, expected: ShieldBreak)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000269" startTime="2025-11-04T14:18:15.6637018+09:00" endTime="2025-11-04T14:18:15.6637019+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68e1730f-586f-44f6-a835-ad651452cd19" />
+    <UnitTestResult executionId="6cdbd45e-ba82-402f-b992-5cd44f1213b6" testId="7dbef199-2b43-27bf-4896-5555eaa43a8f" testName="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;攻撃する時：カードを二枚引く&quot;, expectedTrigger: AttackDeclared, expectedDraw: 2)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.1729322" startTime="2025-11-04T14:18:15.6530657+09:00" endTime="2025-11-04T14:18:15.6530661+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6cdbd45e-ba82-402f-b992-5cd44f1213b6" />
+    <UnitTestResult executionId="3738d446-9fa9-4ee3-91f2-01b0800725c2" testId="c48eaf29-d5d1-6bd8-d7f1-43f2aa36a9f8" testName="EffectParserTests.Parse_DrawX_YieldsExpectedIR(text: &quot;on enter: draw 1&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 1)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0004717" startTime="2025-11-04T14:18:15.6563726+09:00" endTime="2025-11-04T14:18:15.6563728+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3738d446-9fa9-4ee3-91f2-01b0800725c2" />
+    <UnitTestResult executionId="59481904-76bc-4b76-a5c6-72cf34e0d593" testId="fe5aae07-8957-8d08-bbd1-84b78bc820ae" testName="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;攻撃時、1枚ドロー。&quot;, expectedTrigger: AttackDeclared, expectedDraw: 1)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0019293" startTime="2025-11-04T14:18:15.6567910+09:00" endTime="2025-11-04T14:18:15.6567912+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59481904-76bc-4b76-a5c6-72cf34e0d593" />
+    <UnitTestResult executionId="fb382b47-7bd8-40b2-bc57-c46c83a28d07" testId="2947b0a6-6e8d-0733-0d00-e1adf85d66b1" testName="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;攻撃宣言時：２ドロー&quot;, expectedTrigger: AttackDeclared, expectedDraw: 2)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000335" startTime="2025-11-04T14:18:15.6571854+09:00" endTime="2025-11-04T14:18:15.6571855+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb382b47-7bd8-40b2-bc57-c46c83a28d07" />
+    <UnitTestResult executionId="377eed05-71de-4836-87d7-0b2f053e6dd7" testId="b1ee262b-73f9-1fad-29cd-30bb35cac550" testName="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;召喚時：カードを2枚引く&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 2)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000362" startTime="2025-11-04T14:18:15.6570609+09:00" endTime="2025-11-04T14:18:15.6570610+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="377eed05-71de-4836-87d7-0b2f053e6dd7" />
+    <UnitTestResult executionId="0540ea4d-908e-4178-951a-77857ba44333" testId="88162da8-64c7-e2ce-6c20-2af2bb86aeda" testName="EffectParserTests.PlannedEffect_ExecutesOnTrigger" computerName="DESKTOP-DE0SNP1" duration="00:00:00.1691339" startTime="2025-11-04T14:18:15.5514854+09:00" endTime="2025-11-04T14:18:15.5515218+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0540ea4d-908e-4178-951a-77857ba44333" />
+    <UnitTestResult executionId="3d5a4d18-e915-4e1f-9954-2ef6891f3bad" testId="fcb1e21d-aad0-3920-0ea1-0a9eb73b7146" testName="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;on destroyed&quot;, expected: Destroyed)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000314" startTime="2025-11-04T14:18:15.6635423+09:00" endTime="2025-11-04T14:18:15.6635426+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d5a4d18-e915-4e1f-9954-2ef6891f3bad" />
+    <UnitTestResult executionId="ca4b0946-913d-4966-ab64-1699d13c0770" testId="44c132eb-461f-d7d1-f4c5-f333f1b56ad1" testName="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;破壊された時&quot;, expected: Destroyed)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000376" startTime="2025-11-04T14:18:15.6632217+09:00" endTime="2025-11-04T14:18:15.6632218+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca4b0946-913d-4966-ab64-1699d13c0770" />
+    <UnitTestResult executionId="07125e54-b826-40b1-9e66-40256c80c8a9" testId="b07dc649-aeaa-8213-22c8-cd774e8437ce" testName="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;on shield break&quot;, expected: ShieldBreak)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0085165" startTime="2025-11-04T14:18:15.6628750+09:00" endTime="2025-11-04T14:18:15.6628754+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07125e54-b826-40b1-9e66-40256c80c8a9" />
+    <UnitTestResult executionId="44b8d615-6f41-4314-8044-23633f9f812e" testId="0fec0da3-d01d-e6a4-21d5-d07a21e47ea5" testName="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;このクリーチャーが破壊されるとき&quot;, expected: Destroyed)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.1925421" startTime="2025-11-04T14:18:15.6573625+09:00" endTime="2025-11-04T14:18:15.6573626+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="44b8d615-6f41-4314-8044-23633f9f812e" />
+    <UnitTestResult executionId="cf264890-996b-479a-8581-a3d88f32acbc" testId="e1e270d6-b5cf-e9d5-e631-6b15e766cc77" testName="EffectParserTests.Parse_DrawX_YieldsExpectedIR(text: &quot;on summon: draw 2&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 2)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0003857" startTime="2025-11-04T14:18:15.6557897+09:00" endTime="2025-11-04T14:18:15.6557902+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf264890-996b-479a-8581-a3d88f32acbc" />
+    <UnitTestResult executionId="39797521-d761-46c4-812f-276afea63f9e" testId="1baf0d7c-90e5-cfca-3240-d00463ecae2b" testName="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;バトルに勝った時&quot;, expected: WinsBattle)" computerName="DESKTOP-DE0SNP1" duration="00:00:00.0000283" startTime="2025-11-04T14:18:15.6633668+09:00" endTime="2025-11-04T14:18:15.6633669+09:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39797521-d761-46c4-812f-276afea63f9e" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;攻撃宣言時：２ドロー&quot;, expectedTrigger: AttackDeclared, expectedDraw: 2)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="2947b0a6-6e8d-0733-0d00-e1adf85d66b1">
+      <Execution id="fb382b47-7bd8-40b2-bc57-c46c83a28d07" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JapaneseParsingTests" name="JP_Text_Is_Normalized_And_Parsed" />
+    </UnitTest>
+    <UnitTest name="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;破壊された時&quot;, expected: Destroyed)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="44c132eb-461f-d7d1-f4c5-f333f1b56ad1">
+      <Execution id="ca4b0946-913d-4966-ab64-1699d13c0770" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TriggerVocabularyTests" name="JP_And_English_Bare_Triggers_Parse_To_NoOp" />
+    </UnitTest>
+    <UnitTest name="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;攻撃時、1枚ドロー。&quot;, expectedTrigger: AttackDeclared, expectedDraw: 1)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="fe5aae07-8957-8d08-bbd1-84b78bc820ae">
+      <Execution id="59481904-76bc-4b76-a5c6-72cf34e0d593" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JapaneseParsingTests" name="JP_Text_Is_Normalized_And_Parsed" />
+    </UnitTest>
+    <UnitTest name="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;シールドをブレイクした時&quot;, expected: ShieldBreak)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="50e13b99-ed59-40ff-b9a7-8a64c2b682a2">
+      <Execution id="68e1730f-586f-44f6-a835-ad651452cd19" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TriggerVocabularyTests" name="JP_And_English_Bare_Triggers_Parse_To_NoOp" />
+    </UnitTest>
+    <UnitTest name="EffectParserTests.Parse_DrawX_YieldsExpectedIR(text: &quot;on summon: draw 2&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 2)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="e1e270d6-b5cf-e9d5-e631-6b15e766cc77">
+      <Execution id="cf264890-996b-479a-8581-a3d88f32acbc" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectParserTests" name="Parse_DrawX_YieldsExpectedIR" />
+    </UnitTest>
+    <UnitTest name="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;on shield break&quot;, expected: ShieldBreak)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="b07dc649-aeaa-8213-22c8-cd774e8437ce">
+      <Execution id="07125e54-b826-40b1-9e66-40256c80c8a9" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TriggerVocabularyTests" name="JP_And_English_Bare_Triggers_Parse_To_NoOp" />
+    </UnitTest>
+    <UnitTest name="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;このクリーチャーが破壊されるとき&quot;, expected: Destroyed)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="0fec0da3-d01d-e6a4-21d5-d07a21e47ea5">
+      <Execution id="44b8d615-6f41-4314-8044-23633f9f812e" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TriggerVocabularyTests" name="JP_And_English_Bare_Triggers_Parse_To_NoOp" />
+    </UnitTest>
+    <UnitTest name="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;バトルゾーンに出た時、カードを１枚引く。&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 1)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="5a1f7ba7-7e6d-1044-e8d7-0d60cd4c8303">
+      <Execution id="47d0ac1d-e6e2-48b0-8558-1fb0974ed735" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JapaneseParsingTests" name="JP_Text_Is_Normalized_And_Parsed" />
+    </UnitTest>
+    <UnitTest name="EffectParserTests.Parse_DrawX_YieldsExpectedIR(text: &quot;on enter: draw 1&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 1)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="c48eaf29-d5d1-6bd8-d7f1-43f2aa36a9f8">
+      <Execution id="3738d446-9fa9-4ee3-91f2-01b0800725c2" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectParserTests" name="Parse_DrawX_YieldsExpectedIR" />
+    </UnitTest>
+    <UnitTest name="EffectParserTests.Parse_DrawX_YieldsExpectedIR(text: &quot;on attack: draw 3&quot;, expectedTrigger: AttackDeclared, expectedDraw: 3)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="9f72cacd-628f-0b1a-ee69-6ed1725a4ab5">
+      <Execution id="bdbdae15-f0db-42d0-9699-62225f1e6750" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectParserTests" name="Parse_DrawX_YieldsExpectedIR" />
+    </UnitTest>
+    <UnitTest name="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;攻撃する時：カードを二枚引く&quot;, expectedTrigger: AttackDeclared, expectedDraw: 2)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="7dbef199-2b43-27bf-4896-5555eaa43a8f">
+      <Execution id="6cdbd45e-ba82-402f-b992-5cd44f1213b6" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JapaneseParsingTests" name="JP_Text_Is_Normalized_And_Parsed" />
+    </UnitTest>
+    <UnitTest name="EffectParserTests.PlannedEffect_ExecutesOnTrigger" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="88162da8-64c7-e2ce-6c20-2af2bb86aeda">
+      <Execution id="0540ea4d-908e-4178-951a-77857ba44333" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="EffectParserTests" name="PlannedEffect_ExecutesOnTrigger" />
+    </UnitTest>
+    <UnitTest name="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;バトルに勝った時&quot;, expected: WinsBattle)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="1baf0d7c-90e5-cfca-3240-d00463ecae2b">
+      <Execution id="39797521-d761-46c4-812f-276afea63f9e" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TriggerVocabularyTests" name="JP_And_English_Bare_Triggers_Parse_To_NoOp" />
+    </UnitTest>
+    <UnitTest name="JapaneseParsingTests.JP_Text_Is_Normalized_And_Parsed(jp: &quot;召喚時：カードを2枚引く&quot;, expectedTrigger: EnterBattlezone, expectedDraw: 2)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="b1ee262b-73f9-1fad-29cd-30bb35cac550">
+      <Execution id="377eed05-71de-4836-87d7-0b2f053e6dd7" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JapaneseParsingTests" name="JP_Text_Is_Normalized_And_Parsed" />
+    </UnitTest>
+    <UnitTest name="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;on destroyed&quot;, expected: Destroyed)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="fcb1e21d-aad0-3920-0ea1-0a9eb73b7146">
+      <Execution id="3d5a4d18-e915-4e1f-9954-2ef6891f3bad" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TriggerVocabularyTests" name="JP_And_English_Bare_Triggers_Parse_To_NoOp" />
+    </UnitTest>
+    <UnitTest name="TriggerVocabularyTests.JP_And_English_Bare_Triggers_Parse_To_NoOp(text: &quot;on battle win&quot;, expected: WinsBattle)" storage="c:\users\米山\duelmasters\tests\dmrules.effects.tests\bin\debug\net8.0\dmrules.effects.tests.dll" id="d176a24e-efc3-6fbb-7ed4-4f86a694e47a">
+      <Execution id="2fc7f158-7400-4c24-bc22-c6f6e1a0c159" />
+      <TestMethod codeBase="C:\Users\米山\DuelMasters\tests\DMRules.Effects.Tests\bin\Debug\net8.0\DMRules.Effects.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TriggerVocabularyTests" name="JP_And_English_Bare_Triggers_Parse_To_NoOp" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="9f72cacd-628f-0b1a-ee69-6ed1725a4ab5" executionId="bdbdae15-f0db-42d0-9699-62225f1e6750" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a1f7ba7-7e6d-1044-e8d7-0d60cd4c8303" executionId="47d0ac1d-e6e2-48b0-8558-1fb0974ed735" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d176a24e-efc3-6fbb-7ed4-4f86a694e47a" executionId="2fc7f158-7400-4c24-bc22-c6f6e1a0c159" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50e13b99-ed59-40ff-b9a7-8a64c2b682a2" executionId="68e1730f-586f-44f6-a835-ad651452cd19" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7dbef199-2b43-27bf-4896-5555eaa43a8f" executionId="6cdbd45e-ba82-402f-b992-5cd44f1213b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c48eaf29-d5d1-6bd8-d7f1-43f2aa36a9f8" executionId="3738d446-9fa9-4ee3-91f2-01b0800725c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fe5aae07-8957-8d08-bbd1-84b78bc820ae" executionId="59481904-76bc-4b76-a5c6-72cf34e0d593" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2947b0a6-6e8d-0733-0d00-e1adf85d66b1" executionId="fb382b47-7bd8-40b2-bc57-c46c83a28d07" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b1ee262b-73f9-1fad-29cd-30bb35cac550" executionId="377eed05-71de-4836-87d7-0b2f053e6dd7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="88162da8-64c7-e2ce-6c20-2af2bb86aeda" executionId="0540ea4d-908e-4178-951a-77857ba44333" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fcb1e21d-aad0-3920-0ea1-0a9eb73b7146" executionId="3d5a4d18-e915-4e1f-9954-2ef6891f3bad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="44c132eb-461f-d7d1-f4c5-f333f1b56ad1" executionId="ca4b0946-913d-4966-ab64-1699d13c0770" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b07dc649-aeaa-8213-22c8-cd774e8437ce" executionId="07125e54-b826-40b1-9e66-40256c80c8a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0fec0da3-d01d-e6a4-21d5-d07a21e47ea5" executionId="44b8d615-6f41-4314-8044-23633f9f812e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1e270d6-b5cf-e9d5-e631-6b15e766cc77" executionId="cf264890-996b-479a-8581-a3d88f32acbc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1baf0d7c-90e5-cfca-3240-d00463ecae2b" executionId="39797521-d761-46c4-812f-276afea63f9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="一覧に存在しない結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="読み込まれたすべての結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="16" executed="16" passed="16" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.1+ce9211e970 (64-bit .NET 8.0.21)&#xD;
+[xUnit.net 00:00:00.91]   Discovering: DMRules.Effects.Tests&#xD;
+[xUnit.net 00:00:01.12]   Discovered:  DMRules.Effects.Tests&#xD;
+[xUnit.net 00:00:01.13]   Starting:    DMRules.Effects.Tests&#xD;
+[xUnit.net 00:00:01.53]   Finished:    DMRules.Effects.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
