@@ -1,11 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <!-- Ensure all .cs files are compiled by default -->
-    <EnableDefaultItems>true</EnableDefaultItems>
+    <AssemblyName>DMRules.Engine</AssemblyName>
   </PropertyGroup>
 </Project>
-
-
