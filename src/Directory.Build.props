@@ -1,5 +1,0 @@
-<Project>
-  <ItemGroup Condition="'$(MSBuildProjectName)' == 'DMRules.Data'">
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.7" />
-  </ItemGroup>
-</Project>

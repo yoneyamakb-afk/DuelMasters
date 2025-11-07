@@ -1,0 +1,26 @@
+{
+  "Name": "twin_trigger_shield",
+  "Events": [
+    {
+      "Type": "Setup",
+      "TwinId": 99,
+      "A": 420,
+      "B": 421
+    },
+    {
+      "Type": "BreakShields",
+      "Count": 1
+    },
+    {
+      "Type": "ShieldTrigger",
+      "CardFaceId": 9001,
+      "Cast": true
+    },
+    {
+      "Type": "PlayCardCalled",
+      "FaceIds": [
+        421
+      ]
+    }
+  ]
+}

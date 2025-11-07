@@ -1,0 +1,23 @@
+{
+  "Name": "apnap_order",
+  "Events": [
+    {
+      "Type": "Setup",
+      "Active": "P1",
+      "NonActive": "P2"
+    },
+    {
+      "Type": "APNAP_Active_Resolved",
+      "FaceIds": [
+        601
+      ]
+    },
+    {
+      "Type": "APNAP_NonActive_Resolved",
+      "FaceIds": [
+        601,
+        699
+      ]
+    }
+  ]
+}

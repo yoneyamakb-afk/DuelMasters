@@ -1,0 +1,23 @@
+{
+  "Name": "twin_A_destroy_B",
+  "Events": [
+    {
+      "Type": "Setup",
+      "TwinId": 88,
+      "A": 310,
+      "B": 311
+    },
+    {
+      "Type": "Destroy",
+      "FaceId": 310,
+      "To": "Graveyard"
+    },
+    {
+      "Type": "PlayCardCalled",
+      "FaceIds": [
+        310,
+        311
+      ]
+    }
+  ]
+}

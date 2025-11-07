@@ -1,0 +1,40 @@
+{
+  "Name": "chain_destroy",
+  "Events": [
+    {
+      "Type": "Setup",
+      "TwinId": 314,
+      "A": 800,
+      "B": 801
+    },
+    {
+      "Type": "Enter",
+      "FaceId": 800
+    },
+    {
+      "Type": "Destroy",
+      "FaceId": 800,
+      "To": "Graveyard"
+    },
+    {
+      "Type": "After_B",
+      "FaceIds": [
+        800,
+        801
+      ]
+    },
+    {
+      "Type": "Destroy",
+      "FaceId": 801,
+      "To": "Graveyard"
+    },
+    {
+      "Type": "After_A2",
+      "FaceIds": [
+        800,
+        801,
+        800
+      ]
+    }
+  ]
+}

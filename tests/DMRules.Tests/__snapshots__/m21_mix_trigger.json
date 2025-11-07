@@ -1,0 +1,40 @@
+{
+  "Name": "mix_trigger",
+  "Events": [
+    {
+      "Type": "Setup",
+      "TwinId": 271,
+      "A": 900,
+      "B": 901
+    },
+    {
+      "Type": "BreakShields",
+      "Count": 1
+    },
+    {
+      "Type": "Stack_Push",
+      "Who": "P1",
+      "What": "Twin(B)"
+    },
+    {
+      "Type": "Stack_Push",
+      "Who": "P2",
+      "What": "ShieldTrigger(Cast 9100)"
+    },
+    {
+      "Type": "Resolve",
+      "Who": "P2",
+      "What": "ShieldTrigger",
+      "CardFaceId": 9100,
+      "Cast": true
+    },
+    {
+      "Type": "Resolve",
+      "Who": "P1",
+      "What": "TwinPlay",
+      "FaceIds": [
+        901
+      ]
+    }
+  ]
+}

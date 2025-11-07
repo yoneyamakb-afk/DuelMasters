@@ -1,0 +1,17 @@
+{
+  "Name": "twin_AtoB",
+  "Events": [
+    {
+      "Type": "Setup",
+      "TwinId": 55,
+      "A": 100,
+      "B": 101
+    },
+    {
+      "Type": "PlayCardCalled",
+      "FaceIds": [
+        101
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "Name": "playtwin_path",
+  "Events": [
+    {
+      "Type": "PlayTwin",
+      "SourceFaceId": 10,
+      "Side": "B"
+    },
+    {
+      "Type": "PlayCard",
+      "FaceId": 11,
+      "Zone": "BattleZone"
+    }
+  ]
+}
