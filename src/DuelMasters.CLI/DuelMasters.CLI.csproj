@@ -10,4 +10,7 @@
     <ProjectReference Include="..\DMRules.Engine\DMRules.Engine.csproj" />
     <ProjectReference Include="..\DuelMasters.Engine\DuelMasters.Engine.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.10" />
+  </ItemGroup>
 </Project>

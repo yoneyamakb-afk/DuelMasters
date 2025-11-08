@@ -15,6 +15,7 @@ internal static class Program
     private static string? _traceJsonPath = null;
     private static string _traceLevel = "basic"; // basic|detail|debug
     private static bool _manual = false;         // 手動対戦モードフラグ
+    private static CardDatabase? _cardDb;        // カードDB（あれば）
 
     // ---- イベントトレース (EngineHooks.OnEvent をラップ) ----
     private static void InstallTracing()
@@ -58,7 +59,7 @@ internal static class Program
             {
                 _traceJsonPath = a.Substring("--trace-json=".Length).Trim('"');
                 if (string.IsNullOrWhiteSpace(_traceJsonPath)) _traceJsonPath = "trace.jsonl";
-                try { File.WriteAllText(_traceJsonPath, string.Empty); } catch { }
+                try { File.WriteAllText(_traceJsonPath!, string.Empty); } catch { }
             }
             else if (a.StartsWith("--trace-level=", StringComparison.OrdinalIgnoreCase))
             {
@@ -151,6 +152,29 @@ internal static class Program
     private static Deck MakeDeck(params int[] ids)
     {
         return new Deck(ImmutableArray.Create<CardId>(ids.Select(i => new CardId(i)).ToArray()));
+    }
+
+    // ---- デッキ一覧表示 ----
+    private static void PrintDeckList(string label, int[] ids)
+    {
+        Console.WriteLine();
+        Console.WriteLine($"[{label}]");
+
+        if (_cardDb == null)
+        {
+            Console.WriteLine("  ※カードDBが読み込めなかったため、IDのみ表示します。");
+            foreach (var id in ids)
+            {
+                Console.WriteLine($"  ID={id}");
+            }
+            return;
+        }
+
+        foreach (var id in ids)
+        {
+            var summary = _cardDb.GetCardSummary(id);
+            Console.WriteLine($"  ID={id} : {summary}");
+        }
     }
 
     // ---- 自動デモモード ----
@@ -247,16 +271,41 @@ internal static class Program
         ParseArgs(args);
         InstallTracing();
 
-        Console.WriteLine("=== デュエルマスターズ シミュレーター CLI (M11.6 / M27 手動モード) ===");
+        Console.WriteLine("=== デュエルマスターズ シミュレーター CLI (M11.6 / M28) ===");
         Console.WriteLine(_manual
             ? "モード: 手動（あなたが両方のプレイヤーを操作します）"
             : "モード: 自動デモ");
 
-        var deckA = MakeDeck(1, 2, 3, 4, 5);
-        var deckB = MakeDeck(6, 7, 8, 9, 10);
+        // ★ 実行ディレクトリ（bin\Debug\net8.0）から 5階層上に戻ってルートの Duelmasters.db を参照する
+        var baseDir = AppContext.BaseDirectory;
+        var dbPath = Path.GetFullPath(Path.Combine(
+            baseDir, "..", "..", "..", "..", "..", "Duelmasters.db"));
+
+        if (CardDatabase.TryLoad(dbPath, out var db))
+        {
+            _cardDb = db;
+        }
+        else
+        {
+            _cardDb = null;
+        }
+
+        // ひとまずデッキは従来通り ID 1〜10 のダミー
+        var deckAIds = new[] { 1, 2, 3, 4, 5 };
+        var deckBIds = new[] { 6, 7, 8, 9, 10 };
+
+        var deckA = MakeDeck(deckAIds);
+        var deckB = MakeDeck(deckBIds);
+
+        Console.WriteLine();
+        Console.WriteLine("デュエル開始前にデッキを確認します。");
+
+        PrintDeckList("プレイヤーA", deckAIds);
+        PrintDeckList("プレイヤーB", deckBIds);
 
         var game = GameState.Create(deckA, deckB, seed: 1234);
 
+        Console.WriteLine();
         Console.WriteLine($"ゲーム初期化完了: ターン {game.TurnNumber}, 手番プレイヤー={game.ActivePlayer.Value}");
 
         if (_manual)
