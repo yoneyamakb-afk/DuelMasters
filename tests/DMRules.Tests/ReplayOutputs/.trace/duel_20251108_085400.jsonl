@@ -1,0 +1,4 @@
+{"Phase":null,"Action":"replay_session_start","Player":null,"Card":null,"StackSize":null,"StateHash":null,"Details":{"source":"tests\\DMRules.Tests\\ReplayInputs\\duel_20251108_084159.jsonl"}}
+{"Phase":null,"Action":"sba_probe_skipped","Player":null,"Card":null,"StackSize":null,"StateHash":null,"Details":{"reason":"method_not_found"}}
+{"Phase":null,"Action":"test_session_end","Player":null,"Card":null,"StackSize":null,"StateHash":null,"Details":null}
+{"Phase":null,"Action":"replay_session_end","Player":null,"Card":null,"StackSize":null,"StateHash":null,"Details":{"lines":2}}

@@ -13,4 +13,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\DMRules.Engine\DMRules.Engine.csproj" />
   </ItemGroup>
+  <ItemGroup>
+  	<None Update="ReplayInputs\duel_20251108_084159.jsonl">
+  		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  	</None>
+  </ItemGroup>
+
 </Project>
