@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -14,8 +14,9 @@ internal static class Program
     private static bool _traceConsole = false;
     private static string? _traceJsonPath = null;
     private static string _traceLevel = "basic"; // basic|detail|debug
+    private static bool _manual = false;         // 手動対戦モードフラグ
 
-    // ---- Event tracing (wrap EngineHooks.OnEvent) ----
+    // ---- イベントトレース (EngineHooks.OnEvent をラップ) ----
     private static void InstallTracing()
     {
         var prev = EngineHooks.OnEvent;
@@ -23,7 +24,7 @@ internal static class Program
         {
             if (_traceConsole)
             {
-                Console.WriteLine($"[M11] {ev.TimestampUtc:O} {ev.Kind} phase={ev.PhaseName ?? "-"} ap={ev.ActivePlayerId?.ToString() ?? "-"}");
+                Console.WriteLine($"[M11] {ev.TimestampUtc:O} {ev.Kind} フェイズ={ev.PhaseName ?? "-"} 手番プレイヤー={ev.ActivePlayerId?.ToString() ?? "-"}");
             }
 
             if (!string.IsNullOrEmpty(_traceJsonPath))
@@ -37,19 +38,22 @@ internal static class Program
                     });
                     File.AppendAllText(_traceJsonPath!, line + Environment.NewLine);
                 }
-                catch { /* ignore logging errors */ }
+                catch { /* ログ出力失敗は無視 */ }
             }
 
             prev?.Invoke(ev);
         };
     }
 
-    // ---- CLI args ----
+    // ---- コマンドライン引数 ----
     private static void ParseArgs(string[] args)
     {
         foreach (var a in args)
         {
-            if (a.Equals("--trace", StringComparison.OrdinalIgnoreCase)) _traceConsole = true;
+            if (a.Equals("--trace", StringComparison.OrdinalIgnoreCase))
+            {
+                _traceConsole = true;
+            }
             else if (a.StartsWith("--trace-json=", StringComparison.OrdinalIgnoreCase))
             {
                 _traceJsonPath = a.Substring("--trace-json=".Length).Trim('"');
@@ -61,10 +65,15 @@ internal static class Program
                 _traceLevel = a.Substring("--trace-level=".Length).Trim().ToLowerInvariant();
                 if (_traceLevel != "basic" && _traceLevel != "detail" && _traceLevel != "debug") _traceLevel = "basic";
             }
+            else if (a.Equals("--manual", StringComparison.OrdinalIgnoreCase))
+            {
+                // 一人二役の手動対戦モード
+                _manual = true;
+            }
         }
     }
 
-    // ---- Snapshot / helpers ----
+    // ---- スナップショット / ヘルパ ----
     private sealed class Snapshot
     {
         public int Turn { get; init; }
@@ -78,7 +87,6 @@ internal static class Program
 
     private static Snapshot Take(GameState g)
     {
-        // StackState は IEnumerable を実装していないため、Count取得に失敗したら 0 にフォールバックする
         int stackCount;
         try
         {
@@ -86,7 +94,7 @@ internal static class Program
         }
         catch
         {
-            stackCount = 0; // 列挙不能な型。トレース用途なので安全に 0 固定
+            stackCount = 0;
         }
 
         int triggers = 0;
@@ -113,15 +121,15 @@ internal static class Program
         }
 
         if (_traceConsole)
-            Console.WriteLine($"[STEP] {title}");
+            Console.WriteLine($"[ステップ] {title}");
 
-        diffLine("Turn", before.Turn, after.Turn);
-        diffLine("Phase", before.Phase, after.Phase);
-        diffLine("ActivePlayer", before.ActivePlayer, after.ActivePlayer);
-        diffLine("PriorityPlayer", before.PriorityPlayer, after.PriorityPlayer);
-        diffLine("ConsecutivePasses", before.ConsecutivePasses, after.ConsecutivePasses);
-        diffLine("StackCount", before.StackCount, after.StackCount);
-        diffLine("PendingTriggers", before.PendingTriggers, after.PendingTriggers);
+        diffLine("ターン", before.Turn, after.Turn);
+        diffLine("フェイズ", before.Phase, after.Phase);
+        diffLine("手番プレイヤー", before.ActivePlayer, after.ActivePlayer);
+        diffLine("優先権プレイヤー", before.PriorityPlayer, after.PriorityPlayer);
+        diffLine("連続パス回数", before.ConsecutivePasses, after.ConsecutivePasses);
+        diffLine("スタックの枚数", before.StackCount, after.StackCount);
+        diffLine("未処理トリガー数", before.PendingTriggers, after.PendingTriggers);
 
         if (!string.IsNullOrEmpty(_traceJsonPath))
         {
@@ -145,39 +153,119 @@ internal static class Program
         return new Deck(ImmutableArray.Create<CardId>(ids.Select(i => new CardId(i)).ToArray()));
     }
 
-    private static void Main(string[] args)
+    // ---- 自動デモモード ----
+    private static void RunAuto(GameState game)
     {
-        ParseArgs(args);
-        InstallTracing();
-
-        Console.WriteLine("=== DuelMasters Simulator CLI (M11.6 Trace) ===");
-
-        var deckA = MakeDeck(1, 2, 3, 4, 5);
-        var deckB = MakeDeck(6, 7, 8, 9, 10);
-
-        var game = GameState.Create(deckA, deckB, seed: 1234);
-
-        Console.WriteLine($"Game initialized: Turn {game.TurnNumber}, ActivePlayer={game.ActivePlayer.Value}");
-
+        Console.WriteLine("=== 自動デュエルデモ（従来動作） ===");
         for (int i = 0; i < 5; i++)
         {
-            Console.WriteLine($"-- Turn {game.TurnNumber} -- Active={game.ActivePlayer.Value}");
+            Console.WriteLine($"-- ターン {game.TurnNumber} -- 手番プレイヤー={game.ActivePlayer.Value}");
 
             var actions = game.GenerateLegalActions(game.PriorityPlayer).ToList();
-            Console.WriteLine($"Available actions: {actions.Count}");
+            Console.WriteLine($"選択可能な行動数: {actions.Count}");
             if (actions.Count == 0) break;
 
             var before = Take(game);
             var first = actions.First();
             game = game.Apply(first);
             var after = Take(game);
-            EmitStepTrace($"Apply({first.Type})", before, after);
+            EmitStepTrace($"行動適用 ({first.Type})", before, after);
         }
 
-        Console.WriteLine("=== Simulation End ===");
+        Console.WriteLine("=== 自動デュエル終了 ===");
         if (!string.IsNullOrEmpty(_traceJsonPath))
         {
-            Console.WriteLine($"Trace written to {_traceJsonPath}");
+            Console.WriteLine($"トレース出力先: {_traceJsonPath}");
+        }
+    }
+
+    // ---- 手動入力用ヘルパ ----
+    private static int ReadActionIndex(int max)
+    {
+        while (true)
+        {
+            Console.Write($"行動番号を入力してください (0〜{max - 1}、未入力なら0): ");
+            var line = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(line))
+            {
+                return 0;
+            }
+
+            if (int.TryParse(line, out var idx) && idx >= 0 && idx < max)
+            {
+                return idx;
+            }
+
+            Console.WriteLine("入力が不正です。番号を入力し直してください。");
+        }
+    }
+
+    // ---- 手動対戦モード（一人二役） ----
+    private static void RunManual(GameState game)
+    {
+        Console.WriteLine("=== 手動デュエルモード（一人で両プレイヤーを操作） ===");
+
+        for (int step = 0; step < 100; step++)
+        {
+            Console.WriteLine();
+            Console.WriteLine($"== ステップ {step + 1} ==");
+            Console.WriteLine($"ターン={game.TurnNumber}, フェイズ={game.Phase}, 手番プレイヤー={game.ActivePlayer.Value}, 優先権プレイヤー={game.PriorityPlayer.Value}");
+
+            var actions = game.GenerateLegalActions(game.PriorityPlayer).ToList();
+            if (actions.Count == 0)
+            {
+                Console.WriteLine("選択可能な行動がありません。デュエルを終了します。");
+                break;
+            }
+
+            Console.WriteLine("選択可能な行動一覧:");
+            for (int i = 0; i < actions.Count; i++)
+            {
+                Console.WriteLine($"  {i}: {actions[i].Type}");
+            }
+
+            var before = Take(game);
+            var idx = ReadActionIndex(actions.Count);
+            var chosen = actions[idx];
+
+            Console.WriteLine($"選択した行動: #{idx} {chosen.Type}");
+
+            game = game.Apply(chosen);
+            var after = Take(game);
+            EmitStepTrace($"行動適用 ({chosen.Type})", before, after);
+        }
+
+        Console.WriteLine("=== 手動デュエル終了 ===");
+        if (!string.IsNullOrEmpty(_traceJsonPath))
+        {
+            Console.WriteLine($"トレース出力先: {_traceJsonPath}");
+        }
+    }
+
+    private static void Main(string[] args)
+    {
+        ParseArgs(args);
+        InstallTracing();
+
+        Console.WriteLine("=== デュエルマスターズ シミュレーター CLI (M11.6 / M27 手動モード) ===");
+        Console.WriteLine(_manual
+            ? "モード: 手動（あなたが両方のプレイヤーを操作します）"
+            : "モード: 自動デモ");
+
+        var deckA = MakeDeck(1, 2, 3, 4, 5);
+        var deckB = MakeDeck(6, 7, 8, 9, 10);
+
+        var game = GameState.Create(deckA, deckB, seed: 1234);
+
+        Console.WriteLine($"ゲーム初期化完了: ターン {game.TurnNumber}, 手番プレイヤー={game.ActivePlayer.Value}");
+
+        if (_manual)
+        {
+            RunManual(game);
+        }
+        else
+        {
+            RunAuto(game);
         }
     }
 }
