@@ -339,12 +339,7 @@ internal static class Program
 
         try
         {
-            // --- 追加: 初期状態の調整（GUIの初期化と一致させる）---
-            initial = initial
-                .WithTurnNumber(1)
-                .WithPhase(Phase.Main)
-                .WithActivePlayer(0)
-                .WithPriorityPlayer(0);
+            // ★ ここにあった initial = initial.With... の4行は削除してOK
 
             var before = Take(initial);
             var finalState = ReplayRunner.Run(initial, tracePath);
@@ -358,6 +353,7 @@ internal static class Program
             Console.WriteLine($"リプレイ中にエラーが発生しました: {ex.Message}");
         }
     }
+
 
 
     private static void Main(string[] args)
