@@ -149,7 +149,7 @@ internal static class Program
         }
     }
 
-    private static Deck MakeDeck(params int[] ids)
+    private static Deck MakeDeck(int[] ids)
     {
         return new Deck(ImmutableArray.Create<CardId>(ids.Select(i => new CardId(i)).ToArray()));
     }
@@ -174,6 +174,58 @@ internal static class Program
         {
             var summary = _cardDb.GetCardSummary(id);
             Console.WriteLine($"  ID={id} : {summary}");
+        }
+    }
+
+    // ---- デッキファイル読み込み ----
+    // solutionRoot\decks\deckA.txt / deckB.txt を探す
+    // 1行1つの face_id（整数）。不正行は無視。
+    private static int[] LoadDeckIds(string solutionRoot, string label, string fileName, int[] fallback)
+    {
+        var decksDir = Path.Combine(solutionRoot, "decks");
+        var path = Path.Combine(decksDir, fileName);
+
+        if (!File.Exists(path))
+        {
+            Console.WriteLine($"[Deck] {label} 用のデッキファイルが見つかりませんでした。既定デッキを使用します: {path}");
+            return fallback;
+        }
+
+        try
+        {
+            var lines = File.ReadAllLines(path);
+            var ids = lines
+                .Select(l => l.Trim())
+                .Where(l => !string.IsNullOrWhiteSpace(l))
+                .Select(l =>
+                {
+                    if (int.TryParse(l, out var v))
+                    {
+                        return (ok: true, value: v, raw: l);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"[Deck] {label}: 数値として解釈できない行をスキップします: \"{l}\"");
+                        return (ok: false, value: 0, raw: l);
+                    }
+                })
+                .Where(x => x.ok)
+                .Select(x => x.value)
+                .ToArray();
+
+            if (ids.Length == 0)
+            {
+                Console.WriteLine($"[Deck] {label}: 有効なIDが1つもありませんでした。既定デッキを使用します。");
+                return fallback;
+            }
+
+            Console.WriteLine($"[Deck] {label}: {path} から {ids.Length} 枚読み込みました。");
+            return ids;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Deck] {label}: 読み込みに失敗しました: {ex.Message} 既定デッキを使用します。");
+            return fallback;
         }
     }
 
@@ -271,15 +323,16 @@ internal static class Program
         ParseArgs(args);
         InstallTracing();
 
-        Console.WriteLine("=== デュエルマスターズ シミュレーター CLI (M11.6 / M28) ===");
+        Console.WriteLine("=== デュエルマスターズ シミュレーター CLI (M11.6 / M29) ===");
         Console.WriteLine(_manual
             ? "モード: 手動（あなたが両方のプレイヤーを操作します）"
             : "モード: 自動デモ");
 
-        // ★ 実行ディレクトリ（bin\Debug\net8.0）から 5階層上に戻ってルートの Duelmasters.db を参照する
+        // 実行ディレクトリ（bin\Debug\net8.0）から 5階層上に戻ってルートの Duelmasters.db を参照する
         var baseDir = AppContext.BaseDirectory;
-        var dbPath = Path.GetFullPath(Path.Combine(
-            baseDir, "..", "..", "..", "..", "..", "Duelmasters.db"));
+        var solutionRoot = Path.GetFullPath(Path.Combine(
+            baseDir, "..", "..", "..", "..", ".."));
+        var dbPath = Path.Combine(solutionRoot, "Duelmasters.db");
 
         if (CardDatabase.TryLoad(dbPath, out var db))
         {
@@ -290,9 +343,13 @@ internal static class Program
             _cardDb = null;
         }
 
-        // ひとまずデッキは従来通り ID 1〜10 のダミー
-        var deckAIds = new[] { 1, 2, 3, 4, 5 };
-        var deckBIds = new[] { 6, 7, 8, 9, 10 };
+        // 既定デッキ（DBに存在することが確認済みのID群）
+        var defaultDeckAIds = new[] { 1, 3, 4, 5, 9 };
+        var defaultDeckBIds = new[] { 6, 7, 8, 9, 10 };
+
+        // decks\deckA.txt / deckB.txt があればそちらを優先
+        var deckAIds = LoadDeckIds(solutionRoot, "プレイヤーA", "deckA.txt", defaultDeckAIds);
+        var deckBIds = LoadDeckIds(solutionRoot, "プレイヤーB", "deckB.txt", defaultDeckBIds);
 
         var deckA = MakeDeck(deckAIds);
         var deckB = MakeDeck(deckBIds);

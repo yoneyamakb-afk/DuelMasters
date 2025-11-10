@@ -1,0 +1,84 @@
+<Window x:Class="DuelMasters.GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Duel Masters Simulator" Height="600" Width="900">
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <!-- ヘッダー：タイトル＋ターン・フェイズ・手番 -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,8">
+            <TextBlock Text="デュエル・マスターズ シミュレーター" FontSize="20" FontWeight="Bold"/>
+            <TextBlock Text="{Binding TurnDisplay}" Margin="24,0,0,0" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding PhaseDisplay}" Margin="16,0,0,0" VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding ActivePlayerDisplay}" Margin="16,0,0,0" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- 盤面：上がプレイヤーB、下がプレイヤーA -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- プレイヤーB（上側） -->
+            <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Padding="4" Margin="0,0,0,4">
+                <StackPanel>
+                    <TextBlock Text="プレイヤーB" FontWeight="Bold"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                        <TextBlock Text="{Binding PlayerB.HandLabel}" Margin="0,0,12,0"/>
+                        <TextBlock Text="{Binding PlayerB.ManaLabel}" Margin="0,0,12,0"/>
+                        <TextBlock Text="{Binding PlayerB.ShieldLabel}"/>
+                    </StackPanel>
+                    <TextBlock Text="バトルゾーン" FontStyle="Italic" Margin="0,4,0,0"/>
+                    <ItemsControl ItemsSource="{Binding PlayerB.BattleZoneCards}" Margin="8,0,0,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
+
+            <!-- プレイヤーA（下側） -->
+            <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Padding="4" Margin="0,4,0,0">
+                <StackPanel>
+                    <TextBlock Text="プレイヤーA" FontWeight="Bold"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                        <TextBlock Text="{Binding PlayerA.HandLabel}" Margin="0,0,12,0"/>
+                        <TextBlock Text="{Binding PlayerA.ManaLabel}" Margin="0,0,12,0"/>
+                        <TextBlock Text="{Binding PlayerA.ShieldLabel}"/>
+                    </StackPanel>
+                    <TextBlock Text="バトルゾーン" FontStyle="Italic" Margin="0,4,0,0"/>
+                    <ItemsControl ItemsSource="{Binding PlayerA.BattleZoneCards}" Margin="8,0,0,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- ボタン -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,8,0,4" HorizontalAlignment="Right">
+            <Button Content="ターン進行" Width="120" Margin="0,0,8,0"
+                    Command="{Binding NextStepCommand}"/>
+            <Button Content="終了" Width="80" Click="OnExitClicked"/>
+        </StackPanel>
+
+        <!-- ログ -->
+        <TextBox Grid.Row="3"
+                 Margin="0,4,0,0"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 Text="{Binding LogText, Mode=OneWay}"/>
+    </Grid>
+</Window>
