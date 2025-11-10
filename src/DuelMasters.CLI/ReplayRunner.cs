@@ -18,19 +18,25 @@ namespace DuelMasters.CLI
         /// </summary>
         public static GameState Run(GameState initial, string tracePath)
         {
-            if (!File.Exists(tracePath))
-                throw new FileNotFoundException($"trace ファイルが見つかりません: {tracePath}", tracePath);
-
             var state = initial;
+            var lines = File.ReadAllLines(tracePath);
 
-            foreach (var cmd in LoadCommands(tracePath))
+            foreach (var line in lines)
             {
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+
+                var cmd = JsonSerializer.Deserialize<ReplayCommand>(line);
+                if (cmd == null)
+                    continue;
+
                 var intent = ToActionIntent(cmd);
-                state = state.Apply(intent);
+                state = state.Apply(intent);   // ← ★ 戻り値で上書きするのが必須
             }
 
             return state;
         }
+
 
         /// <summary>
         /// trace.json を 1 行ずつ読み取り、ActionType / ActionParam だけを抜き出した中間表現に変換します。
