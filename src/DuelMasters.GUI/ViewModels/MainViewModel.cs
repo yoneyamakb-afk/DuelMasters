@@ -9,24 +9,25 @@ namespace DuelMasters.GUI.ViewModels
 {
     /// <summary>
     /// メイン画面用ViewModel。
-    /// 現時点ではGameControllerのスタブ実装と接続しています。
-    /// 実エンジン(GameState)に接続する場合はGameController側を差し替えるだけで済む構造にしています。
+    /// IGameController 経由でゲームエンジン（またはスタブ）にアクセスします。
+    /// 実際の DuelMasters.Engine に接続する場合も、IGameController 実装を差し替えるだけで
+    /// GUI 側のコード変更を最小限に抑えられます。
     /// </summary>
     public sealed class MainViewModel : INotifyPropertyChanged
     {
-        private readonly GameController _controller;
+        private readonly IGameController _controller;
 
         private int _turn;
-        private string _phase = "";
-        private string _activePlayer = "";
-        private string _logText = "";
+        private string _phase = string.Empty;
+        private string _activePlayer = string.Empty;
+        private string _logText = string.Empty;
 
         public PlayerViewModel PlayerA { get; } = new PlayerViewModel();
         public PlayerViewModel PlayerB { get; } = new PlayerViewModel();
 
         public ICommand NextStepCommand { get; }
 
-        public MainViewModel(GameController controller)
+        public MainViewModel(IGameController controller)
         {
             _controller = controller;
             NextStepCommand = new RelayCommand(async _ => await NextStepAsync(), _ => true);
@@ -52,13 +53,15 @@ namespace DuelMasters.GUI.ViewModels
             Phase = snapshot.Phase;
             ActivePlayer = snapshot.ActivePlayer;
 
-            PlayerA.HandCount = snapshot.PlayerA.HandCount;
-            PlayerA.ManaCount = snapshot.PlayerA.ManaCount;
+            PlayerA.HandCount   = snapshot.PlayerA.HandCount;
+            PlayerA.ManaCount   = snapshot.PlayerA.ManaCount;
             PlayerA.ShieldCount = snapshot.PlayerA.ShieldCount;
+            PlayerA.DeckCount   = snapshot.PlayerA.DeckCount;
 
-            PlayerB.HandCount = snapshot.PlayerB.HandCount;
-            PlayerB.ManaCount = snapshot.PlayerB.ManaCount;
+            PlayerB.HandCount   = snapshot.PlayerB.HandCount;
+            PlayerB.ManaCount   = snapshot.PlayerB.ManaCount;
             PlayerB.ShieldCount = snapshot.PlayerB.ShieldCount;
+            PlayerB.DeckCount   = snapshot.PlayerB.DeckCount;
 
             PlayerA.BattleZoneCards.Clear();
             foreach (var name in snapshot.PlayerA.BattleZoneCards)
@@ -133,8 +136,8 @@ namespace DuelMasters.GUI.ViewModels
         }
 
         public string TurnDisplay => $"ターン: {Turn}";
-        public string PhaseDisplay => string.IsNullOrWhiteSpace(Phase) ? "" : $"フェイズ: {Phase}";
-        public string ActivePlayerDisplay => string.IsNullOrWhiteSpace(ActivePlayer) ? "" : $"手番: {ActivePlayer}";
+        public string PhaseDisplay => string.IsNullOrWhiteSpace(Phase) ? string.Empty : $"フェイズ: {Phase}";
+        public string ActivePlayerDisplay => string.IsNullOrWhiteSpace(ActivePlayer) ? string.Empty : $"手番: {ActivePlayer}";
 
         public string LogText
         {

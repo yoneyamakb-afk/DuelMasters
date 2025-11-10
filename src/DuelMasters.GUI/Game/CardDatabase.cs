@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.Data.Sqlite;
 
-namespace DuelMasters.CLI;
+namespace DuelMasters.GUI.Game;
 
 /// <summary>
 /// Duelmasters.db の card_face からカード情報を読み込む簡易DB

@@ -9,6 +9,7 @@ namespace DuelMasters.GUI.ViewModels
         private int _handCount;
         private int _manaCount;
         private int _shieldCount;
+        private int _deckCount;
 
         public ObservableCollection<string> BattleZoneCards { get; } = new ObservableCollection<string>();
 
@@ -54,9 +55,24 @@ namespace DuelMasters.GUI.ViewModels
             }
         }
 
+        public int DeckCount
+        {
+            get => _deckCount;
+            set
+            {
+                if (_deckCount != value)
+                {
+                    _deckCount = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(DeckLabel));
+                }
+            }
+        }
+
         public string HandLabel => $"手札: {HandCount}枚";
         public string ManaLabel => $"マナ: {ManaCount}枚";
         public string ShieldLabel => $"シールド: {ShieldCount}枚";
+        public string DeckLabel => $"山札: {DeckCount}枚";
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

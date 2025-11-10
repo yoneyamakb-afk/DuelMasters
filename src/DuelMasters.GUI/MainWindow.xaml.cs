@@ -13,7 +13,8 @@ namespace DuelMasters.GUI
         {
             InitializeComponent();
 
-            var controller = new GameController();
+            // 実エンジン接続版の EngineGameController を使用
+            IGameController controller = new EngineGameController();
             _viewModel = new MainViewModel(controller);
             DataContext = _viewModel;
 

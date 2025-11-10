@@ -1,23 +1,15 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DuelMasters.GUI.Game
 {
     /// <summary>
-    /// GUI とゲームエンジンをつなぐためのアダプタ層。
-    /// 
-    /// 現時点では GameState / CardDatabase など実エンジンの具体型が
-    /// こちらからは参照できないため、
-    /// ・GUIの形
-    /// ・進行ボタンのハンドリング
-    /// を確認するためのスタブ実装になっています。
+    /// GUI とゲームエンジンをつなぐためのアダプタ層（簡易スタブ版）。
     ///
-    /// 実際のGameStateに接続する場合は、以下のスタブ実装部分を
-    /// あなたの環境の GameState / PlayerState / Card 情報取得処理に
-    /// 置き換えてください。
+    /// 実際の GameState / CardDatabase に接続する場合は、
+    /// InitializeAsync / StepAsync 内の処理をあなたの環境の実装に差し替えてください。
     /// </summary>
-    public sealed class GameController
+    public sealed class GameController : IGameController
     {
         private int _turn = 1;
         private bool _isPlayerATurn = true;
@@ -27,9 +19,10 @@ namespace DuelMasters.GUI.Game
 
         public GameController()
         {
-            // 初期値（40枚デッキ・シールド5枚を想定したスタブ）
-            _playerA = new PlayerSnapshot(5, 0, 5, new List<string>());
-            _playerB = new PlayerSnapshot(5, 0, 5, new List<string>());
+            // 40枚デッキ・手札5・シールド5 を想定したスタブ初期値
+            // 山札 = 40 - 5(手札) - 5(シールド) = 30
+            _playerA = new PlayerSnapshot(5, 0, 5, 30, new List<string>());
+            _playerB = new PlayerSnapshot(5, 0, 5, 30, new List<string>());
         }
 
         /// <summary>
@@ -39,8 +32,6 @@ namespace DuelMasters.GUI.Game
         /// </summary>
         public Task<(GameSnapshot snapshot, string message)> InitializeAsync()
         {
-            // TODO: 実エンジン接続版ではここで GameState を生成し、
-            //       Snapshot を GameState から構築してください。
             var snapshot = BuildSnapshot();
             var message = "デュエルを初期化しました。（現在はスタブ実装。GameState接続時はここで初期状態を反映してください）";
             return Task.FromResult((snapshot, message));
@@ -48,10 +39,9 @@ namespace DuelMasters.GUI.Game
 
         /// <summary>
         /// 「ターン進行」ボタン押下時の処理（簡易進行モード）。
-        /// - 手番プレイヤーがカードを1枚ドロー
-        /// - ターン開始時点で手札が1枚以上あった場合のみ、1枚をマナチャージ
-        ///   （= 手札-1, マナ+1）
-        /// という簡易ルールで、視覚的に「ドロー → 条件付きマナチャージ」を再現します。
+        /// - 山札が残っていれば1ドロー（山札-1, 手札+1）
+        /// - ドロー後の手札が1枚以上なら、その中から1枚をマナチャージ（手札-1, マナ+1）
+        /// という簡易ルールで、ドロー→マナチャージの流れを再現します。
         /// </summary>
         public Task<(GameSnapshot snapshot, string message)> StepAsync()
         {
@@ -59,14 +49,18 @@ namespace DuelMasters.GUI.Game
             {
                 var pa = _playerA;
 
-                // ターン開始時点の手札枚数を記録（チャージ可否判定用）
-                var hadCardBeforeDraw = pa.HandCount > 0;
+                // 山札があれば1ドロー
+                if (pa.DeckCount > 0)
+                {
+                    pa = pa with
+                    {
+                        DeckCount = pa.DeckCount - 1,
+                        HandCount = pa.HandCount + 1
+                    };
+                }
 
-                // 1ドロー
-                pa = pa with { HandCount = pa.HandCount + 1 };
-
-                // 開始時点で手札が1枚以上あった場合のみ、1枚をマナにチャージ
-                if (hadCardBeforeDraw)
+                // ドロー後に手札が1枚以上あれば1枚チャージ
+                if (pa.HandCount > 0)
                 {
                     pa = pa with
                     {
@@ -81,12 +75,16 @@ namespace DuelMasters.GUI.Game
             {
                 var pb = _playerB;
 
-                var hadCardBeforeDraw = pb.HandCount > 0;
+                if (pb.DeckCount > 0)
+                {
+                    pb = pb with
+                    {
+                        DeckCount = pb.DeckCount - 1,
+                        HandCount = pb.HandCount + 1
+                    };
+                }
 
-                // 1ドロー
-                pb = pb with { HandCount = pb.HandCount + 1 };
-
-                if (hadCardBeforeDraw)
+                if (pb.HandCount > 0)
                 {
                     pb = pb with
                     {
@@ -103,14 +101,13 @@ namespace DuelMasters.GUI.Game
             _isPlayerATurn = !_isPlayerATurn;
 
             var snapshot = BuildSnapshot();
-            var message = $"ターン{prevTurn}を終了し、ターン{_turn}へ進みました。（スタブ進行: ドロー→条件付きマナチャージ）";
+            var message = $"ターン{prevTurn}を終了し、ターン{_turn}へ進みました。（スタブ進行: ドロー→マナチャージ）";
             return Task.FromResult((snapshot, message));
         }
 
         private GameSnapshot BuildSnapshot()
         {
             var phase = "メイン"; // 簡易表記。実エンジン接続時はGameStateから取得。
-
             var activePlayer = _isPlayerATurn ? "プレイヤーA" : "プレイヤーB";
 
             return new GameSnapshot(
@@ -130,6 +127,7 @@ namespace DuelMasters.GUI.Game
         int HandCount,
         int ManaCount,
         int ShieldCount,
+        int DeckCount,
         IReadOnlyList<string> BattleZoneCards
     );
 

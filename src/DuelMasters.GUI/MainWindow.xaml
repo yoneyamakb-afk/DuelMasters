@@ -32,7 +32,8 @@
                     <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
                         <TextBlock Text="{Binding PlayerB.HandLabel}" Margin="0,0,12,0"/>
                         <TextBlock Text="{Binding PlayerB.ManaLabel}" Margin="0,0,12,0"/>
-                        <TextBlock Text="{Binding PlayerB.ShieldLabel}"/>
+                        <TextBlock Text="{Binding PlayerB.ShieldLabel}" Margin="0,0,12,0"/>
+                        <TextBlock Text="{Binding PlayerB.DeckLabel}"/>
                     </StackPanel>
                     <TextBlock Text="バトルゾーン" FontStyle="Italic" Margin="0,4,0,0"/>
                     <ItemsControl ItemsSource="{Binding PlayerB.BattleZoneCards}" Margin="8,0,0,0">
@@ -52,7 +53,8 @@
                     <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
                         <TextBlock Text="{Binding PlayerA.HandLabel}" Margin="0,0,12,0"/>
                         <TextBlock Text="{Binding PlayerA.ManaLabel}" Margin="0,0,12,0"/>
-                        <TextBlock Text="{Binding PlayerA.ShieldLabel}"/>
+                        <TextBlock Text="{Binding PlayerA.ShieldLabel}" Margin="0,0,12,0"/>
+                        <TextBlock Text="{Binding PlayerA.DeckLabel}"/>
                     </StackPanel>
                     <TextBlock Text="バトルゾーン" FontStyle="Italic" Margin="0,4,0,0"/>
                     <ItemsControl ItemsSource="{Binding PlayerA.BattleZoneCards}" Margin="8,0,0,0">
