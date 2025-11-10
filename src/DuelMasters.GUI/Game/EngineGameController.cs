@@ -13,21 +13,23 @@ namespace DuelMasters.GUI.Game
     /// GameState のゾーン構造から、各プレイヤーの手札 / マナ / シールド / 山札 / バトルゾーン枚数を
     /// PlayerSnapshot に反映します。
     ///
-    /// StepAsync は「1ターン分の自動進行」を担当し、
-    /// - ターン開始時に手番プレイヤーが 1 ドロー
-    /// - 優先権プレイヤーの合法行動を、ターンが切り替わるまで自動で適用
-    /// という処理を行います。
+    /// StepAsync は「優先権プレイヤーの行動を 1 回だけ適用する」簡易モードです。
+    /// （ボタン 1 回 = 行動 1 回）
     /// </summary>
     public sealed class EngineGameController : IGameController
     {
         private GameState? _game;
         private string _solutionRoot = string.Empty;
         private CardDatabase? _cardDb;
+        private ReplayRecorder? _recorder;
 
         public Task<(GameSnapshot snapshot, string message)> InitializeAsync()
         {
             var baseDir = AppContext.BaseDirectory;
             _solutionRoot = Path.GetFullPath(Path.Combine(baseDir, "..", "..", "..", "..", ".."));
+
+            // リプレイ出力先の初期化（artifacts/replays/trace.json）
+            _recorder = new ReplayRecorder(_solutionRoot);
 
             // カードDB読み込み（あればカード名を表示するために使用）
             var dbPath = Path.Combine(_solutionRoot, "Duelmasters.db");
@@ -41,7 +43,6 @@ namespace DuelMasters.GUI.Game
                 _cardDb = null;
                 Console.WriteLine($"[GUI-CardDB] 読み込み失敗: {dbPath}");
             }
-
 
             var defaultDeckAIds = new[] { 1, 3, 4, 5, 9 };
             var defaultDeckBIds = new[] { 6, 7, 8, 9, 10 };
@@ -60,50 +61,46 @@ namespace DuelMasters.GUI.Game
         }
 
         /// <summary>
-        /// 1回呼び出すごとに「現在の手番プレイヤーのターンを最後まで進める」簡易モード。
-        /// - 開始時に手番プレイヤーが1ドロー
-        /// - 優先権プレイヤーの行動を自動選択し、ターン番号が変わるまで適用
+        /// 1回呼び出すごとに「現在の優先権プレイヤーの行動を 1 回だけ適用」します。
+        /// （自動で 100 ステップ回すのではなく、完全に 1 ステップ実行に揃えています）
         /// </summary>
         public Task<(GameSnapshot snapshot, string message)> StepAsync()
         {
             if (_game == null)
                 return Task.FromResult((MakeSnapshot(null), "GameState が初期化されていません。"));
 
-            var startTurn = _game.TurnNumber;
-            var startPlayer = _game.ActivePlayer;
+            var beforeTurn = _game.TurnNumber;
+            var beforeActive = _game.ActivePlayer;
+            var beforePriority = _game.PriorityPlayer;
 
-            // 1. ターン開始時の 1 ドロー（簡易ルール）
-            _game = DrawFor(_game, startPlayer);
-
-            int steps = 0;
-            const int maxStepsPerTurn = 100;
-
-            while (steps < maxStepsPerTurn)
+            // 現在の優先権プレイヤーの合法行動一覧を取得
+            var actions = _game.GenerateLegalActions(_game.PriorityPlayer).ToList();
+            if (actions.Count == 0)
             {
-                steps++;
-
-                // ゲーム終了していそうなら抜ける（GameOverResult は null でないときに決着）
-                if (_game.GameOverResult.HasValue)
-                    break;
-
-                var actions = _game.GenerateLegalActions(_game.PriorityPlayer).ToList();
-                if (actions.Count == 0)
-                {
-                    break;
-                }
-
-                var chosen = ChooseAction(actions);
-                _game = _game.Apply(chosen);
-
-                // ターン番号が変わったら、このターンは終了とみなす
-                if (_game.TurnNumber != startTurn)
-                {
-                    break;
-                }
+                var snapNoAction = MakeSnapshot(_game);
+                return Task.FromResult((snapNoAction, "選択可能な行動がありません。"));
             }
 
+            // 非パスを優先、なければ PassPriority
+            var chosen = ChooseAction(actions);
+
+            _game = _game.Apply(chosen);
+
+            // --- ReplayTrace 追記 ---
+            if (_recorder != null)
+            {
+                var entry = ReplayTraceEntry.From(_game, chosen, note: "GUI Step");
+                _recorder.Append(entry);
+            }
+
+            var afterTurn = _game.TurnNumber;
+            var afterActive = _game.ActivePlayer;
+            var afterPriority = _game.PriorityPlayer;
+
+            var message =
+                $"行動: {chosen.Type}, ターン {beforeTurn}->{afterTurn}, 手番 {beforeActive.Value}->{afterActive.Value}, 優先権 {beforePriority.Value}->{afterPriority.Value}";
+
             var snapshot = MakeSnapshot(_game);
-            var message = $"ターン {startTurn} を {steps} ステップ進めました。現在ターン={_game.TurnNumber}, 手番プレイヤー={_game.ActivePlayer.Value}";
             return Task.FromResult((snapshot, message));
         }
 
@@ -188,7 +185,7 @@ namespace DuelMasters.GUI.Game
 
         /// <summary>
         /// GameState.Draw(PlayerId) とほぼ同等の処理を、外側から呼べるようにしたヘルパ。
-        /// デッキ切れ時の勝敗判定は簡略化し、ここでは何もしないでそのまま返します。
+        /// ※ 現在は StepAsync では呼んでいません（ターン開始ドローはエンジン側に持たせる想定）。
         /// </summary>
         private GameState DrawFor(GameState state, PlayerId p)
         {

@@ -15,6 +15,7 @@ internal static class Program
     private static string? _traceJsonPath = null;
     private static string _traceLevel = "basic"; // basic|detail|debug
     private static bool _manual = false;         // 手動対戦モードフラグ
+    private static bool _replayGui = false;      // GUIトレースリプレイモードフラグ
     private static CardDatabase? _cardDb;        // カードDB（あれば）
 
     // ---- イベントトレース (EngineHooks.OnEvent をラップ) ----
@@ -70,6 +71,11 @@ internal static class Program
             {
                 // 一人二役の手動対戦モード
                 _manual = true;
+            }
+            else if (a.Equals("--replay-gui", StringComparison.OrdinalIgnoreCase))
+            {
+                // GUI が artifacts/replays/trace.json に出力したトレースをリプレイするモード
+                _replayGui = true;
             }
         }
     }
@@ -318,15 +324,57 @@ internal static class Program
         }
     }
 
+    // ---- GUI トレースリプレイモード ----
+    private static void RunReplayFromGuiTrace(GameState initial, string solutionRoot)
+    {
+        Console.WriteLine("=== GUIトレース リプレイモード ===");
+        var tracePath = Path.Combine(solutionRoot, "artifacts", "replays", "trace.json");
+        Console.WriteLine($"trace ファイル: {tracePath}");
+
+        if (!File.Exists(tracePath))
+        {
+            Console.WriteLine("trace.json が見つかりませんでした。");
+            return;
+        }
+
+        try
+        {
+            // --- 追加: 初期状態の調整（GUIの初期化と一致させる）---
+            initial = initial
+                .WithTurnNumber(1)
+                .WithPhase(Phase.Main)
+                .WithActivePlayer(0)
+                .WithPriorityPlayer(0);
+
+            var before = Take(initial);
+            var finalState = ReplayRunner.Run(initial, tracePath);
+            var after = Take(finalState);
+
+            EmitStepTrace("GUIトレース再生 完了", before, after);
+            Console.WriteLine($"リプレイ完了: 最終ターン={finalState.TurnNumber}, 手番プレイヤー={finalState.ActivePlayer.Value}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"リプレイ中にエラーが発生しました: {ex.Message}");
+        }
+    }
+
+
     private static void Main(string[] args)
     {
         ParseArgs(args);
         InstallTracing();
 
-        Console.WriteLine("=== デュエルマスターズ シミュレーター CLI (M11.6 / M29) ===");
-        Console.WriteLine(_manual
-            ? "モード: 手動（あなたが両方のプレイヤーを操作します）"
-            : "モード: 自動デモ");
+        Console.WriteLine("=== デュエルマスターズ シミュレーター CLI (M11.6 / M29+M31) ===");
+        string modeText;
+        if (_replayGui)
+            modeText = "モード: GUIトレースリプレイ";
+        else if (_manual)
+            modeText = "モード: 手動（あなたが両方のプレイヤーを操作します）";
+        else
+            modeText = "モード: 自動デモ";
+
+        Console.WriteLine(modeText);
 
         // 実行ディレクトリ（bin\Debug\net8.0）から 5階層上に戻ってルートの Duelmasters.db を参照する
         var baseDir = AppContext.BaseDirectory;
@@ -365,7 +413,11 @@ internal static class Program
         Console.WriteLine();
         Console.WriteLine($"ゲーム初期化完了: ターン {game.TurnNumber}, 手番プレイヤー={game.ActivePlayer.Value}");
 
-        if (_manual)
+        if (_replayGui)
+        {
+            RunReplayFromGuiTrace(game, solutionRoot);
+        }
+        else if (_manual)
         {
             RunManual(game);
         }
